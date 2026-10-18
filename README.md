@@ -1,4 +1,4 @@
-# Certify — Certificate Studio
+# Certrxy — Certificate Studio
 
 **Laravel 12 • PHP 8.3+ • Local-first automated certificate generation**
 
