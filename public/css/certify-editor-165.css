@@ -1,0 +1,1300 @@
+/* ---- Certify v1.16.0 historical editor styles (retained for compatibility) ---- */
+/* Certify 1.5.9 — professional editor workspace; scoped to this page only. */
+.certify-editor-page{--ed-line:#e2eaf5;--ed-ink:#193455;--ed-muted:#6b7d97;--ed-blue:#2563eb;min-width:0}
+.certify-editor-page .editor-steps{margin:0 0 20px;gap:11px}
+.certify-editor-page .editor-steps .connector{width:30px}
+.certify-editor-page .editor-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(305px,340px);align-items:start;gap:14px;min-width:0}
+.certify-editor-page .editor-workspace,.certify-editor-page .editor-properties-card{min-width:0;margin:0;padding:0;border:1px solid var(--ed-line);border-radius:18px;background:#fff;box-shadow:0 10px 36px rgba(20,45,82,.045)}
+.certify-editor-page .editor-workspace{overflow:hidden}
+.certify-editor-page .canvas-toolbar{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;padding:19px 22px;margin:0;border-bottom:1px solid #edf1f7}
+.certify-editor-page .canvas-heading{display:flex;align-items:center;gap:12px;min-width:0}
+.certify-editor-page .canvas-symbol{display:grid;place-items:center;width:42px;height:42px;flex:0 0 42px;border-radius:13px;background:#eef4ff;color:#2762dc;font-size:22px}
+.certify-editor-page .toolbar-label{color:#173459;font-size:17px;font-weight:750;letter-spacing:-.45px;margin:0 0 3px}
+.certify-editor-page .canvas-heading p{margin:0;font-size:11px;color:var(--ed-muted)}
+.certify-editor-page .editor-canvas-badge{padding:7px 10px;border:1px solid #e1e9f4;background:#f7f9fd;border-radius:8px;color:#66809f;font-size:11px;font-weight:650;white-space:nowrap}
+.certify-editor-page .editor-preview-controls{display:grid;grid-template-columns:minmax(210px,1.7fr) minmax(140px,1fr) auto;align-items:end;gap:15px;background:#fff;padding:14px 20px;border-bottom:1px solid #edf1f7}
+.certify-editor-page .editor-control-unit{min-width:0}
+.certify-editor-page .editor-control-unit>label,.certify-editor-page .editor-toolbar-caption{display:block;font-size:11px;font-weight:720;color:#345175;margin:0 0 7px}
+.certify-editor-page .editor-control-inline{display:flex;gap:7px;align-items:stretch}
+.certify-editor-page .name-test input{border:1px solid #d8e3f1;border-radius:9px;min-height:39px;padding:8px 11px;background:#fff;font-size:12px;min-width:0;flex:1}
+.certify-editor-page .name-test .btn{font-size:11px;line-height:1.2;padding:7px 11px;min-height:39px;white-space:nowrap;flex:0 0 auto}
+.certify-editor-page .editor-tool-buttons{display:flex;align-items:stretch;gap:4px}
+.certify-editor-page .editor-tool-button{display:flex;justify-content:center;align-items:center;gap:5px;padding:7px 9px;min-height:39px;min-width:37px;background:#fff;color:#3d5f8c;border:1px solid #dbe5f3;border-radius:9px;font-size:14px;white-space:nowrap;transition:background .12s,border-color .12s}
+.certify-editor-page .editor-tool-button span{font-size:10px;font-weight:650}
+.certify-editor-page .editor-tool-button:hover{background:#eff5ff;border-color:#bed4f4;color:#2058c3}
+.certify-editor-page .editor-view-tools select{min-height:39px;width:94px;margin:0;border:1px solid #dbe5f3;background:#fff;border-radius:9px;color:#38547e;font-size:11px;font-weight:700;padding:7px}
+.certify-editor-page .editor-stage{display:flex;justify-content:center;align-items:center;gap:0;min-height:390px;max-width:100%;overflow:auto;overscroll-behavior:contain;margin:13px 16px 0;padding:22px 16px;background:#eef3fa;background-image:radial-gradient(#d1dff2 .75px,transparent .75px);background-size:17px 17px;border:1px solid #e0e8f4;border-radius:12px}
+.certify-editor-page .editor-stage.zoomed{justify-content:flex-start;align-items:flex-start}
+.certify-editor-page .editor-stage:fullscreen{margin:0;min-height:100vh;width:100vw;max-width:none;background:#eaf0f8;padding:32px}
+.certify-editor-page .preview{position:relative;max-width:none;flex:0 0 auto;width:min(100%,var(--max-preview-w));min-width:0;overflow:visible;box-shadow:0 12px 35px rgba(23,45,82,.16)}
+.certify-editor-page .preview img{object-fit:fill}
+.certify-editor-page .field.sel{outline:1.5px solid #2368ea;background:#dbeafe2e}
+.certify-editor-page .field:focus-visible{outline:2px solid #1e62e6;outline-offset:3px}
+.certify-editor-page .handle{height:12px;width:12px;background:#fff;border:2px solid #1761ef;border-radius:2px}
+.certify-editor-page .editor-canvas-footer{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:13px 19px 17px;color:#7a8ca5;font-size:10px;line-height:1.5}
+.certify-editor-page .editor-hint-mark{display:inline-grid;place-items:center;width:15px;height:15px;border:1px solid #bfcfe5;color:#3364b5;font-weight:800;border-radius:50%;margin-right:5px}
+.certify-editor-page .editor-inspector{position:sticky;top:16px;min-width:0}
+.certify-editor-page .editor-properties-card{display:flex;flex-direction:column;max-height:calc(100vh - 32px);overflow:hidden}
+.certify-editor-page .inspector-heading{padding:17px 20px 13px;border-bottom:1px solid #edf1f7;flex:0 0 auto}
+.certify-editor-page .inspector-heading .eyebrow{font-size:10px;margin-bottom:5px}
+.certify-editor-page .inspector-heading h2{font-size:17px;letter-spacing:-.4px;color:var(--ed-ink);margin:0 0 3px}
+.certify-editor-page .inspector-heading p{margin:0;color:#7d8da3;font-size:11px;line-height:1.5}
+.certify-editor-page .inspector-scroll-body{min-height:0;overflow-y:auto;overflow-x:hidden;scrollbar-color:#cedaeb transparent;scrollbar-width:thin;flex:1}
+.certify-editor-page .editor-current-field-block{padding:13px 19px 0}
+.certify-editor-page .inspector-block-label{font-weight:730;font-size:11px;color:#365279;margin:0 0 8px}
+.certify-editor-page .selected-control{display:flex;align-items:center;gap:11px;padding:12px;background:#f1f6ff;border:1px solid #dbe8fd;border-radius:11px}
+.certify-editor-page .editor-selected-circle{display:grid;place-items:center;width:34px;height:34px;flex:0 0 34px;border-radius:10px;background:#dceaff;color:#2861d5;font-size:18px;font-weight:800}
+.certify-editor-page .selected-control b{display:block;color:#174073;font-size:12px;margin-bottom:2px}
+.certify-editor-page .selected-control span{display:block;color:#6b86a9;font-size:11px}
+.certify-editor-page .inspector-section{padding:17px 19px;border-bottom:1px solid #edf1f7}
+.certify-editor-page .inspector-section h3{font-size:13px;color:#1b365a;margin:0 0 8px}
+.certify-editor-page label:not(.switch-label){display:block;color:#355378;font-size:11px;font-weight:710;margin:12px 0 6px}
+.certify-editor-page select,.certify-editor-page input:not([type=checkbox]){border:1px solid #d9e3f1;background:#fff;border-radius:9px;min-height:39px;padding:8px 10px;font-size:12px;color:#253b5d}
+.certify-editor-page input[type=color]{width:40px;min-width:40px;height:35px;min-height:35px;border-radius:7px;padding:4px;cursor:pointer}
+.certify-editor-page .font-inline-link{display:inline-block;color:#2862d1;font-size:11px;font-weight:710;margin-top:6px}
+.certify-editor-page .editor-color-field{display:flex;align-items:center;gap:8px;min-height:39px;border:1px solid #d9e3f1;border-radius:9px;padding:2px 4px;background:#fff}
+.certify-editor-page .editor-color-field input{border:0;outline:none;padding:0}
+.certify-editor-page .editor-color-field output{font-size:10px;color:#536b8f;white-space:nowrap}
+.certify-editor-page .editor-original-align{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px;padding:0;min-height:0}
+.certify-editor-page .editor-text-align-buttons{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:3px}
+.certify-editor-page .editor-text-align-buttons button{min-height:37px;display:grid;place-items:center;border:1px solid #dce6f3;border-radius:9px;background:white;color:#6a82a6;font-size:18px}
+.certify-editor-page .editor-text-align-buttons button[data-align=L]{text-align:left;justify-content:start;padding-left:16px}
+.certify-editor-page .editor-text-align-buttons button[data-align=R]{text-align:right;justify-content:end;padding-right:16px}
+.certify-editor-page .editor-text-align-buttons button[aria-pressed=true]{background:#eaf2ff;color:#1f5ed3;border-color:#bcd5ff;box-shadow:inset 0 0 0 1px #d9e7ff}
+.certify-editor-page .editor-font-appearance{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:15px 0 14px}
+.certify-editor-page .editor-font-appearance .switch-label{display:flex;align-items:center;gap:7px;border:1px solid #e0e8f4;padding:7px 10px;border-radius:9px;background:#fff;margin:0;font-size:11px;font-weight:650;cursor:pointer}
+.certify-editor-page .editor-font-appearance .switch-label:has(input:checked){background:#eef4ff;color:#1a55ba;border-color:#c7dbfb}
+.certify-editor-page .editor-font-appearance input{margin:0}
+.certify-editor-page .editor-auto-fit{display:flex;gap:9px;align-items:center!important;font-size:11px!important;margin:0!important;cursor:pointer}
+.certify-editor-page .editor-auto-fit input{margin:0}
+.certify-editor-page .editor-font-style-note{font-size:11px;line-height:1.6;margin:7px 0 10px;color:#6e83a0}
+.certify-editor-page .editor-accordion{margin:0;border:0;border-bottom:1px solid #edf1f7;background:#fff}
+.certify-editor-page .editor-accordion summary{display:flex;align-items:center;justify-content:space-between;gap:9px;min-height:51px;padding:14px 19px;cursor:pointer;list-style:none;color:#243f65;font-size:12px;font-weight:750}
+.certify-editor-page .editor-accordion summary::-webkit-details-marker{display:none}
+.certify-editor-page .editor-summary-tail{display:flex;align-items:center;gap:10px;color:#7890b2}
+.certify-editor-page .editor-summary-tail small{border-radius:6px;padding:3px 7px;background:#f2f5fb;color:#768ba6;font-size:10px;font-weight:700}
+.certify-editor-page .editor-accordion[open] .editor-summary-tail b{transform:rotate(180deg)}
+.certify-editor-page .editor-accordion-body{padding:0 19px 18px;border-top:1px solid #eef2f8}
+.certify-editor-page .editor-accordion-body p{font-size:11px;color:#7890a9;line-height:1.6;margin:12px 0 0}
+.certify-editor-page .editor-accordion-body .two-cols{margin-top:1px}
+.certify-editor-page .editor-field-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:13px}
+.certify-editor-page .editor-field-actions .btn{font-size:11px;padding:9px 7px}
+.certify-editor-page #saveForm{flex:0 0 auto;background:#fff}
+.certify-editor-page .inspector-footer{position:static;display:grid;grid-template-columns:1fr;gap:8px;padding:12px 18px 15px;border-top:1px solid #e8eef6;background:#fff}
+.certify-editor-page .inspector-footer .btn{width:100%;min-height:41px;font-size:12px}
+.certify-editor-page .inspector-footer .btn:last-of-type{box-shadow:0 5px 15px #1c5aca22}
+.certify-editor-page .inspector-footer p{font-size:10px;color:#8494ac;margin:2px 0 0;text-align:center}
+@media(max-width:1360px){.certify-editor-page .editor-preview-controls{grid-template-columns:minmax(220px,1fr) auto;gap:12px}.certify-editor-page .editor-view-tools{grid-column:2}.certify-editor-page .editor-alignment{grid-column:1}}
+@media(max-width:1120px){.certify-editor-page .editor-layout{grid-template-columns:minmax(0,1fr) 305px;gap:12px}.certify-editor-page .editor-stage{padding:14px;margin:12px}.certify-editor-page .editor-preview-controls{padding:13px}}
+@media(max-width:1020px){.certify-editor-page .editor-layout{grid-template-columns:1fr}.certify-editor-page .editor-inspector{position:static}.certify-editor-page .editor-properties-card{max-height:none;overflow:visible}.certify-editor-page .inspector-scroll-body{overflow:visible}.certify-editor-page .editor-preview-controls{grid-template-columns:minmax(220px,1fr) auto auto}.certify-editor-page .editor-alignment,.certify-editor-page .editor-view-tools{grid-column:auto}.certify-editor-page .editor-stage{min-height:270px}}
+@media(max-width:720px){.certify-editor-page .editor-preview-controls{grid-template-columns:1fr 1fr}.certify-editor-page .name-test{grid-column:span 2}.certify-editor-page .editor-control-inline{align-items:stretch}.certify-editor-page .editor-alignment,.certify-editor-page .editor-view-tools{grid-column:auto}.certify-editor-page .editor-tool-button span{display:none}.certify-editor-page .editor-stage{min-height:200px;padding:10px;margin:10px}.certify-editor-page .canvas-toolbar{padding:15px 14px}.certify-editor-page .canvas-heading p{font-size:10px}.certify-editor-page .editor-canvas-footer{padding:12px 13px}}
+@media(max-width:430px){.certify-editor-page .name-test .btn{font-size:10px;padding:7px 9px}.certify-editor-page .editor-preview-controls{gap:10px;padding:11px}.certify-editor-page .editor-view-tools select{width:86px}.certify-editor-page .editor-tool-button{min-width:32px;padding:5px}.certify-editor-page .canvas-symbol{width:36px;height:36px;flex-basis:36px}.certify-editor-page .editor-canvas-badge{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.certify-editor-page *{scroll-behavior:auto!important;transition:none!important}}
+/* Keep the sample name label above its input, independent of legacy form CSS. */
+.certify-editor-page .name-test{display:flex;flex-direction:column;gap:7px;align-items:stretch;min-width:0}
+.certify-editor-page .name-test label{margin:0}
+
+
+/* Certify 1.6.0: one-screen desktop certificate studio. Only scoped to the
+   editor route. Narrow viewports retain ordinary page scroll for accessibility. */
+@media (min-width:1021px) and (min-height:670px) {
+  html:has(.certify-editor-page), body:has(.certify-editor-page) {
+    height:100%; overflow:hidden;
+  }
+  body:has(.certify-editor-page) .shell {height:100dvh;min-height:0;overflow:hidden;}
+  body:has(.certify-editor-page) .page-wrap {height:100dvh;min-height:0;overflow:hidden;display:flex;flex-direction:column;}
+  body:has(.certify-editor-page) main {
+    display:flex;flex-direction:column;flex:1;min-height:0;height:100%;
+    overflow:hidden;width:100%;max-width:1600px;
+    padding:clamp(10px,1.5vh,17px) clamp(14px,2vw,32px) clamp(9px,1.3vh,15px);
+  }
+  body:has(.certify-editor-page) main > .top {flex:0 0 auto;margin-bottom:8px;gap:12px;}
+  body:has(.certify-editor-page) .top .eyebrow {margin-bottom:1px;font-size:9px;}
+  body:has(.certify-editor-page) .top h1 {font-size:clamp(20px,2vw,25px);margin:0 0 2px;}
+  body:has(.certify-editor-page) .top .subtitle {font-size:11px;line-height:1.35;}
+  body:has(.certify-editor-page) .top .btn {padding:8px 12px;font-size:11px;}
+  body:has(.certify-editor-page) .notice {flex:0 0 auto;max-height:25vh;overflow:auto;margin-bottom:7px;}
+  .certify-editor-page {flex:1;min-height:0;display:flex;flex-direction:column;}
+  .certify-editor-page .editor-steps {flex:0 0 auto;margin:0 0 8px;gap:7px;}
+  .certify-editor-page .editor-steps .num {width:19px;height:19px;}
+  .certify-editor-page .editor-steps a,.certify-editor-page .editor-steps span {font-size:11px;}
+  .certify-editor-page .editor-layout {flex:1;min-height:0;align-items:stretch;gap:11px;grid-template-columns:minmax(0,1fr) minmax(284px,305px);}
+  .certify-editor-page .editor-workspace {display:flex;flex-direction:column;height:100%;min-height:0;overflow:hidden;}
+  .certify-editor-page .canvas-toolbar {flex:0 0 auto;min-height:52px;padding:8px 13px;gap:10px;}
+  .certify-editor-page .canvas-symbol {width:32px;height:32px;flex-basis:32px;border-radius:9px;font-size:19px;}
+  .certify-editor-page .toolbar-label {font-size:14px;margin-bottom:1px;}
+  .certify-editor-page .canvas-heading p {font-size:10px;line-height:1.3;}
+  .certify-editor-page .editor-canvas-badge {padding:5px 8px;font-size:10px;}
+  .certify-editor-page .editor-preview-controls {
+    flex:0 0 auto;grid-template-columns:minmax(160px,1fr) auto auto;
+    gap:10px;padding:8px 13px;min-height:58px;
+  }
+  .certify-editor-page .editor-alignment,.certify-editor-page .editor-view-tools {grid-column:auto;}
+  .certify-editor-page .name-test {gap:3px;}
+  .certify-editor-page .editor-control-unit > label,.certify-editor-page .editor-toolbar-caption {margin:0 0 3px;font-size:10px;}
+  .certify-editor-page .name-test input,.certify-editor-page .name-test .btn,.certify-editor-page .editor-tool-button,.certify-editor-page .editor-view-tools select {min-height:32px;height:32px;}
+  .certify-editor-page .name-test input {padding:5px 8px;}
+  .certify-editor-page .name-test .btn {padding:5px 7px;}
+  .certify-editor-page .editor-tool-button {min-width:29px;padding:4px 6px;}
+  .certify-editor-page .editor-view-tools select {width:84px;padding:5px;font-size:10px;}
+  .certify-editor-page .editor-stage {
+    flex:1;min-height:0!important;max-height:none;height:0;margin:7px 10px 0;
+    padding:10px;overflow:hidden;align-items:center;justify-content:center;
+  }
+  .certify-editor-page .editor-stage.zoomed {overflow:auto;align-items:flex-start;justify-content:flex-start;}
+  .certify-editor-page .editor-stage:fullscreen {height:100dvh;min-height:0;max-height:none;margin:0;padding:22px;overflow:auto;}
+  .certify-editor-page .editor-canvas-footer {flex:0 0 auto;padding:7px 11px 8px;gap:7px;font-size:9px;}
+  .certify-editor-page .editor-inspector {height:100%;min-height:0;max-height:none;position:static;}
+  .certify-editor-page .editor-properties-card {height:100%;max-height:none;min-height:0;}
+  .certify-editor-page .inspector-heading {padding:10px 13px 8px;}
+  .certify-editor-page .inspector-heading h2 {font-size:15px;}
+  .certify-editor-page .inspector-heading p {font-size:10px;}
+  .certify-editor-page .editor-current-field-block {padding:9px 13px 0;}
+  .certify-editor-page .inspector-block-label {margin-bottom:5px;}
+  .certify-editor-page .selected-control {padding:9px;}
+  .certify-editor-page .inspector-section {padding:10px 13px;}
+  .certify-editor-page .inspector-section h3 {font-size:12px;}
+  .certify-editor-page label:not(.switch-label) {margin:8px 0 4px;}
+  .certify-editor-page select,.certify-editor-page input:not([type=checkbox]) {min-height:34px;padding:6px 8px;}
+  .certify-editor-page .editor-text-align-buttons button {min-height:30px;}
+  .certify-editor-page .editor-font-appearance {margin:10px 0;}
+  .certify-editor-page .editor-font-appearance .switch-label {padding:5px 7px;}
+  .certify-editor-page .editor-accordion summary {min-height:42px;padding:10px 13px;}
+  .certify-editor-page .editor-accordion-body {padding:0 13px 12px;}
+  .certify-editor-page .inspector-footer {padding:9px 12px 10px;gap:6px;}
+  .certify-editor-page .inspector-footer .btn {min-height:36px;font-size:11px;}
+  .certify-editor-page .inspector-footer p {display:none;}
+}
+/* Keep controls legible when the available editor column narrows. */
+@media (min-width:1021px) and (max-width:1290px) and (min-height:670px) {
+  .certify-editor-page .editor-preview-controls {gap:7px;}
+  .certify-editor-page .editor-tool-button span {display:none;}
+  .certify-editor-page .editor-control-inline {gap:4px;}
+  .certify-editor-page .name-test .btn {font-size:10px;}
+  .certify-editor-page .editor-canvas-footer > span:last-child {display:none;}
+}
+/* At shorter heights, eliminate low-value secondary instructions first. */
+@media (min-width:1021px) and (min-height:670px) and (max-height:780px) {
+  .certify-editor-page .canvas-heading p {display:none;}
+  .certify-editor-page .inspector-heading p {display:none;}
+  .certify-editor-page .editor-canvas-footer > span:last-child {display:none;}
+  .certify-editor-page .editor-stage {margin-top:5px;padding:7px;}
+  .certify-editor-page .editor-preview-controls {padding-top:5px;padding-bottom:5px;}
+}
+/* Native fullscreen must keep fitting regardless of whether the rest of the
+   page is in one-screen mode. */
+.certify-editor-page #editorStage:fullscreen {height:100dvh;min-height:0!important;max-width:none;overflow:auto;margin:0;box-sizing:border-box;}
+
+
+/* ---- Certify v1.16.1 historical editor styles (retained for compatibility) ---- */
+/* Certify 1.6.1 - field-first, single-screen certificate studio.
+   This stylesheet is loaded only by the template editor. */
+body.certify-editor-route main > .top { display:none !important; }
+.certify-editor-route main { padding-top:clamp(10px,1.6vh,18px); }
+.certify-editor-page .editor-layout {grid-template-columns:minmax(0,1fr) minmax(310px,348px);gap:14px}
+.certify-editor-page .editor-workspace {border-radius:16px}
+.certify-editor-page .canvas-toolbar {padding:15px 17px}
+.certify-editor-page .canvas-heading .toolbar-label {font-size:16px;letter-spacing:-.35px}
+.certify-editor-page .canvas-heading p {font-size:11px}
+.certify-editor-page .editor-canvas-actions {display:flex;align-items:center;gap:8px;flex-shrink:0}
+.certify-editor-page .editor-back-link {display:inline-flex;align-items:center;justify-content:center;padding:7px 10px;border:1px solid #dce6f3;border-radius:8px;color:#315b98;font-size:11px;font-weight:710;background:#fff;white-space:nowrap}
+.certify-editor-page .editor-back-link:hover {background:#eff5ff;border-color:#bfd4f6}
+.certify-editor-page .editor-preview-controls {padding:11px 16px}
+.certify-editor-page .editor-stage {margin:11px 12px 0;border-radius:12px}
+.certify-editor-page .editor-canvas-footer{padding:10px 14px;color:#7890af}
+.certify-editor-page .editor-inspector {min-width:0}
+.certify-editor-page .editor-properties-card {border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.certify-editor-page .inspector-scroll-body {flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain}
+.certify-editor-page .certificate-fields-panel {padding:16px 16px 15px;border-bottom:1px solid #e4ebf5;background:#fff}
+.certify-editor-page .editor-panel-heading{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.certify-editor-page .editor-panel-heading h2 {font-size:15px;line-height:1.3;font-weight:760;color:#18395f;margin:0 0 3px;letter-spacing:-.4px}
+.certify-editor-page .editor-panel-heading p{font-size:11px;line-height:1.45;color:#7789a4;margin:0}
+.certify-editor-page .editor-panel-icon{width:34px;height:34px;flex:0 0 34px;border-radius:10px;display:grid;place-items:center;background:#eaf2ff;color:#2a66da;font-size:17px;font-weight:780}
+.certify-editor-page .editor-field-list {display:grid;gap:7px;}
+.certify-editor-page .editor-field-card {border:1px solid #e0e9f5;border-radius:10px;background:#fff;display:flex;align-items:center;gap:9px;text-align:left;padding:7px 9px;width:100%;min-height:48px;color:#243e68;transition:background .12s,border-color .12s,box-shadow .12s}
+.certify-editor-page .editor-field-card:hover{border-color:#bcd2f4;background:#f8fbff}
+.certify-editor-page .editor-field-card.is-selected{background:#eef5ff;border-color:#b5cffb;box-shadow:inset 0 0 0 1px #dbe9ff}
+.certify-editor-page .editor-field-card-icon {flex:0 0 29px;width:29px;height:29px;border-radius:8px;display:grid;place-items:center;background:#eef4ff;color:#2560d3;font-size:13px;font-weight:800}
+.certify-editor-page .editor-field-card.is-selected .editor-field-card-icon {background:#dbe9ff}
+.certify-editor-page .editor-field-card-copy {flex:1;min-width:0}
+.certify-editor-page .editor-field-card-copy strong {font-size:12px;font-weight:720;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.certify-editor-page .editor-field-card-copy small {font-size:10px;color:#7b8ba4;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.45}
+.certify-editor-page .editor-field-card-arrow{font-size:19px;font-weight:400;color:#7893be}
+.certify-editor-page .editor-add-field-wrapper{margin:10px 0 6px}
+.certify-editor-page .editor-add-menu{border:1px solid #c6d9fb;border-radius:9px;background:#fff;overflow:hidden}
+.certify-editor-page .editor-add-menu summary{display:flex;align-items:center;justify-content:center;gap:10px;list-style:none;padding:9px 12px;cursor:pointer;color:#2059bd;font-size:12px;font-weight:740;background:#f8fbff}
+.certify-editor-page .editor-add-menu summary::-webkit-details-marker{display:none}
+.certify-editor-page .editor-add-menu summary span{margin-left:5px}
+.certify-editor-page .editor-add-menu[open] summary{background:#eaf2ff;border-bottom:1px solid #dce7fa}
+.certify-editor-page .editor-add-menu-content{display:grid;padding:4px;gap:1px}
+.certify-editor-page .editor-add-menu-content button{display:flex;align-items:flex-start;flex-direction:column;gap:1px;width:100%;background:#fff;border:0;border-radius:6px;padding:8px;text-align:left;color:#173e79}
+.certify-editor-page .editor-add-menu-content button:hover{background:#eef5ff}
+.certify-editor-page .editor-add-menu-content button b{font-size:11px}
+.certify-editor-page .editor-add-menu-content button small{font-size:10px;color:#7188aa}
+.certify-editor-page label.editor-field-content-label{margin:10px 0 5px!important}
+.certify-editor-page #fieldKey{width:100%}
+.certify-editor-page .editor-field-secondary-actions{display:flex;justify-content:flex-end;min-height:24px;margin:8px 0 0}
+.certify-editor-page .editor-remove-field{border:0;background:none;font-size:10px;font-weight:680;color:#7188a9;text-decoration:underline;text-underline-offset:2px;cursor:pointer;padding:3px 0}
+.certify-editor-page .editor-remove-field:hover{color:#bc3636}
+.certify-editor-page .editor-visually-hidden{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;white-space:nowrap!important;clip-path:inset(50%)!important;border:0!important;padding:0!important;margin:-1px!important;}
+.certify-editor-page .editor-typography-panel{padding:15px 16px 17px;border-bottom:1px solid #e9eff7;background:#fff}
+.certify-editor-page .editor-typography-heading{margin-bottom:8px}
+.certify-editor-page .editor-typography-panel .selected-control{margin-bottom:10px;padding:8px 10px;border-radius:9px}
+.certify-editor-page .editor-typography-panel .editor-selected-circle{width:30px;height:30px;flex-basis:30px;font-size:14px;border-radius:7px}
+.certify-editor-page .editor-typography-panel .selected-control b{font-size:12px}
+.certify-editor-page .editor-typography-panel .selected-control span{font-size:10px}
+.certify-editor-page .editor-typography-panel label:not(.switch-label){display:block;font-size:11px;font-weight:710;color:#3b5275;margin:10px 0 5px}
+.certify-editor-page .editor-typography-panel select{width:100%}
+.certify-editor-page .editor-typography-panel .two-cols{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.certify-editor-page .editor-typography-panel .two-cols > div{min-width:0}
+.certify-editor-page .editor-typography-panel .editor-color-field{min-width:0;gap:4px}
+.certify-editor-page .editor-typography-panel .editor-color-field output{font-size:9px}
+.certify-editor-page .editor-font-appearance{margin:11px 0 12px}
+.certify-editor-page .editor-auto-fit{color:#2d4672}
+.certify-editor-page .inspector-footer{display:grid;grid-template-columns:1fr 1fr;gap:7px;padding:11px 12px;background:#fff;border-top:1px solid #e5eefa}
+.certify-editor-page .inspector-footer .btn{min-width:0;white-space:normal;min-height:39px;font-size:11px;padding:8px 7px}
+.certify-editor-page .inspector-footer .btn:last-of-type{box-shadow:0 5px 12px rgba(34,92,212,.14)}
+.certify-editor-page .editor-accordion summary{min-height:44px;padding:12px 16px}
+.certify-editor-page .editor-accordion-body{padding:0 16px 13px}
+/* hide redundant page heading + stepper; editor canvas is now the direct entry point. */
+@media (min-width:1021px) and (min-height:670px){
+  body.certify-editor-route main{padding:9px 14px}
+  .certify-editor-page .editor-layout{height:100%;min-height:0;grid-template-columns:minmax(0,1fr) minmax(305px,335px)}
+  .certify-editor-page .canvas-toolbar{padding:10px 13px;min-height:52px}
+  .certify-editor-page .editor-preview-controls{padding:8px 12px}
+  .certify-editor-page .editor-stage{margin:7px 10px 0}
+  .certify-editor-page .editor-canvas-footer{padding:7px 12px}
+  .certify-editor-page .certificate-fields-panel{padding:11px 12px 10px}
+  .certify-editor-page .editor-panel-heading{margin-bottom:8px}
+  .certify-editor-page .editor-panel-heading p{font-size:10px}
+  .certify-editor-page .editor-field-list{gap:5px}
+  .certify-editor-page .editor-field-card{min-height:40px;padding:5px 7px}
+  .certify-editor-page .editor-field-card-icon{width:27px;height:27px;flex-basis:27px}
+  .certify-editor-page .editor-typography-panel{padding:10px 12px 12px}
+  .certify-editor-page .editor-typography-panel .selected-control{margin-bottom:6px}
+  .certify-editor-page .editor-typography-panel label:not(.switch-label){margin:7px 0 4px}
+  .certify-editor-page .inspector-footer{padding:9px 10px}
+}
+@media (max-width:1100px) and (min-width:1021px){
+  .certify-editor-page .editor-preview-controls{gap:6px}
+  .certify-editor-page .editor-back-link{font-size:10px}
+}
+@media (max-width:1020px){
+  .certify-editor-page .editor-layout{grid-template-columns:1fr}
+  .certify-editor-page .inspector-scroll-body{overflow:visible}
+  .certify-editor-page .editor-properties-card{max-height:none}
+  .certify-editor-page .editor-workspace{margin-bottom:14px}
+  .certify-editor-page .inspector-footer{position:sticky;bottom:0;z-index:5}
+}
+@media (max-width:550px){
+  .certify-editor-page .editor-canvas-actions{gap:5px}
+  .certify-editor-page .editor-canvas-badge{display:none}
+  .certify-editor-page .editor-back-link{font-size:10px}
+  .certify-editor-page .editor-preview-controls{grid-template-columns:1fr 1fr}
+  .certify-editor-page .editor-control-inline{flex-wrap:wrap}
+  .certify-editor-page .name-test .btn{flex:1}
+  .certify-editor-page .inspector-footer{grid-template-columns:1fr 1fr}
+}
+/* Keep the backing native alignment control accessible to JS, not in layout. */
+.certify-editor-page select.editor-original-align {position:absolute!important;width:1px!important;height:1px!important;min-height:0!important;max-width:1px!important;padding:0!important;margin:-1px!important;border:0!important;overflow:hidden!important;clip-path:inset(50%)!important;opacity:0!important;pointer-events:none!important}
+
+
+/* ---- Certify v1.16.2 historical editor styles (retained for compatibility) ---- */
+/* Certify 1.6.2 · single-screen, field-first inspector refresh.
+   Scoped to the editor; no changes to other pages or PDF rendering. */
+.certify-editor-page {
+  --editor-line:#dfe7f2;
+  --editor-ink:#17365f;
+  --editor-muted:#657d9d;
+  --editor-focus:#2865dd;
+}
+.certify-editor-page .editor-workspace,
+.certify-editor-page .editor-properties-card {
+  border-radius:15px;
+  border-color:#dfe8f4;
+  box-shadow:0 7px 24px rgba(17,48,90,.045);
+}
+.certify-editor-page .canvas-toolbar {padding:12px 18px;}
+.certify-editor-page .canvas-heading .toolbar-label {font-size:16px;font-weight:730;}
+.certify-editor-page .canvas-symbol {background:#eff5ff;color:#2763dc;}
+.certify-editor-page .editor-preview-controls {background:#fbfdff;}
+.certify-editor-page .editor-stage {
+  border-color:#e0e9f6;
+  background-color:#f3f7fc;
+  background-image:radial-gradient(#d6e0ef .7px,transparent .7px);
+  background-size:19px 19px;
+}
+.certify-editor-page .editor-canvas-footer {color:#7187a5;}
+.certify-editor-page .editor-properties-card {background:#fff;}
+.certify-editor-page .certificate-fields-panel {border-bottom:1px solid #e6edf7;}
+.certify-editor-page .editor-panel-heading{margin-bottom:7px;}
+.certify-editor-page .editor-panel-heading h2 {font-weight:750;font-size:15px;}
+.certify-editor-page .editor-fields-toolbar {
+  display:flex;align-items:center;justify-content:space-between;gap:6px;
+  padding:0 1px;margin-bottom:7px;
+}
+.certify-editor-page #fieldCount{font-size:11px;font-weight:730;color:#2e5385;}
+.certify-editor-page .editor-fields-toolbar-help{font-size:10px;color:#8a9bb3;}
+/* Two-column field palette is shorter and makes the field list visually distinct
+   from the separate editing settings beneath it. */
+.certify-editor-page .editor-field-list {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  align-content:start;
+  gap:7px;
+  max-height:151px;
+  overflow-y:auto;
+  scrollbar-color:#d6e1f0 transparent;
+  scrollbar-width:thin;
+  padding:1px;
+}
+.certify-editor-page .editor-field-card {
+  min-height:43px;
+  padding:6px 7px;
+  gap:7px;
+  background:#fff;
+  border-radius:9px;
+  border:1px solid #e1e9f5;
+}
+.certify-editor-page .editor-field-card.is-selected {
+  border-color:#7faaf1;
+  background:#edf4ff;
+  box-shadow:0 0 0 1px #c5dafa;
+}
+.certify-editor-page .editor-field-card-icon {
+  height:29px;width:29px;flex-basis:29px;
+  color:#245bbb;background:#edf3ff;border-radius:8px;
+}
+.certify-editor-page .editor-field-card-copy strong {font-size:11px;color:#1a3c70;font-weight:730;}
+.certify-editor-page .editor-field-card-copy small {
+  position:absolute!important;width:1px!important;height:1px!important;
+  overflow:hidden!important;clip-path:inset(50%)!important;
+}
+.certify-editor-page .editor-field-card-arrow {font-size:15px;color:#7991b6;}
+.certify-editor-page .editor-add-field-wrapper{margin:8px 0 0;}
+.certify-editor-page .editor-add-menu{border:1px dashed #bdd4f8;background:#f9fbff;}
+.certify-editor-page .editor-add-menu summary{min-height:33px;padding:6px 10px;color:#215ac1;background:#f8fbff;}
+.certify-editor-page .editor-add-menu-content{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px;padding:7px;
+}
+.certify-editor-page .editor-add-menu-content button{border:1px solid #e1e9f6;border-radius:7px;padding:7px;background:#fff;}
+.certify-editor-page .editor-add-menu-content button b{font-size:11px;}
+.certify-editor-page .editor-add-menu-content button small{font-size:10px;}
+/* Only one selected-field identifier is visible: in the inline editing row.
+   Keep the Content dropdown for changing a selected field to another type. */
+.certify-editor-page .editor-field-editing{
+  margin:10px 0 0;
+  padding:10px 11px 9px;
+  background:#f7faff;
+  border:1px solid #e1eafb;
+  border-radius:10px;
+}
+.certify-editor-page .editor-field-editing-header{
+  display:flex;gap:9px;align-items:center;justify-content:space-between;margin:0 0 6px;
+}
+.certify-editor-page .editor-field-editing-header>div{display:flex;flex-direction:column;min-width:0;}
+.certify-editor-page .editor-editing-eyebrow{
+  font-size:9px;font-weight:800;letter-spacing:.08em;color:#6284b9;
+}
+.certify-editor-page #elementTitle {
+  font-size:12px;font-weight:740;color:#163d73;
+  white-space:nowrap;text-overflow:ellipsis;overflow:hidden;
+}
+.certify-editor-page .editor-saving-status{
+  flex:0 0 auto;font-size:9px;font-weight:650;color:#6883a8;
+}
+.certify-editor-page .editor-content-row{
+  display:grid;grid-template-columns:63px minmax(0,1fr);align-items:center;gap:8px;
+}
+.certify-editor-page label.editor-field-content-label {
+  margin:0!important;color:#45628b;font-size:11px;font-weight:700;
+}
+.certify-editor-page .editor-content-row #fieldKey {
+  margin:0;width:100%;min-height:32px;height:32px;
+  padding:5px 8px;background:white;
+}
+.certify-editor-page #literalWrap label {margin:8px 0 3px;}
+.certify-editor-page #literalWrap input {min-height:32px;height:32px;}
+.certify-editor-page .editor-field-secondary-actions {
+  display:flex;justify-content:flex-end;margin:3px 0 0;min-height:0;
+}
+.certify-editor-page .editor-remove-field {font-size:10px;line-height:1.5;}
+/* Appearance: one clear heading, no repeat of the selected-field card. */
+.certify-editor-page .editor-typography-panel{padding:13px 16px 15px;}
+.certify-editor-page .editor-style-heading{
+  display:flex;align-items:baseline;justify-content:space-between;gap:8px;
+  margin:0 0 7px;
+}
+.certify-editor-page .editor-style-heading h2{
+  font-size:14px;line-height:1.2;color:#183d71;margin:0;font-weight:780;
+}
+.certify-editor-page .editor-style-heading span{font-size:10px;color:#8295af;text-align:right;}
+.certify-editor-page .editor-typography-panel label:not(.switch-label) {margin:9px 0 4px;font-size:11px;}
+.certify-editor-page .editor-typography-panel select,
+.certify-editor-page .editor-typography-panel input:not([type=checkbox]):not([type=color]) {min-height:34px;padding:6px 9px;font-size:12px;}
+.certify-editor-page .editor-typography-panel .two-cols{gap:10px;}
+.certify-editor-page .editor-font-appearance{margin:10px 0;}
+.certify-editor-page .editor-text-align-buttons button{min-height:32px;}
+.certify-editor-page .font-inline-link{margin-top:4px;}
+.certify-editor-page .editor-auto-fit{margin-top:2px!important;}
+.certify-editor-page .editor-accordion summary{min-height:42px;font-size:12px;}
+.certify-editor-page .inspector-footer {gap:8px;padding:10px 12px;background:#fff;}
+.certify-editor-page .inspector-footer .btn {font-size:11px;font-weight:730;min-height:39px;}
+/* At desktop heights, the canvas and inspector occupy only the screen's content
+   box. Additional fields are scrolled INSIDE the inspector instead. */
+@media (min-width:1021px) and (min-height:670px) {
+  .certify-editor-page .editor-layout {
+    grid-template-columns:minmax(0,1fr) clamp(337px,27vw,405px);
+    gap:13px;
+  }
+  .certify-editor-page .editor-properties-card {height:100%;max-height:none;}
+  .certify-editor-page .inspector-scroll-body {overflow-y:auto;min-height:0;}
+  .certify-editor-page .certificate-fields-panel {padding:11px 13px 11px;}
+  .certify-editor-page .editor-typography-panel {padding:11px 13px;}
+  .certify-editor-page .canvas-toolbar {min-height:49px;padding:9px 13px;}
+  .certify-editor-page .editor-preview-controls {min-height:55px;padding:8px 13px;}
+  .certify-editor-page .editor-stage {margin:7px 10px 0;}
+  .certify-editor-page .inspector-footer {padding:8px 11px;}
+}
+@media (max-width:1020px) {
+  .certify-editor-page .editor-field-list {max-height:unset;}
+  .certify-editor-page .editor-layout {grid-template-columns:1fr;}
+  .certify-editor-page .editor-properties-card{height:auto;}
+}
+@media (max-width:500px) {
+  .certify-editor-page .editor-style-heading span {display:none;}
+  .certify-editor-page .editor-fields-toolbar-help {display:none;}
+  .certify-editor-page .editor-preview-controls {gap:8px;}
+  .certify-editor-page .editor-field-list {grid-template-columns:1fr 1fr;}
+  .certify-editor-page .editor-field-card-icon {width:25px;height:25px;flex-basis:25px;}
+  .certify-editor-page .editor-field-card-copy strong{font-size:10px;}
+}
+/* The selected state already identifies the field; hide chevrons so long labels fit. */
+.certify-editor-page .editor-field-card-arrow {display:none;}
+.certify-editor-page .editor-field-card-icon {width:26px;height:26px;flex-basis:26px;}
+
+
+/* ---- Certify v1.16.3 historical editor styles (retained for compatibility) ---- */
+/* Certify 1.6.3 · visual alignment and inspector cleanup */
+.certify-editor-page {
+  --editor-card:#ffffff;
+  --editor-card-soft:#f6f9fe;
+  --editor-border:#dfe8f4;
+  --editor-border-strong:#cfdbee;
+  --editor-blue:#2a66da;
+  --editor-blue-soft:#edf4ff;
+  --editor-shadow:0 10px 28px rgba(16,49,96,.05);
+}
+
+/* overall page rhythm */
+.certify-editor-page .editor-layout {
+  align-items:start;
+  grid-template-columns:minmax(0,1fr) minmax(360px,420px);
+  gap:16px;
+}
+.certify-editor-page .editor-workspace,
+.certify-editor-page .editor-properties-card {
+  border:1px solid var(--editor-border);
+  border-radius:18px;
+  box-shadow:var(--editor-shadow);
+  overflow:hidden;
+}
+.certify-editor-page .editor-properties-card {
+  background:var(--editor-card-soft);
+  height:auto;
+  max-height:calc(100vh - 150px);
+}
+.certify-editor-page .inspector-scroll-body {
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  padding:12px;
+  flex:0 1 auto;
+  overflow-y:auto;
+}
+
+/* workspace header */
+.certify-editor-page .canvas-toolbar,
+.certify-editor-page .editor-preview-controls {
+  padding-left:16px;
+  padding-right:16px;
+}
+.certify-editor-page .canvas-toolbar {
+  background:#fff;
+  border-bottom:1px solid #e7eef8;
+}
+.certify-editor-page .editor-preview-controls {
+  display:grid;
+  grid-template-columns:minmax(0,1.55fr) auto auto;
+  gap:12px;
+  align-items:end;
+  background:#fbfdff;
+  border-bottom:1px solid #eef3fa;
+}
+.certify-editor-page .editor-control-unit {
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.certify-editor-page .editor-control-unit > label,
+.certify-editor-page .editor-control-unit > .editor-toolbar-caption {
+  margin:0;
+  font-size:11px;
+  font-weight:730;
+  color:#45628b;
+}
+.certify-editor-page .editor-control-inline,
+.certify-editor-page .editor-tool-buttons {
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.certify-editor-page .editor-control-inline input {min-width:0;flex:1 1 auto;}
+.certify-editor-page .editor-tool-button,
+.certify-editor-page #canvasZoom,
+.certify-editor-page .small-btn {
+  min-height:38px;
+  border-radius:10px;
+}
+.certify-editor-page .editor-tool-button span {white-space:nowrap;}
+.certify-editor-page .editor-stage {
+  margin:12px;
+  border-radius:14px;
+}
+.certify-editor-page .editor-canvas-footer {
+  padding:10px 14px 12px;
+  background:#fff;
+  border-top:1px solid #eef3fa;
+}
+
+/* inspector section cards */
+.certify-editor-page .certificate-fields-panel,
+.certify-editor-page .editor-typography-panel,
+.certify-editor-page .editor-accordion {
+  background:var(--editor-card);
+  border:1px solid var(--editor-border);
+  border-radius:14px;
+  overflow:hidden;
+}
+.certify-editor-page .certificate-fields-panel,
+.certify-editor-page .editor-typography-panel {
+  padding:14px;
+}
+.certify-editor-page .certificate-fields-panel {border-bottom:1px solid var(--editor-border);}
+.certify-editor-page .editor-panel-heading,
+.certify-editor-page .editor-style-heading {
+  margin-bottom:12px;
+}
+.certify-editor-page .editor-panel-heading h2,
+.certify-editor-page .editor-style-heading h2 {
+  font-size:15px;
+  line-height:1.25;
+  letter-spacing:-.02em;
+}
+.certify-editor-page .editor-panel-heading p,
+.certify-editor-page .editor-style-heading span {
+  font-size:11px;
+  color:#7890af;
+}
+.certify-editor-page .editor-fields-toolbar {
+  align-items:center;
+  margin-bottom:10px;
+}
+.certify-editor-page #fieldCount,
+.certify-editor-page .editor-fields-toolbar-help {
+  font-size:11px;
+}
+.certify-editor-page .editor-field-list {
+  gap:8px;
+  max-height:none;
+  overflow:visible;
+}
+.certify-editor-page .editor-field-card {
+  min-height:54px;
+  padding:10px 11px;
+  border-radius:12px;
+  align-items:flex-start;
+}
+.certify-editor-page .editor-field-card-icon {
+  width:30px;
+  height:30px;
+  flex-basis:30px;
+  border-radius:10px;
+  margin-top:1px;
+}
+.certify-editor-page .editor-field-card-copy {
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+}
+.certify-editor-page .editor-field-card-copy strong {
+  font-size:12px;
+  line-height:1.3;
+}
+.certify-editor-page .editor-field-card-copy small {
+  position:static!important;
+  width:auto!important;
+  height:auto!important;
+  overflow:visible!important;
+  clip-path:none!important;
+  color:#7b8ba4;
+  font-size:10px;
+  line-height:1.35;
+}
+.certify-editor-page .editor-field-card.is-selected {
+  border-color:#92b6f4;
+  background:var(--editor-blue-soft);
+  box-shadow:0 0 0 1px rgba(42,102,218,.08);
+}
+.certify-editor-page .editor-add-field-wrapper {margin:10px 0 0;}
+.certify-editor-page .editor-add-menu {
+  border:1px dashed #b8d0f5;
+  background:#fbfdff;
+  border-radius:12px;
+}
+.certify-editor-page .editor-add-menu summary {
+  min-height:40px;
+  font-size:12px;
+  font-weight:750;
+}
+.certify-editor-page .editor-add-menu-content {
+  grid-template-columns:1fr 1fr;
+  gap:6px;
+  padding:8px;
+}
+.certify-editor-page .editor-add-menu-content button {
+  border-radius:10px;
+  padding:8px 9px;
+}
+.certify-editor-page .editor-field-editing {
+  margin-top:12px;
+  padding:12px;
+  border-radius:12px;
+  background:#f7faff;
+  border:1px solid #dfe8f7;
+}
+.certify-editor-page .editor-field-editing-header {
+  margin-bottom:10px;
+  align-items:flex-start;
+}
+.certify-editor-page .editor-editing-eyebrow {
+  font-size:10px;
+  letter-spacing:.08em;
+}
+.certify-editor-page #elementTitle {
+  font-size:13px;
+  margin-top:2px;
+}
+.certify-editor-page .editor-saving-status {
+  font-size:10px;
+  padding-top:2px;
+}
+.certify-editor-page .editor-content-row {
+  grid-template-columns:1fr;
+  gap:6px;
+}
+.certify-editor-page .editor-content-row #fieldKey,
+.certify-editor-page #literalWrap input,
+.certify-editor-page .editor-typography-panel select,
+.certify-editor-page .editor-typography-panel input:not([type=checkbox]):not([type=color]) {
+  min-height:40px;
+  height:40px;
+  border-radius:10px;
+}
+.certify-editor-page #literalWrap label {margin:10px 0 4px;}
+.certify-editor-page .editor-field-secondary-actions {
+  margin-top:8px;
+  padding-top:8px;
+  border-top:1px dashed #d8e4f4;
+}
+
+/* text style section */
+.certify-editor-page .editor-typography-panel .two-cols {
+  gap:12px;
+  align-items:end;
+}
+.certify-editor-page .font-inline-link {
+  display:inline-block;
+  margin-top:2px;
+  margin-bottom:2px;
+}
+.certify-editor-page .editor-color-field {
+  min-height:40px;
+  border:1px solid var(--editor-border-strong);
+  border-radius:10px;
+  background:#fff;
+  padding:4px 8px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.certify-editor-page .editor-color-field input[type=color] {
+  width:32px;
+  height:28px;
+  padding:0;
+  border:0;
+  background:transparent;
+}
+.certify-editor-page .editor-color-field output {
+  font-size:11px;
+  color:#59718f;
+}
+.certify-editor-page .editor-text-align-buttons {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px;
+  margin-top:4px;
+}
+.certify-editor-page .editor-text-align-buttons button {
+  min-height:38px;
+  border-radius:10px;
+}
+.certify-editor-page .editor-font-appearance {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin:12px 0 10px;
+}
+.certify-editor-page .switch-label {
+  min-height:38px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:0 10px;
+  border:1px solid var(--editor-border-strong);
+  border-radius:10px;
+  background:#fff;
+}
+.certify-editor-page .editor-auto-fit {
+  margin-top:0!important;
+  justify-content:flex-start;
+  padding:10px;
+}
+.certify-editor-page .editor-auto-fit input {margin:0;}
+
+/* accordions and footer */
+.certify-editor-page .editor-accordion summary {
+  min-height:46px;
+  padding:12px 14px;
+  font-size:12px;
+  background:#fff;
+}
+.certify-editor-page .editor-accordion-body {
+  padding:0 14px 14px;
+  background:#fff;
+}
+.certify-editor-page .inspector-footer {
+  padding:12px;
+  gap:8px;
+  border-top:1px solid #e5edf8;
+  background:#f6f9fe;
+}
+.certify-editor-page .inspector-footer .btn {
+  min-height:44px;
+  border-radius:12px;
+  font-size:12px;
+}
+
+/* desktop single-screen fit without cramped labels */
+@media (min-width:1021px) and (min-height:670px) {
+  .certify-editor-page .editor-layout {
+    grid-template-columns:minmax(0,1fr) minmax(370px,420px);
+    gap:16px;
+  }
+  .certify-editor-page .editor-properties-card {
+    max-height:calc(100vh - 140px);
+  }
+  .certify-editor-page .canvas-toolbar {padding:12px 16px; min-height:54px;}
+  .certify-editor-page .editor-preview-controls {padding:10px 16px;}
+  .certify-editor-page .certificate-fields-panel,
+  .certify-editor-page .editor-typography-panel {padding:14px;}
+}
+
+/* responsive cleanup */
+@media (max-width:1280px) {
+  .certify-editor-page .editor-preview-controls {
+    grid-template-columns:minmax(0,1fr) auto;
+  }
+  .certify-editor-page .editor-view-tools {
+    grid-column:1 / -1;
+  }
+}
+@media (max-width:1020px) {
+  .certify-editor-page .editor-layout {grid-template-columns:1fr;}
+  .certify-editor-page .editor-properties-card {max-height:none;}
+  .certify-editor-page .inspector-scroll-body {overflow:visible;}
+}
+@media (max-width:640px) {
+  .certify-editor-page .editor-preview-controls {
+    grid-template-columns:1fr;
+  }
+  .certify-editor-page .editor-control-inline,
+  .certify-editor-page .editor-tool-buttons {
+    flex-wrap:wrap;
+  }
+  .certify-editor-page .editor-field-list,
+  .certify-editor-page .editor-add-menu-content {
+    grid-template-columns:1fr;
+  }
+  .certify-editor-page .editor-font-appearance,
+  .certify-editor-page .inspector-footer,
+  .certify-editor-page .editor-typography-panel .two-cols {
+    grid-template-columns:1fr;
+  }
+}
+
+
+/* ---- Certify v1.16.4 historical editor styles (retained for compatibility) ---- */
+/* Certify 1.6.4 · Redesigned certificate studio.
+   All selectors are scoped to the editor so other Laravel pages are unaffected.
+   Keeps the real canvas/inputs/field IDs and the single-screen desktop behavior. */
+.certify-editor-page {
+  --studio-blue:#2467e8;
+  --studio-ink:#152e54;
+  --studio-muted:#7184a1;
+  --studio-line:#e0e8f3;
+  --studio-soft:#f7f9fe;
+}
+.certify-editor-page .editor-layout {grid-template-columns:minmax(0,1fr) minmax(355px,392px);gap:14px;align-items:stretch;}
+.certify-editor-page .editor-workspace,
+.certify-editor-page .editor-properties-card {
+  border:1px solid #e2e9f3;
+  border-radius:18px;
+  box-shadow:0 8px 28px rgba(22,57,105,.055);
+  background:#fff;
+  min-width:0;
+}
+.certify-editor-page .editor-workspace {overflow:hidden;}
+.certify-editor-page .canvas-toolbar {min-height:58px;padding:12px 17px;border-color:#e9eff7;}
+.certify-editor-page .canvas-heading .toolbar-label {font-size:16px;font-weight:725;letter-spacing:-.35px;}
+.certify-editor-page .canvas-heading p {color:#7588a4;font-size:11px;}
+.certify-editor-page .canvas-symbol {width:36px;height:36px;flex:0 0 36px;border-radius:11px;background:#eaf2ff;}
+.certify-editor-page .editor-preview-controls {
+  grid-template-columns:minmax(0,1.5fr) auto auto;
+  gap:11px;
+  min-height:74px;
+  padding:11px 17px;
+  background:#fcfdff;
+  border-bottom:1px solid #e9eff7;
+}
+.certify-editor-page .editor-control-unit {min-width:0;}
+.certify-editor-page .editor-control-unit>label,
+.certify-editor-page .editor-control-unit>.editor-toolbar-caption {font-size:10px;line-height:1.2;color:#486587;letter-spacing:.01em;}
+.certify-editor-page .editor-control-inline {gap:7px;}
+.certify-editor-page .name-test input {min-height:36px;height:36px;border-radius:9px;}
+.certify-editor-page .name-test .btn {min-height:36px;height:36px;font-size:10px;padding:6px 10px;}
+.certify-editor-page .editor-tool-button,
+.certify-editor-page .editor-view-tools select {min-height:36px;height:36px;border-radius:9px;}
+.certify-editor-page .editor-tool-buttons {gap:5px;}
+.certify-editor-page .editor-alignment,.certify-editor-page .editor-view-tools {grid-column:auto;}
+.certify-editor-page .editor-stage {border:1px solid #e5edf8;border-radius:13px;background-color:#f1f6fd;margin:10px 11px 0;}
+.certify-editor-page .editor-canvas-footer {padding:8px 13px;color:#7185a2;background:#fff;}
+
+/* The inspector's cards are scrolled together, while the save bar stays fixed. */
+.certify-editor-page .editor-inspector {min-height:0;}
+.certify-editor-page .editor-properties-card {
+  height:100%;max-height:none;min-height:0;
+  display:flex;flex-direction:column;
+  background:#f6f8fc;
+  overflow:hidden;
+}
+.certify-editor-page .inspector-scroll-body {
+  display:flex;flex-direction:column;
+  flex:1 1 auto;min-height:0;
+  overflow-y:auto;overscroll-behavior:contain;
+  padding:10px;gap:10px;
+  scrollbar-width:thin;
+  scrollbar-color:#cbd9ee transparent;
+}
+.certify-editor-page .certificate-fields-panel,
+.certify-editor-page .editor-settings-card {
+  background:#fff;
+  border:1px solid #e3ebf6;
+  border-radius:14px;
+  overflow:visible;
+  flex:0 0 auto;
+  box-shadow:0 2px 9px rgba(22,60,100,.025);
+}
+.certify-editor-page .certificate-fields-panel {padding:13px;}
+.certify-editor-page .editor-panel-heading {margin:0 0 10px;gap:9px;}
+.certify-editor-page .editor-panel-icon,
+.certify-editor-page .editor-settings-symbol {
+  display:grid;place-items:center;
+  height:35px;width:35px;flex:0 0 35px;
+  border-radius:11px;background:#eaf2ff;color:#2565dd;
+  font-size:16px;font-weight:770;
+}
+.certify-editor-page .editor-panel-heading h2,
+.certify-editor-page .editor-settings-heading h2 {color:var(--studio-ink);font-size:15px;letter-spacing:-.32px;margin:0 0 2px;font-weight:740;}
+.certify-editor-page .editor-panel-heading p,
+.certify-editor-page .editor-settings-subtitle {font-size:11px;line-height:1.3;color:var(--studio-muted);margin:0;}
+.certify-editor-page .editor-fields-toolbar {margin:0 0 8px;}
+.certify-editor-page #fieldCount {font-size:10px;color:#3a5b89;font-weight:730;}
+.certify-editor-page .editor-fields-toolbar-help {font-size:10px;color:#8395ad;}
+.certify-editor-page .editor-field-list {display:flex;flex-direction:column;gap:6px;max-height:none;overflow:visible;}
+.certify-editor-page .editor-field-row {display:flex;align-items:center;min-width:0;position:relative;gap:0;}
+.certify-editor-page .editor-field-card {
+  width:100%;min-width:0;min-height:51px;
+  padding:7px 41px 7px 9px;border-radius:11px;
+  background:#fff;border:1px solid #e4ebf5;
+  align-items:center;gap:9px;
+  transition:background .12s,border-color .12s;
+}
+.certify-editor-page .editor-field-card:hover {background:#f7faff;border-color:#bdd3f9;}
+.certify-editor-page .editor-field-card.is-selected {background:#eef5ff;border-color:#74a5fa;box-shadow:inset 0 0 0 1px #bed6ff;}
+.certify-editor-page .editor-field-card-icon {width:32px;height:32px;flex:0 0 32px;border-radius:9px;display:grid;place-items:center;background:#eaf2ff;color:#245fc8;font-size:15px;font-weight:750;}
+.certify-editor-page .editor-field-card-copy {display:block;min-width:0;}
+.certify-editor-page .editor-field-card-copy strong {display:block;font-size:12px;color:#173b71;line-height:1.3;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.certify-editor-page .editor-field-card-copy small {font-size:10px;line-height:1.35;color:#7c8fa9;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:static!important;width:auto!important;height:auto!important;clip-path:none!important;}
+.certify-editor-page .editor-row-remove {
+  position:absolute;right:7px;top:50%;transform:translateY(-50%);
+  border:0;background:transparent;color:#98a9c0;
+  width:30px;height:30px;border-radius:8px;
+  display:grid;place-items:center;
+  font-size:22px;font-weight:400;line-height:1;
+}
+.certify-editor-page .editor-row-remove:hover,
+.certify-editor-page .editor-row-remove:focus-visible {color:#b42336;background:#fff0f1;}
+.certify-editor-page .editor-add-field-wrapper {margin:8px 0 0;}
+.certify-editor-page .editor-add-menu {border-radius:10px;border:1px dashed #bdd3f8;background:#f9fbff;}
+.certify-editor-page .editor-add-menu summary {min-height:38px;padding:8px 10px;background:transparent;color:#245bc7;font-size:12px;}
+.certify-editor-page .editor-add-menu-content {grid-template-columns:repeat(2,minmax(0,1fr));padding:7px;gap:6px;}
+.certify-editor-page .editor-add-menu-content button {padding:8px;border:1px solid #e3ebf7;border-radius:9px;}
+
+/* Settings heading and real accessible tabs */
+.certify-editor-page .editor-settings-header {display:flex;align-items:center;gap:9px;padding:12px 13px 10px;min-width:0;}
+.certify-editor-page .editor-settings-heading {flex:1;min-width:0;}
+.certify-editor-page .editor-settings-heading h2 {font-size:14px;}
+.certify-editor-page .editor-settings-subtitle {display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.certify-editor-page .editor-saving-status {font-size:10px;color:#6680a2;max-width:112px;text-align:right;flex:0 0 auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.certify-editor-page .editor-settings-tabs {display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;background:#f2f6fc;border-top:1px solid #eef2f8;border-bottom:1px solid #e8eef7;padding:3px 4px 0;}
+.certify-editor-page .editor-settings-tabs button {border:0;background:transparent;border-radius:8px 8px 0 0;padding:10px 3px 11px;color:#667b9b;font-size:11px;font-weight:650;min-width:0;white-space:nowrap;cursor:pointer;border-bottom:2px solid transparent;}
+.certify-editor-page .editor-settings-tabs button:hover {background:#eaf1fc;color:#2559b8;}
+.certify-editor-page .editor-settings-tabs button[aria-selected="true"] {background:#fff;color:#2465dc;border-bottom-color:#2465dc;font-weight:750;}
+.certify-editor-page .editor-tab-panel[hidden] {display:none!important;}
+.certify-editor-page .editor-settings-content {background:#fff;}
+.certify-editor-page .editor-tab-panel {padding:11px 13px 13px;}
+.certify-editor-page .editor-typography-panel {border:0;border-radius:0;background:#fff;padding:11px 13px 13px;}
+.certify-editor-page .editor-tab-panel label:not(.switch-label) {font-size:11px;color:#3a5276;font-weight:680;display:block;margin:8px 0 5px;}
+.certify-editor-page .editor-tab-panel label:first-child {margin-top:0;}
+.certify-editor-page .editor-tab-panel select,
+.certify-editor-page .editor-tab-panel input:not([type=checkbox]):not([type=color]) {height:36px;min-height:36px;padding:6px 9px;font-size:12px;border-radius:9px;}
+.certify-editor-page .editor-style-data {display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.certify-editor-page .font-inline-link {display:block;font-size:10px;margin:5px 0 1px;}
+.certify-editor-page .editor-style-options {display:grid;grid-template-columns:1.05fr .95fr;gap:11px;margin-top:5px;align-items:start;}
+.certify-editor-page .editor-text-align-buttons {grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin-top:0;}
+.certify-editor-page .editor-text-align-buttons button {min-height:33px;height:33px;border-radius:8px;font-size:15px;}
+.certify-editor-page .editor-font-appearance {display:grid;grid-template-columns:1fr 1fr;gap:5px;margin:0;}
+.certify-editor-page .editor-font-appearance .switch-label {display:flex;align-items:center;justify-content:center;gap:4px;padding:5px 3px;min-height:33px;height:33px;border-radius:8px;font-size:11px;white-space:nowrap;}
+.certify-editor-page .editor-font-appearance .switch-label input {width:14px;height:14px;margin:0;}
+.certify-editor-page .editor-font-appearance .switch-label span {font-size:10px;}
+.certify-editor-page .editor-color-field {height:36px;min-height:36px;padding:3px 6px;border-radius:9px;}
+.certify-editor-page .editor-color-field input[type="color"] {width:28px;height:26px;flex:0 0 28px;}
+.certify-editor-page .editor-color-field output {font-size:10px;}
+.certify-editor-page .editor-auto-fit {display:flex;justify-content:space-between;gap:12px;align-items:center;margin:12px 0 0!important;padding:9px 10px;border:1px solid #e5ecf5;border-radius:11px;background:#f9fbfe;min-height:52px;}
+.certify-editor-page .editor-auto-fit span {display:flex;flex-direction:column;gap:2px;min-width:0;}
+.certify-editor-page .editor-auto-fit strong {font-size:11px;color:#31517a;}
+.certify-editor-page .editor-auto-fit small {font-size:10px;color:#8293aa;line-height:1.35;font-weight:450;}
+.certify-editor-page .editor-auto-fit input {width:17px;height:17px;flex:0 0 auto;margin:0;}
+.certify-editor-page .editor-font-style-note {margin-top:6px;line-height:1.45;font-size:10px;}
+.certify-editor-page .editor-panel-description {margin:0 0 12px;font-size:11px;color:#6d819e;line-height:1.55;}
+.certify-editor-page .editor-position-panel .two-cols {display:grid;grid-template-columns:1fr 1fr;gap:9px 11px;}
+.certify-editor-page .editor-position-tip {padding:10px;border-radius:9px;background:#f4f8ff;color:#6380a8;font-size:11px;margin-top:14px;line-height:1.5;}
+.certify-editor-page #literalWrap {margin-top:11px;}
+.certify-editor-page .editor-field-secondary-actions {margin-top:16px;padding-top:12px;border-top:1px solid #e5edf7;justify-content:flex-start;}
+.certify-editor-page .editor-remove-field {font-size:11px;color:#b13b44;text-decoration:none;}
+.certify-editor-page .editor-remove-field:hover {color:#9c2730;text-decoration:underline;}
+.certify-editor-page .inspector-footer {grid-template-columns:1fr 1.15fr;display:grid;gap:8px;background:#fff;padding:10px;border-top:1px solid #e4ecf6;}
+.certify-editor-page .inspector-footer .btn {font-size:11px;font-weight:710;min-height:40px;border-radius:9px;white-space:nowrap;padding:7px 8px;}
+
+/* Retain one-screen desktop behavior; scroll only the inspector's content. */
+@media (min-width:1021px) and (min-height:670px) {
+  .certify-editor-page .editor-layout {grid-template-columns:minmax(0,1fr) clamp(350px,27vw,392px);gap:12px;}
+  .certify-editor-page .editor-workspace {height:100%;min-height:0;}
+  .certify-editor-page .editor-inspector {height:100%;min-height:0;}
+  .certify-editor-page .editor-properties-card {height:100%;max-height:none;min-height:0;}
+  .certify-editor-page .inspector-scroll-body {flex:1;min-height:0;overflow:auto;}
+  .certify-editor-page .canvas-toolbar {min-height:52px;padding:8px 13px;}
+  .certify-editor-page .editor-preview-controls {min-height:65px;padding:7px 12px;}
+  .certify-editor-page .editor-stage {flex:1;min-height:0!important;height:0;}
+}
+@media (min-width:1021px) and (max-width:1280px) {
+  .certify-editor-page .editor-preview-controls {gap:6px;}
+  .certify-editor-page .editor-tool-button span {display:none;}
+  .certify-editor-page .editor-canvas-badge {display:none;}
+}
+@media (max-width:1020px) {
+  .certify-editor-page .editor-layout {grid-template-columns:1fr;}
+  .certify-editor-page .editor-properties-card {height:auto;max-height:none;}
+  .certify-editor-page .inspector-scroll-body {overflow:visible;}
+  .certify-editor-page .editor-field-list {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width:680px) {
+  .certify-editor-page .editor-preview-controls {grid-template-columns:1fr;}
+  .certify-editor-page .editor-field-list {grid-template-columns:1fr;}
+  .certify-editor-page .editor-style-options {grid-template-columns:1fr;}
+  .certify-editor-page .editor-font-appearance {grid-template-columns:1fr 1fr;}
+}
+
+
+/* ---- Certify v1.6.5 consolidated overrides ---- */
+/* Certify v1.6.5 — balanced two-panel certificate studio.
+   Loaded after older editor styles; scoped to the editor only. */
+.certify-editor-page {
+  --ce-blue:#2563db;
+  --ce-dark:#15365e;
+  --ce-muted:#7185a1;
+  --ce-line:#e1e9f4;
+  --ce-soft:#f5f8fd;
+}
+.certify-editor-page .editor-layout {
+  gap:14px;
+  grid-template-columns:minmax(0,1fr) clamp(365px,28vw,428px);
+  align-items:stretch;
+}
+.certify-editor-page .editor-workspace,
+.certify-editor-page .editor-properties-card {
+  min-width:0;
+  border:1px solid #dfe8f3;
+  border-radius:16px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 8px 30px rgba(24,52,94,.045);
+}
+/* Top bar: labels and control baselines align, including at laptop widths. */
+.certify-editor-page .canvas-toolbar {
+  min-height:54px;
+  padding:10px 16px;
+  background:#fff;
+  border-bottom:1px solid #e9eef6;
+}
+.certify-editor-page .canvas-heading .toolbar-label {font-size:15px;line-height:1.2;letter-spacing:-.02em;}
+.certify-editor-page .canvas-heading p {font-size:11px;line-height:1.4;color:var(--ce-muted);}
+.certify-editor-page .editor-preview-controls {
+  display:grid;
+  grid-template-columns:minmax(215px,1fr) max-content max-content;
+  align-items:end;
+  gap:12px;
+  padding:10px 16px 12px;
+  background:#fcfdff;
+  border-bottom:1px solid #e9eff7;
+}
+.certify-editor-page .editor-preview-controls .editor-control-unit {
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  align-items:stretch;
+}
+.certify-editor-page .editor-preview-controls .editor-control-unit > label,
+.certify-editor-page .editor-preview-controls .editor-toolbar-caption {
+  margin:0;
+  font-size:10px;
+  font-weight:730;
+  line-height:1.2;
+  color:#51688b;
+}
+.certify-editor-page .editor-control-inline,
+.certify-editor-page .editor-tool-buttons {
+  display:flex;
+  align-items:stretch;
+  gap:7px;
+  min-width:0;
+}
+.certify-editor-page .editor-control-inline input,
+.certify-editor-page .editor-control-inline button,
+.certify-editor-page .editor-tool-button,
+.certify-editor-page #canvasZoom {
+  height:36px;
+  min-height:36px;
+  border-radius:9px;
+  margin:0;
+  line-height:1.2;
+  font-size:11px;
+}
+.certify-editor-page .editor-control-inline input {flex:1 1 auto;min-width:80px;padding:8px 10px;}
+.certify-editor-page .editor-control-inline button {white-space:nowrap;flex:0 0 auto;padding:7px 11px;}
+.certify-editor-page .editor-tool-button {padding:7px 9px;white-space:nowrap;}
+.certify-editor-page #canvasZoom {width:94px;padding:6px 7px;}
+.certify-editor-page .editor-view-fullscreen {width:36px;min-width:36px;display:grid;place-items:center;}
+.certify-editor-page .editor-stage {
+  margin:10px 12px 0;
+  border-radius:12px;
+  background-color:#f4f8fe;
+  background-image:radial-gradient(#d7e2f2 .7px,transparent .7px);
+  background-size:18px 18px;
+}
+.certify-editor-page .editor-canvas-footer {padding:8px 13px 10px;color:#71849f;background:#fff;font-size:10px;}
+/* Inspector: two genuinely separated areas rather than a very long form. */
+.certify-editor-page .editor-properties-card {
+  display:flex;
+  flex-direction:column;
+  background:#f6f9fe;
+}
+.certify-editor-page .inspector-scroll-body {
+  flex:1 1 auto;
+  min-height:0;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  padding:10px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.certify-editor-page .certificate-fields-panel,
+.certify-editor-page .editor-settings-card {
+  background:#fff;
+  border:1px solid #e1e9f4;
+  border-radius:13px;
+  margin:0;
+  overflow:hidden;
+  flex:0 0 auto;
+}
+.certify-editor-page .certificate-fields-panel {padding:13px;}
+.certify-editor-page .editor-panel-heading {margin:0 0 9px;gap:9px;align-items:center;}
+.certify-editor-page .editor-panel-icon,
+.certify-editor-page .editor-settings-symbol {height:32px;width:32px;flex:0 0 32px;border-radius:10px;}
+.certify-editor-page .editor-panel-heading h2,
+.certify-editor-page .editor-settings-heading h2 {font-size:14px;font-weight:740;letter-spacing:-.02em;}
+.certify-editor-page .editor-panel-heading p {font-size:10px;}
+.certify-editor-page .editor-fields-toolbar {margin:0 0 8px;padding:0;}
+.certify-editor-page #fieldCount {font-size:10px;}
+.certify-editor-page .editor-fields-toolbar-help {font-size:10px;}
+.certify-editor-page .editor-field-list {
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  max-height:215px;
+  overflow-y:auto;
+  scrollbar-width:thin;
+  padding:1px;
+}
+.certify-editor-page .editor-field-row {position:relative;display:flex;align-items:center;min-width:0;}
+.certify-editor-page .editor-field-card {
+  min-width:0;
+  min-height:49px;
+  border:1px solid #e1e9f4;
+  border-radius:10px;
+  background:#fff;
+  padding:7px 39px 7px 9px;
+  align-items:center;
+  gap:9px;
+  box-shadow:none;
+}
+.certify-editor-page .editor-field-card.is-selected {background:#edf4ff;border-color:#83adf6;box-shadow:inset 0 0 0 1px #cee0ff;}
+.certify-editor-page .editor-field-card-icon {width:29px;height:29px;flex:0 0 29px;border-radius:8px;font-size:13px;}
+.certify-editor-page .editor-field-card-copy strong,
+.certify-editor-page .editor-field-card-copy small {
+  white-space:normal;
+  overflow:visible;
+  text-overflow:clip;
+  line-height:1.3;
+}
+.certify-editor-page .editor-field-card-copy strong {font-size:11px;}
+.certify-editor-page .editor-field-card-copy small {font-size:10px;}
+.certify-editor-page .editor-row-remove {
+  display:grid;
+  place-items:center;
+  right:8px;
+  width:27px;height:27px;
+  font-size:20px;
+  color:#8397b5;
+  border-radius:8px;
+}
+.certify-editor-page .editor-row-remove:focus-visible {outline:2px solid #7aa9f5;outline-offset:1px;}
+.certify-editor-page .editor-add-field-wrapper {margin:8px 0 0;}
+.certify-editor-page .editor-add-menu {border-radius:10px;border:1px dashed #b8cff1;background:#f8fbff;}
+.certify-editor-page .editor-add-menu summary {min-height:36px;padding:8px 12px;}
+.certify-editor-page .editor-add-menu-content {padding:7px;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;}
+.certify-editor-page .editor-add-menu-content button {min-width:0;padding:8px;border:1px solid #e0e9f5;border-radius:9px;}
+/* 'Content' belongs to Certificate fields; no Advanced tab. */
+.certify-editor-page .editor-selected-content {
+  border-top:1px solid #edf1f7;
+  padding-top:10px;
+  margin-top:11px;
+}
+.certify-editor-page .editor-selected-content-heading {display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:6px;}
+.certify-editor-page .editor-selected-content-heading label {font-size:11px;font-weight:720;color:#314c74;margin:0;}
+.certify-editor-page .editor-selected-content-heading span {font-size:10px;color:#879ab2;text-align:right;}
+.certify-editor-page .editor-selected-content select,
+.certify-editor-page .editor-selected-content input {min-height:35px;height:35px;width:100%;padding:6px 10px;font-size:11px;border-radius:8px;background-color:#fff;}
+.certify-editor-page #literalWrap label {display:block;font-size:11px;margin:8px 0 4px;}
+/* Two functional settings tabs, equal width. */
+.certify-editor-page .editor-settings-header {padding:12px 13px 11px;gap:9px;}
+.certify-editor-page .editor-settings-subtitle {font-size:11px;}
+.certify-editor-page .editor-saving-status {font-size:10px;color:#6e89ab;}
+.certify-editor-page .editor-settings-tabs {grid-template-columns:repeat(2,minmax(0,1fr));padding:3px 5px 0;}
+.certify-editor-page .editor-settings-tabs button {min-height:38px;padding:9px 8px;font-size:11px;}
+.certify-editor-page .editor-settings-content {background:#fff;}
+.certify-editor-page .editor-tab-panel,
+.certify-editor-page .editor-typography-panel {padding:12px 13px 13px;}
+.certify-editor-page .editor-tab-panel label:not(.switch-label) {font-size:11px;margin:9px 0 5px;color:#39537a;}
+.certify-editor-page .editor-tab-panel label:first-child {margin-top:0;}
+.certify-editor-page .editor-tab-panel select,
+.certify-editor-page .editor-tab-panel input:not([type=checkbox]):not([type=color]) {height:36px;min-height:36px;border-radius:9px;font-size:12px;}
+.certify-editor-page .editor-style-data {grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px;}
+.certify-editor-page .editor-style-data>div {min-width:0;}
+.certify-editor-page .editor-color-field {height:36px;min-height:36px;border-radius:9px;padding:3px 7px;min-width:0;gap:7px;}
+.certify-editor-page .editor-color-field output {font-size:10px;white-space:nowrap;}
+.certify-editor-page .editor-style-options {display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start;}
+.certify-editor-page .editor-text-align-buttons {gap:5px;grid-template-columns:repeat(3,minmax(0,1fr));}
+.certify-editor-page .editor-text-align-buttons button {height:36px;min-height:36px;border-radius:9px;}
+.certify-editor-page .editor-font-appearance {display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:0;}
+.certify-editor-page .editor-font-appearance .switch-label {height:36px;min-height:36px;display:flex;justify-content:center;gap:5px;padding:5px 4px;border:1px solid #e1e9f4;border-radius:9px;}
+.certify-editor-page .editor-font-appearance .switch-label input {width:14px;height:14px;}
+.certify-editor-page .editor-auto-fit {margin:12px 0 0!important;min-height:50px;border-radius:10px;padding:8px 10px;}
+.certify-editor-page .editor-auto-fit input {width:18px;height:18px;}
+.certify-editor-page .editor-position-panel .two-cols {display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.certify-editor-page .inspector-footer {display:grid;grid-template-columns:1fr 1.12fr;gap:8px;padding:10px;background:#fff;border-top:1px solid #e5edf7;}
+.certify-editor-page .inspector-footer .btn {min-height:40px;padding:8px 7px;border-radius:9px;white-space:nowrap;font-size:11px;}
+/* Preserve the one-page desktop editor; when needed, only the inspector scrolls. */
+@media (min-width:1021px) and (min-height:670px) {
+  .certify-editor-page .editor-layout {grid-template-columns:minmax(0,1fr) clamp(365px,28vw,428px);gap:14px;align-items:stretch;}
+  .certify-editor-page .editor-workspace,
+  .certify-editor-page .editor-inspector,
+  .certify-editor-page .editor-properties-card {height:100%;min-height:0;max-height:none;}
+  .certify-editor-page .editor-preview-controls {min-height:64px;padding:8px 13px 10px;}
+  .certify-editor-page .canvas-toolbar {min-height:52px;padding:9px 13px;}
+  .certify-editor-page .editor-stage {flex:1;min-height:0!important;height:0;margin:8px 10px 0;}
+  .certify-editor-page .inspector-scroll-body {min-height:0;overflow-y:auto;padding:10px;}
+}
+@media (max-width:1220px) and (min-width:1021px) {
+  .certify-editor-page .editor-preview-controls {grid-template-columns:minmax(0,1fr) max-content;gap:8px 10px;}
+  .certify-editor-page .name-test {grid-column:1;grid-row:1;}
+  .certify-editor-page .editor-alignment {grid-column:2;grid-row:1;}
+  .certify-editor-page .editor-view-tools {grid-column:2;grid-row:2;}
+  .certify-editor-page .editor-view-tools>.editor-tool-buttons {justify-content:flex-end;}
+  .certify-editor-page .editor-preview-controls .editor-view-tools>label {display:none;}
+  .certify-editor-page .editor-preview-controls {min-height:72px;}
+}
+@media (max-width:1180px) and (min-width:1021px) {
+  .certify-editor-page .editor-preview-controls {grid-template-columns:minmax(0,1fr) auto;}
+  .certify-editor-page .editor-tool-button span {display:none;}
+  .certify-editor-page .editor-canvas-badge {display:none;}
+}
+@media (max-width:1020px) {
+  .certify-editor-page .editor-layout {grid-template-columns:1fr;}
+  .certify-editor-page .editor-inspector,
+  .certify-editor-page .editor-properties-card {height:auto;max-height:none;}
+  .certify-editor-page .inspector-scroll-body {overflow:visible;}
+  .certify-editor-page .editor-preview-controls {grid-template-columns:minmax(200px,1fr) auto auto;}
+  .certify-editor-page .editor-alignment,
+  .certify-editor-page .editor-view-tools {grid-column:auto;grid-row:auto;}
+}
+@media (max-width:670px) {
+  .certify-editor-page .editor-preview-controls {grid-template-columns:1fr 1fr;gap:12px;}
+  .certify-editor-page .name-test {grid-column:1/-1;}
+  .certify-editor-page .editor-alignment,
+  .certify-editor-page .editor-view-tools {grid-column:auto;}
+  .certify-editor-page .editor-tool-button span {display:none;}
+  .certify-editor-page .editor-field-list {max-height:none;}
+}
+@media (max-width:420px) {
+  .certify-editor-page .editor-preview-controls {padding:10px;gap:9px;}
+  .certify-editor-page .editor-control-inline {flex-wrap:wrap;}
+  .certify-editor-page .name-test .btn {width:100%;}
+  .certify-editor-page .editor-style-options {grid-template-columns:1fr;}
+  .certify-editor-page .editor-add-menu-content {grid-template-columns:1fr;}
+  .certify-editor-page .inspector-footer .btn {font-size:10px;}
+}

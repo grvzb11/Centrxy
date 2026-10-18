@@ -1,0 +1,12 @@
+.certify-draft-status{display:block;font-size:11px;color:#637ca2;min-height:1em;margin-top:3px;}
+.certify-draft-overlay{position:fixed;inset:0;z-index:50000;display:flex;align-items:center;justify-content:center;padding:22px;background:rgba(17,35,64,.56);}
+.certify-draft-dialog{width:min(440px,100%);background:#fff;border-radius:16px;padding:25px 26px;box-shadow:0 25px 65px rgba(0,0,0,.23);font-family:inherit;color:#17335b;}
+.certify-draft-kicker{font-size:11px;letter-spacing:.07em;color:#346cce;font-weight:750;}
+.certify-draft-dialog h2{font-size:22px;margin:9px 0 11px;}
+.certify-draft-dialog p{font-size:13px;line-height:1.55;color:#687d9b;margin:0 0 11px;}
+.certify-draft-dialog .certify-draft-timestamp{font-size:11px;margin:12px 0 17px;}
+.certify-draft-actions{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:9px;}
+.certify-draft-actions button{font:inherit;font-weight:650;font-size:13px;padding:10px 12px;border-radius:8px;cursor:pointer;}
+.certify-draft-secondary{background:#fff;border:1px solid #d3dfed;color:#244775;}
+.certify-draft-primary{background:#2664de;border:1px solid #2664de;color:#fff;}
+.certify-draft-actions button:focus-visible{outline:3px solid #91b9ff;outline-offset:2px;}

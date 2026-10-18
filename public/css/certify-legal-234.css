@@ -1,0 +1,64 @@
+/* Certify 2.0.36 Alpha — full-width, document-style Legal & Privacy experience.
+   Scoped to this page. Uses the available main area rather than a centered 860px stack. */
+.legal-shell{width:100%;max-width:none;margin:0 0 38px;min-width:0;color:#1a3556}
+.legal-shell *{box-sizing:border-box}
+.clp-page-heading{display:flex;justify-content:flex-start;align-items:flex-start;gap:20px;margin-bottom:25px;padding:0 0 22px;border-bottom:1px solid #dce5f1}
+.clp-heading-copy{min-width:0;max-width:1100px}
+.legal-eyebrow{display:block;margin-bottom:10px;font-size:10px;letter-spacing:.11em;font-weight:750;color:#3e67a6}
+.clp-page-heading h1{margin:0 0 8px;font-size:clamp(26px,2.4vw,33px);letter-spacing:-.85px;line-height:1.25;color:#17365d}
+.clp-page-heading p{max-width:900px;margin:0;color:#667b96;font-size:13px;line-height:1.7}
+.clp-layout{display:grid;grid-template-columns:minmax(180px,220px) minmax(0,1fr);align-items:start;column-gap:24px;min-width:0}
+.clp-jump{position:sticky;top:24px;display:flex;flex-direction:column;gap:3px;min-width:0;margin:0;padding:8px 11px 0 0;border:0;background:transparent}
+.clp-toc-title{padding:3px 11px 12px;font-size:10px;font-weight:760;letter-spacing:.1em;color:#8696ab}
+.clp-jump a{display:flex;align-items:center;gap:11px;min-height:40px;padding:9px 11px;border-radius:8px;font-size:12px;font-weight:590;line-height:1.35;text-decoration:none;color:#415979;background:transparent;border:1px solid transparent;transition:background .12s ease,color .12s ease}
+.clp-jump a:hover,.clp-jump a:focus-visible{background:#eaf1fb;border-color:#dce7f5;color:#154c9d}
+.clp-jump a:focus-visible,.clp-shell a:focus-visible{outline:2px solid #2d71dc;outline-offset:2px}
+.clp-nav-number{min-width:19px;color:#94a6c0;font-size:10px;font-weight:690;font-variant-numeric:tabular-nums}
+.clp-toc-help{font-size:11px;line-height:1.65;color:#899bb2;margin:16px 12px 0;max-width:220px}
+.clp-document{min-width:0;background:#fff;border:1px solid #dde6f1;border-radius:14px;box-shadow:0 4px 20px rgba(21,48,92,.035);overflow:hidden}
+.clp-group{min-width:0;scroll-margin-top:18px;padding:0;border:0;border-bottom:1px solid #e2e9f2;background:transparent;box-shadow:none;margin:0;border-radius:0}
+.clp-group:target{scroll-margin-top:20px}
+.clp-group-heading{padding:29px clamp(22px,2.5vw,40px) 19px;border:0;display:block}
+.clp-group-kicker{font-size:10px;font-weight:740;letter-spacing:.1em;color:#4b75ab}
+.clp-group-heading h2{font-size:clamp(19px,1.6vw,23px);line-height:1.35;margin:8px 0 4px;color:#17365c;letter-spacing:-.4px}
+.clp-group-heading p{color:#70849d;margin:0;font-size:12px;line-height:1.65}
+.clp-details{padding:0 clamp(22px,2.5vw,40px) 21px}
+.clp-shell .legal-section{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);column-gap:clamp(22px,3vw,50px);align-items:start;padding:18px 0;border-top:1px solid #edf1f6;border-bottom:0}
+.clp-shell .legal-section h3{margin:1px 0 0;color:#24415f;font-size:12.5px;font-weight:700;line-height:1.55;letter-spacing:0}
+.clp-shell .legal-section p{margin:0;color:#586e88;font-size:13px;line-height:1.75;max-width:none;overflow-wrap:anywhere}
+.clp-appendix{scroll-margin-top:18px}
+.clp-shell .legal-identity{margin:0;border:0;border-radius:0;padding:27px clamp(22px,2.5vw,40px) 20px;background:transparent}
+.clp-shell .legal-identity h2{font-size:clamp(19px,1.6vw,23px);margin:0 0 4px;color:#17365c;letter-spacing:-.4px}
+.clp-shell .legal-identity strong{font-size:13px;color:#24415f}
+.clp-shell .legal-identity .legal-identity-intro{font-size:12px;color:#70849d;margin:0 0 17px}
+.clp-shell .legal-contact-details{margin:0;border-top:1px solid #edf1f6}
+.clp-shell .legal-contact-details>div{display:grid;grid-template-columns:minmax(150px,220px) minmax(0,1fr);column-gap:clamp(22px,3vw,50px);padding:17px 0;border-bottom:1px solid #edf1f6}
+.clp-shell .legal-contact-details dt{font-size:12.5px;font-weight:700;color:#24415f}
+.clp-shell .legal-contact-details dd{margin:0;font-size:13px;color:#586e88;overflow-wrap:anywhere}
+.clp-shell .legal-identity .clp-contact-help{font-size:12px;margin:16px 0 0;color:#70849d}
+.clp-policy-date{display:block;margin-top:8px;font-weight:600;color:#536e90}
+.clp-shell .legal-identity p{margin:9px 0;font-size:12.5px;line-height:1.75;color:#5e728e}
+.clp-shell .legal-identity a{color:#245bb2;text-decoration:underline;text-underline-offset:2px}
+.clp-shell .legal-disclaimer{padding:18px clamp(22px,2.5vw,40px);border:0;border-top:1px solid #edf1f6;border-radius:0;background:#f7f9fc;font-size:11.5px;line-height:1.75;color:#697f9a;margin:0}
+@media(max-width:1000px){
+  .clp-layout{grid-template-columns:180px minmax(0,1fr);gap:15px}
+  .clp-shell .legal-section{grid-template-columns:1fr;gap:6px;padding:15px 0}
+  .clp-shell .legal-section h3{font-size:12.5px}
+  .clp-shell .legal-contact-details>div{grid-template-columns:1fr;gap:6px}
+}
+@media(max-width:720px){
+  .clp-page-heading{align-items:flex-start;flex-direction:column;gap:12px;margin-bottom:15px;padding-bottom:16px}
+  .clp-layout{display:block}
+  .clp-jump{position:relative;top:auto;display:flex;flex-direction:row;gap:7px;overflow-x:auto;padding:0 1px 12px;margin-bottom:10px;scrollbar-width:thin}
+  .clp-jump a{white-space:nowrap;flex:0 0 auto;border-color:#dae5f1;background:#fff;min-height:35px;padding:7px 11px;font-size:11px}
+  .clp-toc-title,.clp-toc-help{display:none}
+  .clp-nav-number{display:none}
+  .clp-document{border-radius:11px}
+  .clp-group-heading{padding:22px 18px 15px}
+  .clp-details{padding:0 18px 14px}
+  .clp-shell .legal-section{padding:14px 0}
+  .clp-shell .legal-section p{font-size:12.5px}
+  .clp-shell .legal-identity{padding:23px 18px 16px}
+  .clp-shell .legal-disclaimer{padding:17px 18px}
+}
+@media(prefers-reduced-motion:reduce){.clp-shell *{transition:none!important;scroll-behavior:auto!important}}

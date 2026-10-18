@@ -1,0 +1,78 @@
+/* Certify 2.0.66 — compact, unified signatory typography. */
+.certify-editor-page .editor-signatory-details-settings {
+    display:grid;gap:11px;margin-top:12px;padding-top:13px;
+    min-width:0;border-top:1px solid #e4ebf5;
+}
+.certify-editor-page .editor-signatory-details-settings[hidden] {display:none!important}
+.certify-editor-page .editor-signatory-heading {display:grid;gap:3px}
+.certify-editor-page .editor-signatory-heading h3 {margin:0;color:#183b6a;font-size:13px;line-height:1.3}
+.certify-editor-page .editor-signatory-heading p {margin:0;color:#71829e;font-size:10px;line-height:1.45}
+.certify-editor-page .editor-signatory-details-settings .editor-signatory-unified-field,
+.certify-editor-page .editor-signatory-details-settings .editor-signatory-unified-grid label,
+.certify-editor-page .editor-signatory-details-settings .editor-signatory-unified-style-row label {
+    display:grid;align-content:start;gap:5px;min-width:0;margin:0!important;
+    font-size:11px;font-weight:650;line-height:1.3;color:#2b4770;
+}
+.certify-editor-page .editor-signatory-details-settings :is(.editor-signatory-unified-field,.editor-signatory-unified-grid label,.editor-signatory-unified-style-row label) :is(input:not([type=checkbox]),select) {
+    display:block;box-sizing:border-box;min-width:0;width:100%;height:37px;
+    padding:7px 10px;margin:0!important;background:#fff;color:#173861;
+    border:1px solid #d4e0ee;border-radius:7px;
+    font-size:12px;line-height:1.4;box-shadow:none;
+}
+.certify-editor-page .editor-signatory-details-settings :is(input:not([type=checkbox]),select):focus-visible {
+    outline:2px solid #80aafe;outline-offset:2px;border-color:#6492e9;
+}
+.certify-editor-page .editor-signatory-shared-heading {
+    margin-top:2px;padding-top:9px;border-top:1px solid #e6edf6;
+    font-size:11px;font-weight:750;color:#183b6a;
+}
+.certify-editor-page .editor-signatory-unified-grid {
+    display:grid;grid-template-columns:minmax(0,1fr) 72px;align-items:end;gap:11px;min-width:0;
+}
+.certify-editor-page .editor-signatory-unified-grid input[type=color] {
+    height:37px!important;padding:4px!important;cursor:pointer;
+}
+.certify-editor-page .editor-signatory-shared-note {
+    margin:0;padding:7px 9px;border-radius:6px;background:#f2f6fd;
+    color:#506687;font-size:10px;line-height:1.45;
+}
+.certify-editor-page .editor-signatory-shared-note[hidden]{display:none!important}
+.certify-editor-page .editor-signatory-unified-style-row {
+    display:grid;grid-template-columns:minmax(75px,1fr) 66px auto;
+    gap:8px;align-items:end;min-width:0;
+}
+.certify-editor-page .editor-signatory-style-title {
+    align-self:center;min-width:0;font-size:11px;font-weight:750;color:#24466e;
+}
+.certify-editor-page .editor-signatory-unified-style-row input[type=number] {
+    text-align:center;padding-inline:2px!important;
+}
+.certify-editor-page .editor-signatory-style-toggles {
+    display:flex;gap:5px;align-items:end;justify-content:flex-end;min-width:0;
+}
+.certify-editor-page .editor-signatory-style-toggles button {
+    appearance:none;box-sizing:border-box;min-height:36px;margin:0;
+    padding:0 9px;border:1px solid #d7e2f2;border-radius:7px;
+    background:#fff;color:#385476;line-height:1.2;
+    font-family:inherit;font-size:11px;font-weight:650;cursor:pointer;
+}
+.certify-editor-page .editor-signatory-style-toggles button[aria-pressed=true] {
+    background:#eaf2ff;border-color:#92b8f8;color:#1b52ab;
+}
+.certify-editor-page .editor-signatory-style-toggles button:focus-visible {
+    outline:2px solid #80aafe;outline-offset:2px;
+}
+.certify-editor-page .editor-signatory-style-toggles button:disabled {opacity:.45;cursor:not-allowed}
+.certify-editor-page .editor-signatory-line-setting {
+    display:flex!important;gap:8px;align-items:center;justify-content:flex-start;
+    margin:1px 0 0!important;padding:9px 0 0;border:0;border-top:1px solid #e6edf6;
+    min-width:0;background:transparent;border-radius:0;cursor:pointer;
+}
+.certify-editor-page .editor-signatory-line-setting input[type=checkbox] {width:15px;height:15px;margin:0;accent-color:#2862d6}
+.certify-editor-page .editor-signatory-line-copy strong {font-size:11px;color:#254568}
+@media(max-width:375px) {
+    .certify-editor-page .editor-signatory-unified-style-row {grid-template-columns:minmax(57px,1fr) 59px auto;gap:5px}
+    .certify-editor-page .editor-signatory-style-toggles {gap:3px}
+    .certify-editor-page .editor-signatory-style-toggles button {padding-inline:6px}
+    .certify-editor-page .editor-signatory-unified-grid {grid-template-columns:minmax(0,1fr) 65px;gap:6px}
+}

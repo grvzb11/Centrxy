@@ -1,0 +1,68 @@
+/* Certify Desktop: explicit saved/unsaved status and safe discard action.
+   Loaded after all other editor styles to avoid overriding the current editor. */
+.certify-editor-page .inspector-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+}
+.certify-editor-page .editor-change-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 22px;
+}
+.certify-editor-page .editor-saving-status {
+  flex: 1 1 auto;
+  max-width: none;
+  min-width: 0;
+  text-align: left;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+  font-size: 11px;
+  font-weight: 650;
+  color: #47755a;
+  line-height: 1.3;
+}
+.certify-editor-page .editor-saving-status.is-unsaved { color: #a76a19; }
+.certify-editor-page .editor-discard-changes {
+  appearance: none;
+  flex: 0 0 auto;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  padding: 4px 3px;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 650;
+  color: #b14652;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.certify-editor-page .editor-discard-changes:disabled {
+  color: #a0aec1;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+.certify-editor-page .editor-discard-changes:focus-visible {
+  outline: 2px solid #3574d6;
+  outline-offset: 2px;
+}
+.certify-editor-page .editor-save-buttons {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1.12fr);
+  gap: 8px;
+  width: 100%;
+}
+.certify-editor-page .editor-save-buttons .btn {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+@media (max-width: 420px) {
+  .certify-editor-page .editor-save-buttons { grid-template-columns: repeat(2,minmax(0,1fr)); gap:6px; }
+  .certify-editor-page .editor-save-buttons .btn { font-size: 10px; }
+}

@@ -1,0 +1,140 @@
+/* MS Word-like searchable font picker for Certify template editor */
+.certify-editor-page .certify-font-search-holder {
+    position: relative;
+    min-width: 0;
+    width: 100%;
+}
+.certify-editor-page #fontFamily.certify-font-original,
+.certify-editor-page #editorDetailsFont.certify-font-original {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+    pointer-events: none !important;
+    clip-path: inset(50%) !important;
+}
+.certify-editor-page .certify-font-combo {
+    display: grid;
+    grid-template-columns: 1fr 38px;
+    align-items: stretch;
+    width: 100%;
+    min-height: 38px;
+    border: 1px solid #b7c6d8;
+    border-radius: 4px;
+    background: #fff;
+    overflow: hidden;
+    transition: border-color .12s ease, box-shadow .12s ease;
+}
+.certify-editor-page .certify-font-combo:hover {
+    border-color: #8ca6c7;
+}
+.certify-editor-page .certify-font-combo.is-open,
+.certify-editor-page .certify-font-combo:focus-within {
+    border-color: #2b6fe5;
+    box-shadow: 0 0 0 1px rgba(43,111,229,.18);
+}
+.certify-editor-page .certify-font-combo-input {
+    width: 100%;
+    min-width: 0;
+    padding: 7px 10px 7px 34px;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: #17345f;
+    font: inherit;
+    line-height: 1.35;
+}
+.certify-editor-page .certify-font-combo-input::placeholder { color: #7489a8; }
+.certify-editor-page .certify-font-combo-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 13px;
+    color: #7a8eaa;
+    pointer-events: none;
+}
+.certify-editor-page .certify-font-combo-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-left: 1px solid #d7e0ea;
+    background: linear-gradient(#fafbfd, #f0f4f8);
+    color: #4f688b;
+    cursor: pointer;
+}
+.certify-editor-page .certify-font-combo-button:hover {
+    background: linear-gradient(#f7faff, #e8eef7);
+    color: #2f64c9;
+}
+.certify-editor-page .certify-font-combo-button:focus-visible {
+    outline: none;
+    background: linear-gradient(#f7faff, #e8eef7);
+    color: #2f64c9;
+}
+.certify-editor-page .certify-font-combo-button .certify-font-search-chevron {
+    font-size: 13px;
+    line-height: 1;
+}
+.certify-font-search-menu {
+    position: fixed;
+    z-index: 10050;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #b8c5d6;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 10px 24px rgba(18,42,76,.16);
+}
+.certify-font-search-menu[hidden] { display: none !important; }
+.certify-font-search-results {
+    overflow-y: auto;
+    min-height: 0;
+    max-height: inherit;
+    padding: 4px 0;
+    overscroll-behavior: contain;
+}
+.certify-font-search-section-label {
+    padding: 8px 12px 5px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: #7b8ea8;
+    background: #fff;
+}
+.certify-font-search-divider {
+    height: 1px;
+    margin: 5px 0;
+    background: #edf2f7;
+}
+.certify-font-search-option {
+    padding: 8px 12px;
+    color: #203e66;
+    cursor: pointer;
+    font: inherit;
+    line-height: 1.25;
+    transition: background-color .1s ease, color .1s ease;
+    border-left: 2px solid transparent;
+}
+.certify-font-search-option:hover,
+.certify-font-search-option.is-active {
+    background: #eef4ff;
+    color: #134fb7;
+    border-left-color: #2c72e8;
+}
+.certify-font-search-option[aria-selected="true"] {
+    font-weight: 650;
+}
+.certify-font-no-results {
+    padding: 11px 12px;
+    color: #6b7f9c;
+    font-size: 13px;
+}

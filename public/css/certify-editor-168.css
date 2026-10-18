@@ -1,0 +1,88 @@
+/* Certify v1.6.8 — multi-line fixed text and aligned field menu chevron. */
+.certify-editor-page .editor-add-menu summary {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  min-height:42px;
+  padding:9px 14px;
+  line-height:1.2;
+}
+.certify-editor-page .editor-add-menu summary .editor-add-trigger-label {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:auto;
+  margin:0;
+  line-height:1.25;
+}
+.certify-editor-page .editor-add-menu summary .editor-add-chevron {
+  display:block;
+  width:16px;
+  height:16px;
+  min-width:16px;
+  margin:0;
+  flex:0 0 16px;
+  transition:transform .15s ease;
+}
+.certify-editor-page .editor-add-menu[open] summary .editor-add-chevron {
+  transform:rotate(180deg);
+}
+.certify-editor-page .editor-fixed-text-editor {
+  margin-top:13px;
+  padding:13px;
+}
+.certify-editor-page .editor-fixed-text-editor textarea {
+  display:block;
+  width:100%;
+  min-height:112px;
+  height:auto;
+  max-height:240px;
+  resize:vertical;
+  padding:11px 12px;
+  border:1px solid #cbdcf2;
+  border-radius:10px;
+  background:#fff;
+  color:#17365f;
+  font-size:12px;
+  line-height:1.5;
+  white-space:pre-wrap;
+}
+.certify-editor-page .editor-fixed-text-editor textarea:focus {
+  outline:2px solid #8dbbff;
+  outline-offset:1px;
+  border-color:#76a8fb;
+}
+.certify-editor-page .editor-fixed-text-meta {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:6px 12px;
+  margin-top:9px;
+}
+.certify-editor-page .editor-fixed-text-meta #literalHelp {
+  flex:1 1 180px;
+  color:#7185a5;
+  font-size:10.5px;
+  line-height:1.55;
+}
+.certify-editor-page .editor-fixed-text-meta #literalCount {
+  flex:0 0 auto;
+  color:#5575a3;
+  font-size:10px;
+  font-variant-numeric:tabular-nums;
+  white-space:nowrap;
+}
+/* PDF MultiCell supports hard line breaks and natural word wrapping. */
+.certify-editor-page #canvas .field-value {
+  max-height:100%;
+  overflow:hidden;
+}
+.certify-editor-page #canvas .field:has(.field-value[style*="pre-wrap"]) {
+  overflow:hidden;
+}
+@media(max-width:600px) {
+  .certify-editor-page .editor-fixed-text-editor {padding:12px;}
+  .certify-editor-page .editor-fixed-text-editor textarea {min-height:105px;}
+}

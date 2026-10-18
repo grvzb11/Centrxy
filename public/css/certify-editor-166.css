@@ -1,0 +1,201 @@
+/* Certify 1.6.6 — single inspector / three top-level tabs.
+   Overrides editor-165 without touching the rest of the application. */
+.certify-editor-page .editor-properties-card{
+  display:flex;
+  flex-direction:column;
+  background:#fff;
+  border:1px solid #dce7f5;
+  border-radius:15px;
+  min-width:0;
+  overflow:hidden;
+}
+.certify-editor-page .editor-main-tabs{
+  display:grid;
+  grid-template-columns:1.1fr .82fr 1fr;
+  gap:3px;
+  align-items:stretch;
+  padding:9px 10px 0;
+  background:#fff;
+  border-bottom:1px solid #e4ebf5;
+  flex:0 0 auto;
+}
+.certify-editor-page .editor-main-tabs button{
+  width:100%;min-width:0;
+  padding:12px 4px 11px;
+  border:0;
+  border-bottom:2px solid transparent;
+  border-radius:8px 8px 0 0;
+  background:transparent;
+  color:#617694;
+  font-size:12px;
+  font-weight:680;
+  line-height:1.15;
+  white-space:nowrap;
+  cursor:pointer;
+}
+.certify-editor-page .editor-main-tabs button:hover{
+  background:#f2f6fe;
+  color:#2455b6;
+}
+.certify-editor-page .editor-main-tabs button[aria-selected="true"]{
+  color:#215ed5;
+  background:#eff5ff;
+  border-bottom-color:#2865e1;
+}
+.certify-editor-page .editor-main-tabs button:focus-visible{
+  outline:2px solid #86b1ff;
+  outline-offset:-2px;
+}
+.certify-editor-page .inspector-scroll-body{
+  display:block;
+  min-height:0;
+  flex:1 1 auto;
+  padding:14px;
+  overflow-y:auto;
+  scrollbar-width:thin;
+  background:#fff;
+}
+.certify-editor-page .inspector-scroll-body > .editor-tab-panel{
+  width:100%; min-width:0;
+  border:0;
+  border-radius:0;
+  padding:0;
+  margin:0;
+  background:transparent;
+  box-shadow:none;
+}
+.certify-editor-page .inspector-scroll-body > .editor-tab-panel[hidden],
+.certify-editor-page #literalWrap[hidden]{display:none!important;}
+.certify-editor-page .editor-fields-heading{
+  margin:0 0 14px;
+  padding:0 0 12px;
+  border-bottom:1px solid #edf2f9;
+}
+.certify-editor-page .editor-fields-heading h2{font-size:15px;}
+.certify-editor-page .editor-field-list{
+  max-height:min(360px,45vh);
+  overflow-y:auto;
+  scrollbar-width:thin;
+  padding-right:3px;
+  gap:8px;
+}
+.certify-editor-page .editor-field-card{
+  min-height:56px;
+  padding:9px 39px 9px 10px;
+  border-radius:10px;
+  background:#fff;
+}
+.certify-editor-page .editor-field-card-copy strong{font-size:12px;}
+.certify-editor-page .editor-field-card-copy small{font-size:11px;}
+.certify-editor-page .editor-add-field-wrapper{margin:12px 0 0;}
+.certify-editor-page .editor-add-menu summary{min-height:41px;}
+.certify-editor-page .editor-fixed-text-editor{
+  margin-top:16px;
+  padding:14px;
+  border:1px solid #d9e5f6;
+  border-radius:11px;
+  background:#f5f9ff;
+}
+.certify-editor-page .editor-fixed-text-editor label{
+  margin:0 0 7px;
+  display:block;
+  font-size:12px;
+  color:#254875;
+  font-weight:740;
+}
+.certify-editor-page .editor-fixed-text-editor input{
+  width:100%;
+  height:42px;min-height:42px;
+  padding:9px 12px;
+  font-size:13px;
+  border-radius:9px;
+  background:#fff;
+}
+.certify-editor-page .editor-fixed-text-editor p{
+  margin:8px 0 0;
+  font-size:11px;
+  line-height:1.4;
+  color:#7186a6;
+}
+.certify-editor-page .editor-tab-heading{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  margin-bottom:14px;
+  padding-bottom:12px;
+  border-bottom:1px solid #e9eff7;
+}
+.certify-editor-page .editor-tab-heading h2{
+  font-size:15px;
+  color:#163762;
+  margin:0 0 2px;
+}
+.certify-editor-page .editor-tab-heading p{
+  color:#7287a6;
+  font-size:11px;
+  line-height:1.45;
+  margin:0;
+}
+.certify-editor-page .editor-selected-name{
+  display:inline-flex;
+  align-items:center;
+  max-width:145px;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  padding:6px 10px;
+  border-radius:999px;
+  background:#eef4ff;
+  color:#285fc5;
+  font-size:11px;
+  font-weight:700;
+}
+.certify-editor-page .editor-typography-panel .two-cols,
+.certify-editor-page .editor-position-panel .two-cols{grid-template-columns:repeat(2,minmax(0,1fr));}
+.certify-editor-page .editor-typography-panel .editor-style-options{grid-template-columns:minmax(0,1fr) minmax(0,1fr);}
+.certify-editor-page .editor-position-panel .editor-panel-description{margin:0 0 15px;font-size:12px;line-height:1.5;}
+.certify-editor-page .inspector-footer{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  background:#fff;
+  border-top:1px solid #e6edf7;
+  padding:8px 12px 11px;
+  flex:0 0 auto;
+}
+.certify-editor-page .editor-saving-status{
+  display:block;
+  padding:0 2px;
+  font-size:10px;
+  line-height:1.25;
+  color:#8195ae;
+}
+.certify-editor-page .editor-save-buttons{
+  display:grid;
+  grid-template-columns:1fr 1.13fr;
+  gap:8px;
+}
+.certify-editor-page .editor-save-buttons .btn{
+  width:100%;height:40px;min-height:40px;
+  margin:0;
+  padding:8px 5px;
+  font-size:11px;
+  border-radius:9px;
+  white-space:nowrap;
+}
+@media (min-width:1021px) and (min-height:670px){
+  .certify-editor-page .inspector-scroll-body{padding:13px;}
+  .certify-editor-page .editor-layout{grid-template-columns:minmax(0,1fr) clamp(365px,28vw,428px);}
+}
+@media (max-width:1020px){
+  .certify-editor-page .editor-properties-card{height:auto;max-height:none;}
+  .certify-editor-page .inspector-scroll-body{overflow:visible;}
+  .certify-editor-page .editor-field-list{max-height:450px;}
+}
+@media (max-width:480px){
+  .certify-editor-page .editor-main-tabs{padding:6px 5px 0;gap:0;}
+  .certify-editor-page .editor-main-tabs button{font-size:10px;padding:10px 2px;}
+  .certify-editor-page .editor-save-buttons .btn{font-size:10px;}
+  .certify-editor-page .editor-typography-panel .editor-style-options{grid-template-columns:1fr;}
+}

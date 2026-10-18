@@ -1,0 +1,105 @@
+/* Certify v2.0.59 — focused Template Editor refinement; canvas-only presentation. */
+/* Keep tabs/save buttons fixed while a long field list scrolls independently. */
+.certify-editor-page .editor-properties-card .inspector-scroll-body {
+    min-height:0;
+    scrollbar-gutter:stable;
+}
+.certify-editor-page #editorPanelFields { min-width:0; }
+.certify-editor-page #editorPanelFields .editor-field-list {
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    max-height:clamp(180px,36dvh,365px);
+    overflow-y:auto;
+    overflow-x:hidden;
+    overscroll-behavior:contain;
+    scrollbar-width:thin;
+    scrollbar-color:#c0d1ea transparent;
+    padding:2px 5px 3px 1px;
+    margin:0 0 9px;
+}
+.certify-editor-page #editorPanelFields .editor-field-list::-webkit-scrollbar{width:6px}
+.certify-editor-page #editorPanelFields .editor-field-list::-webkit-scrollbar-thumb{background:#c0d1ea;border-radius:12px}
+.certify-editor-page #editorPanelFields .editor-field-row{flex:0 0 auto;min-width:0;}
+.certify-editor-page #editorPanelFields .editor-field-card{min-width:0;}
+.certify-editor-page #editorPanelFields .editor-field-card-copy small{
+    display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;
+}
+/* Add Field sits outside the scrolling list, ready even with 20 fields. */
+.certify-editor-page #editorPanelFields .editor-add-field-wrapper{position:relative;z-index:2;}
+/* Compact, contextual selection controls instead of a full empty toolbar. */
+.certify-editor-page .editor-selection-toolbar{
+    display:flex;align-items:center;justify-content:space-between;gap:7px 10px;
+    flex-wrap:wrap;margin:8px 12px 0;padding:6px 8px;
+    min-height:40px;background:#fff;border:1px solid #e6edf7;border-radius:10px;
+}
+.certify-editor-page .editor-selection-context{display:flex;align-items:center;gap:10px;flex-wrap:wrap;min-width:0;}
+.certify-editor-page .editor-selection-count{font-size:10.5px;color:#58708f;font-weight:700;}
+.certify-editor-page .editor-selection-actions{display:flex;gap:5px;flex-wrap:wrap;}
+.certify-editor-page .editor-selection-actions .editor-selection-btn{
+    border:1px solid transparent;min-height:28px;padding:5px 8px;
+    background:transparent;color:#31588b;font-size:10.5px;
+}
+.certify-editor-page .editor-selection-actions .editor-selection-btn:hover:not(:disabled){background:#f1f6fd;border-color:#d9e7fa;}
+.certify-editor-page .editor-selection-actions .editor-selection-btn:disabled{display:none;}
+.certify-editor-page .editor-selection-btn.is-emphasized:not(:disabled){border-color:#cbddfb;background:#edf4ff;}
+.certify-editor-page .editor-mode-toggle{
+    display:inline-flex;gap:2px;align-items:center;flex:0 0 auto;
+    padding:3px;border-radius:9px;background:#eef2f8;
+}
+.certify-editor-page .editor-mode-option{
+    border:0;border-radius:7px;background:transparent;color:#657892;
+    padding:6px 12px;min-height:28px;line-height:1;font-size:11px;font-weight:700;
+}
+.certify-editor-page .editor-mode-option[aria-pressed="true"]{
+    background:#fff;color:#174fa7;box-shadow:0 1px 4px rgba(33,67,114,.11);
+}
+.certify-editor-page .editor-mode-option:focus-visible{outline:2px solid #3379e9;outline-offset:2px;}
+/* The canvas has a soft mat, never a thick black border or decorative frame. */
+.certify-editor-page .editor-stage {
+    background:#f4f7fb;
+    background-image:radial-gradient(#e2eaf5 .7px,transparent .7px);
+    background-size:19px 19px;
+    border-color:#e4ebf4;
+    padding:17px;
+}
+.certify-editor-page #canvas{
+    background:#fff;
+    border:1px solid #d7e0eb;
+    box-shadow:0 7px 23px rgba(18,40,71,.13);
+}
+.certify-editor-page #canvas > img,
+.certify-editor-page #canvas > iframe{width:100%;height:100%;border:0;background:#fff;}
+/* The browser's native PDF viewer is not part of Certify's CSS. It may
+   paint its own dark surround. Never crop the original PDF artwork. */
+/* Less distracting boxes while editing; stronger only when selected. */
+.certify-editor-page #canvas .field:not(.sel){
+    border-color:rgba(48,110,212,.42);background:rgba(66,135,240,.022);
+}
+.certify-editor-page #canvas .field.sel{border-color:#246be4;}
+/* Clean preview affects browser overlays ONLY, not saved geometry or output. */
+.certify-editor-page.is-clean-preview #canvas .field,
+.certify-editor-page.is-clean-preview #canvas .field.sel,
+.certify-editor-page.is-clean-preview #canvas .field.is-multi{
+    border-color:transparent!important;outline:none!important;background:transparent!important;
+    cursor:default!important;pointer-events:none!important;
+}
+.certify-editor-page.is-clean-preview #canvas .field-label,
+.certify-editor-page.is-clean-preview #canvas .handle,
+.certify-editor-page.is-clean-preview #canvas .editor-selection-outline,
+.certify-editor-page.is-clean-preview #canvas .editor-alignment-guide{
+    display:none!important;
+}
+.certify-editor-page.is-clean-preview .editor-selection-context{display:none;}
+.certify-editor-page.is-clean-preview .editor-selection-toolbar{justify-content:flex-end;}
+.certify-editor-page.is-clean-preview .editor-stage{background-image:none;}
+@media(max-width:1020px){
+    .certify-editor-page #editorPanelFields .editor-field-list{max-height:min(320px,38dvh);display:flex;grid-template-columns:none;}
+}
+@media(max-width:600px){
+    .certify-editor-page .editor-selection-toolbar{margin:7px 9px 0;padding:6px 7px;}
+    .certify-editor-page .editor-selection-context{gap:5px;}
+    .certify-editor-page .editor-mode-option{padding:6px 9px;}
+    .certify-editor-page .editor-stage{padding:10px;}
+    .certify-editor-page #editorPanelFields .editor-field-list{max-height:260px;}
+}

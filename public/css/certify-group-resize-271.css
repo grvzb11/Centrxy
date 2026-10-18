@@ -1,0 +1,18 @@
+/* 2.0.71 — Proportional group resizing and compact copy/paste actions. */
+.certify-editor-page #canvas .editor-selection-outline > .editor-group-resize-handle{
+    position:absolute;right:-8px;bottom:-8px;width:16px;height:16px;
+    padding:0;border:2px solid #fff;border-radius:5px;
+    background:#2365d9;box-shadow:0 1px 6px rgba(25,75,155,.4);
+    pointer-events:auto;touch-action:none;cursor:nwse-resize;z-index:12;
+}
+.certify-editor-page #canvas .editor-selection-outline > .editor-group-resize-handle:hover{
+    background:#124bb3;transform:scale(1.12);
+}
+.certify-editor-page #canvas .editor-selection-outline > .editor-group-resize-handle:focus-visible{
+    outline:2px solid #74a7ff;outline-offset:3px;
+}
+.certify-editor-page.is-clean-preview #canvas .editor-group-resize-handle{display:none!important;}
+.certify-editor-page #editorPasteSelection:disabled{opacity:.43;}
+@media(max-width:600px){
+    .certify-editor-page #canvas .editor-selection-outline > .editor-group-resize-handle{width:19px;height:19px;right:-10px;bottom:-10px;}
+}

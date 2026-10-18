@@ -1,0 +1,11 @@
+/* Certify 2.0.62 — independently movable signatory components. */
+.certify-editor-page .editor-signature-split{display:grid;gap:9px;padding:12px;border:1px solid #dbe7f5;border-radius:10px;background:#f8fbff}
+.certify-editor-page .editor-signature-split[hidden],.certify-editor-page .editor-signature-settings [hidden],.certify-editor-page .editor-signature-rule-settings[hidden]{display:none!important}
+.certify-editor-page .editor-signature-rule-settings{border-top:1px solid #e4ebf5;margin-top:16px;padding-top:16px;display:grid;gap:9px}
+.certify-editor-page .editor-signature-rule-settings h3{margin:0;font-size:13px;color:#193b6e}
+.certify-editor-page .editor-signature-rule-settings p{margin:0;font-size:11px;line-height:1.5;color:#7286a3}
+.certify-editor-page .editor-signature-rule-settings label{font-size:11px;font-weight:700;color:#29466e}
+.certify-editor-page .editor-signature-rule-settings input[type=color]{height:38px;width:100%;background:white;border:1px solid #dbe7f5;border-radius:9px;padding:5px}
+.certify-editor-page #canvas .field .signature-rule-field{width:100%;height:100%;display:block;position:relative;pointer-events:none}
+.certify-editor-page #canvas .signature-rule-field:after{content:"";position:absolute;top:50%;left:0;right:0;border-top:1.5px solid var(--signature-rule-color,#8695a9);transform:translateY(-50%)}
+.certify-editor-page #canvas .field .signature-field-value:has(.signature-visual):not(:has(.signature-rule)):not(:has(.signature-person)):not(:has(.signature-designation)) .signature-visual{height:100%;flex:1 1 100%}

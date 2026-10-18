@@ -1,0 +1,55 @@
+Certify — bundled certificate fonts
+
+SIL Open Font License 1.1 applies to each listed font. A complete OFL license copy is in OFL-1.1.txt. Copyright notices below were extracted from original TTF files.
+
+Great Vibes
+Copyright 2010 The Great Vibes Pro Project Authors (https://github.com/googlefonts/great-vibes)
+Source: https://raw.githubusercontent.com/google/fonts/main/ofl/greatvibes/GreatVibes-Regular.ttf
+License: SIL Open Font License 1.1
+
+Allura
+Copyright 2010 The Allura Project Authors (https://github.com/googlefonts/allura)
+Source: https://raw.githubusercontent.com/google/fonts/main/ofl/allura/Allura-Regular.ttf
+License: SIL Open Font License 1.1
+
+Sacramento
+Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astigmatic.com), with ReservedFont Name "Sacramento"
+Source: https://raw.githubusercontent.com/google/fonts/main/ofl/sacramento/Sacramento-Regular.ttf
+License: SIL Open Font License 1.1
+
+Italianno
+Copyright 2009 The Italianno Project Authors (https://github.com/googlefonts/italianno)
+Source: https://raw.githubusercontent.com/google/fonts/main/ofl/italianno/Italianno-Regular.ttf
+License: SIL Open Font License 1.1
+
+Marcellus
+Copyright (c) 2012 by Brian J. Bonislawsky DBA Astigmatic (AOETI) (astigma@astigmatic.com), with ReservedFont Name "Marcellus"
+Source: https://raw.githubusercontent.com/google/fonts/main/ofl/marcellus/Marcellus-Regular.ttf
+License: SIL Open Font License 1.1
+
+Old Standard TT
+Copyright 2011 The Old Standard Project Authors (amkryukov@gmail.com)
+Source: https://raw.githubusercontent.com/google/fonts/main/ofl/oldstandardtt/OldStandard-Regular.ttf
+License: SIL Open Font License 1.1
+
+Prata
+Copyright 2011 The Prata Project Authors (contact@cyreal.org)
+Source: https://raw.githubusercontent.com/google/fonts/main/ofl/prata/Prata-Regular.ttf
+License: SIL Open Font License 1.1
+
+Abril Fatface
+Copyright (c) 2011, Copyright (c) 2011, TypeTogether (www.type-together.com), with Reserved Font Names "Abril" and "Abril Fatface"
+Source: https://raw.githubusercontent.com/google/fonts/main/ofl/abrilfatface/AbrilFatface-Regular.ttf
+License: SIL Open Font License 1.1
+
+Play
+Copyright (c) 2011, Jonas Hecksher, Playtypes, e-types AS (lasse@e-types.com), with Reserved Font Name 'Play', 'Playtype', 'Playtype Sans'.
+Source: https://raw.githubusercontent.com/google/fonts/main/ofl/play/Play-Regular.ttf
+License: SIL Open Font License 1.1
+
+Basic
+Copyright (c) 2011-2014, Sorkin Type Co (www.sorkintype.com) with Reserved Font Name 'Basic'
+Source: https://raw.githubusercontent.com/google/fonts/main/ofl/basic/Basic-Regular.ttf
+License: SIL Open Font License 1.1
+
+JuliaMetal was not bundled because the supplied registry did not specify a redistributable license.

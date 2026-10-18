@@ -1,0 +1,157 @@
+/* Certify v1.6.11 — Text Style boundary/focus refinement.
+   Scoped to the editor; restores consistent, safe inside padding after
+   the earlier 1.6.5–1.6.10 CSS overrides. No global form side effects. */
+
+/* The inspector has its own scroll area. Keep it away from both card edges
+   and the scrollbar, including on shorter desktop screens. */
+.certify-editor-page .editor-properties-card .inspector-scroll-body {
+  box-sizing: border-box;
+  padding: 22px 23px 26px;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+}
+.certify-editor-page .editor-properties-card .inspector-scroll-body > .editor-tab-panel {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* The font selector and two-column controls must never grow past the card. */
+.certify-editor-page #editorPanelStyle,
+.certify-editor-page #editorPanelStyle .editor-tab-heading,
+.certify-editor-page #editorPanelStyle .editor-style-data,
+.certify-editor-page #editorPanelStyle .editor-style-options,
+.certify-editor-page #editorPanelStyle .editor-style-data > div,
+.certify-editor-page #editorPanelStyle .editor-style-options > div {
+  box-sizing: border-box;
+  min-width: 0;
+  max-width: 100%;
+}
+.certify-editor-page #editorPanelStyle #fontFamily,
+.certify-editor-page #editorPanelStyle #fontSize,
+.certify-editor-page #editorPanelStyle .editor-color-field {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 42px;
+  height: 42px;
+  border: 1px solid #cddbeb;
+  border-radius: 11px;
+  background-color: #fff;
+}
+.certify-editor-page #editorPanelStyle #fontFamily {
+  padding: 8px 12px;
+  /* Native select menus remain browser/OS-controlled. This ensures the
+     closed control has predictable dimensions and focus styling. */
+}
+.certify-editor-page #editorPanelStyle #fontSize {padding: 8px 12px;}
+.certify-editor-page #editorPanelStyle .editor-color-field {
+  display: flex;
+  align-items: center;
+  padding: 5px 9px;
+  gap: 9px;
+  overflow: hidden;
+}
+.certify-editor-page #editorPanelStyle .editor-color-field output {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Replace the default outer blue focus outline with an inset ring so it
+   never collides with the card border or a neighbouring input. */
+.certify-editor-page #editorPanelStyle #fontFamily:focus,
+.certify-editor-page #editorPanelStyle #fontSize:focus,
+.certify-editor-page #editorPanelStyle #fontFamily:focus-visible,
+.certify-editor-page #editorPanelStyle #fontSize:focus-visible {
+  outline: none;
+  border-color: #3173e8;
+  box-shadow: inset 0 0 0 2px #b1ceff;
+}
+.certify-editor-page #editorPanelStyle .editor-color-field:focus-within {
+  border-color: #3173e8;
+  box-shadow: inset 0 0 0 2px #b1ceff;
+}
+.certify-editor-page #editorPanelStyle .editor-color-field input[type="color"]:focus,
+.certify-editor-page #editorPanelStyle .editor-color-field input[type="color"]:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Intentional vertical rhythm, independent of earlier compact rules. */
+.certify-editor-page #editorPanelStyle .editor-tab-heading {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+}
+.certify-editor-page #editorPanelStyle label:not(.switch-label) {
+  margin-top: 13px;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+.certify-editor-page #editorPanelStyle .editor-tab-heading + label {
+  margin-top: 0;
+}
+.certify-editor-page #editorPanelStyle .font-inline-link {
+  display: inline-flex;
+  align-items: center;
+  margin: 10px 0 14px;
+  line-height: 1.4;
+}
+.certify-editor-page #editorPanelStyle .editor-style-data {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 14px;
+  margin: 0;
+  align-items: end;
+}
+.certify-editor-page #editorPanelStyle .editor-style-data label {
+  margin-top: 0;
+}
+.certify-editor-page #editorPanelStyle .editor-style-options {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+  align-items: start;
+}
+.certify-editor-page #editorPanelStyle .editor-style-options label {
+  margin-top: 0;
+}
+.certify-editor-page #editorPanelStyle .editor-text-align-buttons,
+.certify-editor-page #editorPanelStyle .editor-font-appearance {
+  width: 100%;
+  min-width: 0;
+  margin-top: 2px;
+}
+.certify-editor-page #editorPanelStyle .editor-auto-fit {
+  margin-top: 20px !important;
+}
+
+/* Prefer comfortable spacing even when the inspector is vertically
+   constrained; let the inspector scroll rather than squashing controls. */
+@media (min-width: 1021px) and (min-height: 670px) {
+  .certify-editor-page .editor-properties-card .inspector-scroll-body {
+    padding: 20px 23px 24px;
+  }
+}
+@media (max-width: 1180px) {
+  .certify-editor-page .editor-properties-card .inspector-scroll-body {
+    padding: 18px 19px 22px;
+  }
+}
+@media (max-width: 480px) {
+  .certify-editor-page .editor-properties-card .inspector-scroll-body {
+    padding: 18px 17px 22px;
+    scrollbar-gutter: auto;
+  }
+  .certify-editor-page #editorPanelStyle .editor-style-options {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}

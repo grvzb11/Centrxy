@@ -1,0 +1,22 @@
+/* Certify 1.6.13 — the entire text-color control acts as one native HTML label.
+   The browser forwards activation to the existing type=color element.
+   No PDF, saving, or backend code changes are required. */
+.certify-editor-page #editorPanelStyle .editor-color-field {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: border-color 140ms ease, background-color 140ms ease, box-shadow 140ms ease;
+}
+.certify-editor-page #editorPanelStyle .editor-color-field:hover {
+    border-color: #7ba7ef;
+    background-color: #f9fbff;
+}
+.certify-editor-page #editorPanelStyle .editor-color-field:focus-within {
+    border-color: #2a68dc;
+    box-shadow: inset 0 0 0 1px #2a68dc;
+}
+.certify-editor-page #editorPanelStyle .editor-color-field #colorHex {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+}

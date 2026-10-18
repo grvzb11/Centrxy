@@ -1,0 +1,46 @@
+{
+    "name": "certify/bulk-certificate-generator",
+    "type": "project",
+    "description": "Fast bulk certificate generation with print-ready PDF exports",
+    "require": {
+        "laravel/framework": "^12.0",
+        "laravel/tinker": "^2.10",
+        "nativephp/desktop": "^2.0",
+        "php": "^8.3",
+        "setasign/fpdi": "^2.6",
+        "tecnickcom/tcpdf": "^6.8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.0",
+        "laravel/pint": "^1.20",
+        "nunomaduro/collision": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ],
+        "native:dev": [
+            "Composer\\Config::disableProcessTimeout",
+            "npx concurrently -k -c \"#93c5fd,#c4b5fd\" \"php artisan native:run --no-interaction\" \"npm run dev\" --names=app,vite"
+        ],
+        "post-update-cmd": [
+            "@php artisan native:install --force --quiet --publish"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

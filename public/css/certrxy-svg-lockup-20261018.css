@@ -1,0 +1,82 @@
+/* Certrxy SVG transparent display update — 2026-10-18
+   Removes the white card/background and shows the uploaded SVG directly. */
+.side .brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 108px;
+    width: 100%;
+    padding: 12px 8px 16px;
+    gap: 0;
+}
+.side .brand .brand-logo {
+    display: block;
+    box-sizing: border-box;
+    width: min(100%, 170px);
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1500 / 940;
+    max-height: 100px;
+    padding: 0;
+    flex: 0 1 auto;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    object-fit: contain;
+    transform: none;
+}
+.side .brand .brand-copy { display: none; }
+.mobile-brand .mobile-brand-logo {
+    display: block;
+    box-sizing: border-box;
+    width: 110px;
+    height: auto;
+    max-height: 60px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    object-fit: contain;
+    box-shadow: none;
+}
+.mobile-brand .brand-wordmark { display: none; }
+.dash-home .dash-hero-art {
+    position: absolute;
+    top: 50%;
+    right: clamp(20px, 2.6vw, 38px);
+    width: clamp(190px, 20vw, 245px);
+    height: auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    pointer-events: none;
+}
+.dash-home .dash-hero-art .dash-hero-logo {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: none;
+    flex: 1 1 auto;
+    object-fit: contain;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    transform: none;
+    filter: none;
+}
+@media (max-width: 950px) and (min-width: 701px) {
+    .dash-home .dash-hero-art { width: 172px; right: 14px; }
+    .dash-home .dash-hero { padding-right: 202px; }
+}
+@media (max-width: 700px) {
+    .dash-home .dash-hero-art { display: none; }
+}

@@ -1,0 +1,16 @@
+/* Certify v1.6.18: archive/restore UI; preserve 1.6.17 responsive cards */
+.template-library .library-state-switch { display:inline-flex; align-items:center; gap:5px; padding:4px; background:#eaf0fa; border:1px solid #dce7f7; border-radius:12px; margin:0 0 18px; max-width:100%; }
+.template-library .library-state-link { display:inline-flex; gap:7px; align-items:center; justify-content:center; padding:9px 17px; border-radius:9px; font-size:12px; font-weight:700; color:#506f98; text-decoration:none; min-height:38px; white-space:nowrap; }
+.template-library .library-state-link > span { font-size:10px; min-width:19px; text-align:center; border-radius:20px; padding:2px 5px; background:#dbe6f8; color:#335a91; }
+.template-library .library-state-link.is-active { color:#1d5ac7; background:#fff; box-shadow:0 2px 8px #17365c12; }
+.template-library .library-state-link.is-active > span { background:#e9f1ff; color:#1f60cb; }
+.template-library .library-state-link:hover { color:#1253bf; }
+.template-library .library-archived-badge { position:absolute; top:17px; left:66px; z-index:2; background:#fff; border:1px solid #cad5e4; color:#52677f; font-size:10px; font-weight:750; border-radius:6px; padding:5px 8px; }
+.template-library .library-card-artwork { position:relative; }
+.template-library .library-card.is-archived .library-card-artwork { background:#f2f5f9; }
+.template-library .library-card.is-archived .library-card-paper { filter:saturate(.75); }
+.template-library .library-item-menu-list .library-menu-restore { color:#1456b7; }
+.template-library .library-card-restore-form { display:contents; }
+.template-library .library-card-actions .library-restore-btn { min-width:0; }
+.template-library .library-empty-first .btn + .btn { margin-left:10px; }
+@media(max-width:480px) { .template-library .library-state-switch { width:100%; } .template-library .library-state-link { flex:1; padding:8px 10px; } }

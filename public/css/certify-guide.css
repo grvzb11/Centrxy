@@ -1,0 +1,44 @@
+/* Certify user guide: self-contained styles; no changes to global navigation CSS. */
+.certify-guide{max-width:1120px;margin:0 auto 48px;color:#213956}
+.guide-header{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;padding:10px 0 24px}
+.guide-eyebrow{display:block;margin-bottom:9px;color:#2863c6;font-size:11px;font-weight:800;letter-spacing:.11em}
+.guide-header h1{margin:0 0 9px;color:#102c53;font-size:clamp(27px,3vw,36px);letter-spacing:-1px}
+.guide-header p{margin:0;max-width:620px;font-size:14px;line-height:1.6}
+.guide-header-link{display:inline-flex;flex:0 0 auto;align-items:center;gap:7px;background:#2863d9;color:#fff;border-radius:9px;padding:11px 15px;font-size:12px;font-weight:750}
+.guide-header-link:hover{background:#164daa}
+.guide-jump{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:25px}
+.guide-jump a{display:inline-flex;align-items:center;border:1px solid #dbe5f3;background:white;color:#31557f;font-size:12px;font-weight:650;padding:9px 13px;border-radius:999px}
+.guide-jump a:hover{background:#eaf2ff;border-color:#b6d0f6;color:#194fa7}
+.guide-section{scroll-margin-top:22px;background:#fff;border:1px solid #dce5f0;border-radius:16px;margin-bottom:17px;padding:24px 26px;box-shadow:0 6px 20px rgba(24,59,114,.035)}
+.guide-section-heading{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px}
+.guide-section-number{display:grid;place-items:center;min-width:34px;height:34px;border-radius:10px;background:#e9f1ff;color:#1f57bd;font-size:12px;font-weight:850}
+.guide-section h2{margin:2px 0 4px;font-size:19px;letter-spacing:-.4px}
+.guide-section-heading p{margin:0;font-size:12px}
+.guide-step-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}
+.guide-step{border:1px solid #e1e9f3;background:#fbfcff;border-radius:12px;padding:17px}
+.guide-step>span{display:grid;place-items:center;height:28px;width:28px;border-radius:50%;color:#2362cb;background:#e5eeff;font-size:12px;font-weight:800;margin-bottom:13px}
+.guide-step h3{font-size:13px;margin:0 0 8px;color:#15335c}
+.guide-step p{font-size:12px;margin:0 0 12px;line-height:1.65}
+.guide-step a,.guide-content a{color:#1e55b6;font-weight:700;text-underline-offset:2px}
+.guide-step a{font-size:12px}.guide-step a:hover,.guide-content a:hover{text-decoration:underline}
+.guide-content{font-size:13px;line-height:1.8;color:#425c7b}
+.guide-content p{margin:0 0 13px;font-size:13px}
+.guide-content ol{margin:0 0 17px;padding-left:22px}
+.guide-content li{padding-left:5px;margin:0 0 9px}
+.guide-content strong,.guide-choice-grid strong{color:#183c70}
+.guide-note{background:#f3f7fe;border-left:3px solid #3b73d1;border-radius:6px;padding:12px 15px;color:#365578!important;margin-top:16px!important;margin-bottom:0!important}
+.guide-choice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:16px 0}
+.guide-choice-grid>div{background:#fbfcff;border:1px solid #e2e9f2;border-radius:10px;padding:14px 16px}
+.guide-choice-grid strong{font-size:13px}
+.guide-choice-grid p{margin:5px 0 0;color:#617693;font-size:12px}
+.guide-questions{display:grid;gap:9px}
+.guide-questions details{border:1px solid #dce5f1;border-radius:10px;background:#fff;overflow:hidden}
+.guide-questions summary{padding:14px 16px;font-weight:720;font-size:13px;color:#18365d;cursor:pointer}
+.guide-questions details[open] summary{background:#f4f8ff}
+.guide-questions details p{padding:0 16px 15px;margin:12px 0 0;font-size:12px}
+.guide-ending{margin-top:23px;background:#f3f7fd;border-radius:12px;padding:18px 20px;display:flex;justify-content:space-between;gap:18px;align-items:center}
+.guide-ending h3{margin-bottom:4px}.guide-ending p{margin:0;font-size:12px}
+.guide-ending>a{white-space:nowrap;color:#1854b6;font-weight:750;font-size:12px}
+@media(max-width:970px){.guide-step-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:580px){.guide-header{align-items:flex-start;flex-direction:column;gap:15px}.guide-section{padding:20px 16px}.guide-step-grid,.guide-choice-grid{grid-template-columns:1fr}.guide-ending{flex-direction:column;align-items:flex-start}.guide-jump{gap:6px}.guide-jump a{font-size:11px;padding:8px 10px}}
+@media print{.certify-guide{max-width:none}.guide-jump,.guide-header-link,.guide-step a,.guide-ending>a{display:none}.guide-section{box-shadow:none;break-inside:avoid}.guide-questions details:not([open]) p{display:block}}

@@ -1,0 +1,42 @@
+/* Certify v2.0.68: signatory identity belongs to Fields, typography to Text Style. */
+.certify-editor-page #editorSignatoryAppearance[hidden],
+.certify-editor-page #editorStandardTextStyle[hidden],
+.certify-editor-page #editorSignatoryDetailsSettings[hidden] {display:none!important;}
+.certify-editor-page #editorSignatoryAppearance {
+  margin:0;padding:0;border:0;background:transparent;gap:11px;
+}
+.certify-editor-page #editorSignatoryAppearance .editor-signatory-shared-heading {
+  margin:0;padding:0;border:0;font-size:12px;
+}
+.certify-editor-page #editorPanelStyle #editorSignatoryAppearance label {
+  display:grid;align-content:start;gap:5px;min-width:0;
+  margin:0!important;font-size:11px;line-height:1.35;
+}
+.certify-editor-page #editorSignatoryAppearance .editor-signatory-unified-grid {
+  grid-template-columns:minmax(0,1fr) 70px;gap:9px;
+}
+.certify-editor-page #editorSignatoryAppearance .editor-signatory-unified-grid :is(select,input[type=color]),
+.certify-editor-page #editorSignatoryAppearance .editor-signatory-unified-style-row input[type=number] {
+  min-height:34px;height:34px;box-sizing:border-box;
+}
+.certify-editor-page #editorSignatoryAppearance .editor-signatory-unified-style-row {
+  grid-template-columns:minmax(75px,1fr) 65px auto;
+  align-items:end;gap:7px;
+}
+.certify-editor-page #editorSignatoryAppearance .editor-signatory-style-toggles button {
+  min-height:34px;white-space:nowrap;
+}
+.certify-editor-page #editorSignatoryDetailsSettings .editor-signatory-style-link {
+  display:inline-flex;align-items:center;justify-content:space-between;gap:8px;
+  width:100%;min-height:35px;box-sizing:border-box;
+  padding:7px 10px;border:1px solid #d4e2f6;border-radius:7px;
+  color:#2056ac;background:#f6f9ff;font:inherit;font-size:11px;font-weight:700;
+  cursor:pointer;text-align:left;
+}
+.certify-editor-page #editorSignatoryDetailsSettings .editor-signatory-style-link:hover {background:#eaf2ff;border-color:#accbf7;}
+.certify-editor-page #editorSignatoryDetailsSettings .editor-signatory-style-link:focus-visible {outline:2px solid #7eacfc;outline-offset:2px;}
+.certify-editor-page #editorSignatoryDetailsSettings .editor-signatory-line-setting {margin-top:0!important;padding-top:8px;}
+@media(max-width:375px){
+  .certify-editor-page #editorSignatoryAppearance .editor-signatory-unified-style-row{grid-template-columns:minmax(65px,1fr) 59px auto;gap:4px;}
+  .certify-editor-page #editorSignatoryAppearance .editor-signatory-style-toggles button{padding-inline:6px;}
+}

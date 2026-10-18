@@ -1,0 +1,59 @@
+/* Certify v1.6.14 — keep Font Size and Text Color vertically aligned.
+   The clickable text-color <label> inherited a bottom margin from the general
+   inspector label rule; it made the grid align-items:end offset Font Size. */
+.certify-editor-page #editorPanelStyle .editor-style-data {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    column-gap: 14px;
+}
+.certify-editor-page #editorPanelStyle .editor-style-data > div {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 16px 42px;
+    gap: 8px;
+    min-width: 0;
+    width: 100%;
+    align-content: start;
+}
+/* Both labels have identical height, padding, and spacing regardless of tag. */
+.certify-editor-page #editorPanelStyle .editor-style-data label[for="fontSize"],
+.certify-editor-page #editorPanelStyle .editor-style-data .editor-color-label {
+    display: block;
+    width: 100%;
+    height: 16px;
+    min-height: 16px;
+    margin: 0 !important;
+    padding: 0;
+    font-size: 11px;
+    font-weight: 710;
+    line-height: 16px;
+    color: #354f73;
+}
+/* Suppress inherited label margins on clickable swatch + hex container. */
+.certify-editor-page #editorPanelStyle .editor-style-data #fontSize,
+.certify-editor-page #editorPanelStyle .editor-style-data .editor-color-field {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    height: 42px;
+    min-height: 42px;
+    max-height: 42px;
+    width: 100%;
+    min-width: 0;
+    margin: 0 !important;
+}
+.certify-editor-page #editorPanelStyle .editor-style-data #fontSize {
+    display: block;
+}
+/* Preserve v1.6.13's full-container native color picker activation. */
+.certify-editor-page #editorPanelStyle .editor-style-data .editor-color-field {
+    cursor: pointer;
+}
+@media (max-width: 480px) {
+    .certify-editor-page #editorPanelStyle .editor-style-data { column-gap: 10px; }
+}
+
+/* Editor undo/redo and snap-to-center cue */
+#editorUndo:disabled,#editorRedo:disabled { opacity:.42; cursor:not-allowed; }
+#canvas.is-snapped-center::after { content:""; pointer-events:none; position:absolute; top:0;bottom:0;left:50%; border-left:1px dashed rgba(20,102,222,.68); z-index:8; }

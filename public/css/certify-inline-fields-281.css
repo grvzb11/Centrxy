@@ -1,0 +1,24 @@
+/* v2.0.81 — constrained, inline value editing without floating overlays. */
+.certify-editor-page .editor-inline-tools{margin:11px 0 0;padding:11px 12px;background:#f8faff;border:1px solid #e1e9f8;border-radius:10px;display:grid;gap:8px}
+.certify-editor-page .editor-inline-tools[hidden]{display:none!important}
+.certify-editor-page .editor-inline-tools-label{color:#243e69;font-size:12px;font-weight:700}
+.certify-editor-page .editor-inline-buttons{display:flex;gap:6px;flex-wrap:wrap}
+.certify-editor-page .editor-inline-buttons button{border:1px solid #d4e1f7;border-radius:7px;background:white;color:#24518d;font-size:11px;font-weight:600;padding:7px 9px;cursor:pointer}
+.certify-editor-page .editor-inline-buttons button:hover{background:#eaf2ff;border-color:#8bb4f4}
+.certify-editor-page .editor-inline-tools p{color:#687d9d;margin:0;font-size:11px;line-height:1.45}
+.certify-editor-page .editor-inline-style-toggle{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:600;color:#213d69;margin:0}
+.certify-editor-page .editor-inline-style-toggle input{width:15px;height:15px;accent-color:#2861d4}
+.certify-editor-page .editor-inline-color-row{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#39557f;font-size:11px}
+.certify-editor-page .editor-inline-color-row[hidden]{display:none!important}
+.certify-editor-page .editor-inline-color-row input{width:54px;height:34px;border:1px solid #d8e4f3;border-radius:7px;background:white;padding:3px}
+.certify-editor-page .editor-inline-award-source{display:flex;align-items:center;gap:9px;padding:10px 0 13px;color:#183c70;margin:0;font-size:12px}
+.certify-editor-page .editor-inline-award-source input{flex:none;accent-color:#2861d4;width:16px;height:16px}
+.certify-editor-page .editor-inline-award-source span{display:grid;gap:2px}
+.certify-editor-page .editor-inline-award-source small{font-size:10px;color:#7184a2;font-weight:400;line-height:1.4}
+.certify-editor-page #canvas .field.is-inline-source{visibility:hidden!important;pointer-events:none!important}
+.certify-editor-page #canvas .inline-field-value{font-weight:700}
+
+.certify-editor-page .editor-fixed-text-editor .editor-inline-tools .editor-inline-style-toggle input{width:16px!important;height:16px!important;min-width:16px!important;min-height:16px!important;max-width:16px!important;padding:0!important;margin:0;flex:none}
+.certify-editor-page .editor-fixed-text-editor .editor-inline-tools .editor-inline-color-row input{width:54px!important;min-width:54px!important;max-width:54px!important;height:34px!important;min-height:34px!important;padding:3px!important;flex:none}
+.certify-editor-page .editor-inline-configure{padding:0!important;border:0!important;background:none!important;color:#275ec2!important;text-align:left;font-size:11px;font-weight:700;cursor:pointer;min-height:0!important}
+.certify-editor-page .editor-inline-configure[hidden]{display:none!important}

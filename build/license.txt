@@ -1,0 +1,42 @@
+CERTRXY — END USER LICENSE AGREEMENT
+Version 1.0.0 | Last revised: 17 October 2026
+Publisher/contact: grvzb (George Rexy Vincent Z. Bacani)
+Support and privacy inquiries: grvzb11@gmail.com
+
+IMPORTANT: READ BEFORE INSTALLING OR USING CERTRXY.
+This agreement is intended for the Certrxy standalone Windows desktop distribution. Installation or use following a clear opportunity to review and accept these terms constitutes acceptance to the extent permitted by applicable law. If you do not agree, do not install or use the software. For purchases or organizational deployments, separately agreed written terms may also apply.
+
+1. LICENSE AND PERMITTED USE
+Subject to these terms and applicable law, the publisher grants you a limited, non-exclusive, revocable license to install and use Certrxy to create, edit, generate, preview, print and export lawful certificates on a device you control. This is a license to use the software, not a transfer of ownership. You may make reasonable copies for your own backup where lawful. Resale or redistribution of the Certrxy application itself requires permission from the holder of the applicable rights, except where third-party open-source licenses independently grant rights. No term here restricts rights granted to you by those third-party licenses.
+
+2. YOUR CONTENT AND PERMISSIONS
+You retain any rights you have in content you upload or create. You are responsible for verifying that you have permission to use and distribute recipient information, names, signatures, logos, certificate designs, fonts, photographs and other materials. Do not use Certrxy to issue fraudulent or misleading certificates, infringe another person's rights, or violate law. A font-installation license checkbox or application notice does not itself establish ownership, consent, or redistribution rights.
+
+3. ACCURACY, PRINTING AND OUTPUT
+Review names, certificate numbers, design placement, dates, spelling, signatures, page dimensions, font rendering and other information before issuing or distributing certificates. Print a test sheet before large runs. Output can differ among printers, operating systems and PDF viewers. Certrxy does not independently validate that a certificate is authentic or that its recipient is entitled to an award.
+
+4. LOCAL DATA AND PRIVACY
+Certrxy may store recipient names, certificate designs, fonts, batch information and generated PDFs in a local database or application-data directory. Files you export, email, print, copy or share are outside Certrxy's local storage controls. Local storage is not necessarily encrypted at rest. Protect access to your computer and files, arrange your own backups, and use an appropriate lawful basis and privacy notice for personal information. The organization issuing certificates may have independent privacy-controller obligations. Consult the in-app Legal & Privacy page for the installation's actual practices and limits.
+
+5. THIRD-PARTY MATERIALS
+Certrxy relies on third-party software, fonts and other assets that remain subject to their respective licenses and notices. Those licenses govern those components where applicable and are not replaced or reduced by this EULA. The publisher does not claim ownership of Laravel, NativePHP, Electron, TCPDF, FPDI, third-party font files, or third-party artwork solely because they are bundled. Any separately included font notices and license texts must remain available as their licenses require.
+
+6. UPDATES, SUPPORT AND CHANGES
+The publisher may make maintenance updates available but does not promise continuous support, a particular update schedule, cloud services or perpetual compatibility. Back up your user-created materials before changing installations or uninstalling. Updated EULA terms must be brought to the user's attention when legally required; simply replacing this text does not automatically bind existing users to materially new conditions.
+
+7. DISCLAIMER OF WARRANTIES
+TO THE EXTENT PERMITTED BY APPLICABLE LAW, CERTRXY IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, ERROR-FREE OPERATION, OR UNINTERRUPTED AVAILABILITY. THIS DOES NOT EXCLUDE ANY WARRANTY OR CONSUMER RIGHT THAT CANNOT LAWFULLY BE EXCLUDED. No statement in the user guide or other materials is a guarantee of legal, regulatory, academic, accessibility or security compliance.
+
+8. LIMITATION OF LIABILITY
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE PUBLISHER IS NOT LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL LOSS, LOSS OF PROFITS, OR LOSS OF DATA ARISING FROM USE OF CERTRXY. NOTHING IN THIS AGREEMENT LIMITS LIABILITY THAT THE LAW DOES NOT ALLOW TO BE LIMITED, INCLUDING ANY APPLICABLE LIABILITY FOR FRAUD, INTENTIONAL WRONGDOING, OR OTHER NON-EXCLUDABLE CLAIMS. The legal effect of this clause depends on the facts, relevant law and the terms of any separate agreement.
+
+9. TERMINATION
+This license may terminate if you materially breach these terms, subject to any mandatory legal protections. On termination, stop using and distributing copies of the proprietary portions of Certrxy to which the termination applies. This does not revoke independent rights under third-party open-source licenses or require unlawful destruction of records that you must retain.
+
+10. GENERAL
+If any provision is unenforceable, the remaining provisions should continue to apply insofar as permitted by law. This agreement does not remove statutory rights or obligations. Disputes, legal remedies and any mandatory consumer or privacy protections are subject to applicable law. This EULA does not replace a contract negotiated separately for an institution or customer.
+
+CONTACT
+For questions about Certrxy's own software terms, contact grvzb11@gmail.com. For questions about a certificate or recipient record, also contact the organization that issued the certificate.
+
+END OF AGREEMENT

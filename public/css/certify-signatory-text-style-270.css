@@ -1,0 +1,120 @@
+/* Certify v2.0.70 — focused Text Style tab alignment/focus correction.
+   Scope to signatory appearance only; ordinary text styles and PDFs are unchanged. */
+.certify-editor-page #editorPanelStyle #editorSignatoryAppearance {
+    row-gap:10px;
+    min-width:0;
+}
+.certify-editor-page #editorPanelStyle #editorSignatoryAppearance .editor-signatory-unified-grid {
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 70px;
+    column-gap:10px;
+    align-items:end;
+    padding:0 2px 2px;
+    min-width:0;
+}
+.certify-editor-page #editorPanelStyle #editorSignatoryAppearance .editor-signatory-unified-grid label {
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:10px;
+    padding:0;
+    margin:0!important;
+    line-height:1.3;
+    min-width:0;
+}
+.certify-editor-page #editorPanelStyle #editorSignatoryAppearance .editor-signatory-unified-grid :is(select,input[type=color]) {
+    display:block;
+    box-sizing:border-box;
+    width:100%;
+    height:37px;
+    min-height:37px;
+    margin:0;
+    outline:none;
+    outline-offset:0;
+    border:1px solid #d4e0ee;
+    border-radius:8px;
+    box-shadow:none;
+    background-color:#fff;
+}
+.certify-editor-page #editorPanelStyle #editorSignatoryAppearance .editor-signatory-unified-grid :is(select,input[type=color]):is(:focus,:focus-visible),
+.certify-editor-page #editorPanelStyle #editorSignatoryAppearance .editor-signatory-unified-style-row input[type=number]:is(:focus,:focus-visible) {
+    outline:none!important;
+    outline-offset:0!important;
+    border-color:#4c83e8!important;
+    box-shadow:inset 0 0 0 1px #4c83e8!important;
+}
+/* A single heading eliminates the staggered per-row size labels. */
+.certify-editor-page #editorPanelStyle #editorSignatoryAppearance .editor-signatory-size-column-heading,
+.certify-editor-page #editorPanelStyle #editorSignatoryAppearance .editor-signatory-unified-style-row {
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 66px 94px;
+    column-gap:9px;
+    min-width:0;
+}
+.certify-editor-page #editorPanelStyle #editorSignatoryAppearance .editor-signatory-size-column-heading {
+    align-items:end;
+    margin-top:7px;
+    margin-bottom:-5px;
+    color:#395a83;
+    font-size:10px;
+    font-weight:650;
+    line-height:1.3;
+}
+.certify-editor-page #editorPanelStyle #editorSignatoryAppearance .editor-signatory-unified-style-row {
+    align-items:center;
+    min-height:38px;
+    margin:0;
+}
+.certify-editor-page #editorPanelStyle #editorSignatoryAppearance .editor-signatory-unified-style-row .editor-signatory-style-title {
+    display:block;
+    align-self:center;
+    margin:0!important;
+    font-size:11px;
+    line-height:1.35;
+    font-weight:700;
+    white-space:normal;
+}
+.certify-editor-page #editorPanelStyle #editorSignatoryAppearance .editor-signatory-unified-style-row input[type=number] {
+    box-sizing:border-box;
+    width:100%;
+    min-width:0;
+    height:36px;
+    min-height:36px;
+    margin:0!important;
+    padding:5px 2px!important;
+    border:1px solid #d4e0ee;
+    border-radius:8px;
+    background:#fff;
+    outline:none;
+    box-shadow:none;
+    line-height:1.3;
+    text-align:center;
+}
+.certify-editor-page #editorPanelStyle #editorSignatoryAppearance .editor-signatory-style-toggles {
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:5px;
+    margin:0;
+    min-width:0;
+}
+.certify-editor-page #editorPanelStyle #editorSignatoryAppearance .editor-signatory-style-toggles button {
+    box-sizing:border-box;
+    height:36px;
+    min-height:36px;
+    padding:0 9px;
+    white-space:nowrap;
+}
+@media(max-width:390px) {
+    .certify-editor-page #editorPanelStyle #editorSignatoryAppearance .editor-signatory-size-column-heading,
+    .certify-editor-page #editorPanelStyle #editorSignatoryAppearance .editor-signatory-unified-style-row {
+        grid-template-columns:minmax(65px,1fr) 60px 84px;
+        column-gap:5px;
+    }
+    .certify-editor-page #editorPanelStyle #editorSignatoryAppearance .editor-signatory-style-toggles {gap:4px}
+    .certify-editor-page #editorPanelStyle #editorSignatoryAppearance .editor-signatory-style-toggles button {padding-inline:6px}
+    .certify-editor-page #editorPanelStyle #editorSignatoryAppearance .editor-signatory-unified-grid {
+        grid-template-columns:minmax(0,1fr) 62px;
+        column-gap:8px;
+    }
+}

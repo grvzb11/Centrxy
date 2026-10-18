@@ -1,0 +1,20 @@
+/* Certify unified template library and portable-template exchange */
+.template-library-main-actions {display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.certify-import-dialog {border:0;border-radius:17px;padding:0;max-width:min(92vw,470px);box-shadow:0 20px 75px #061d3750;color:#24344f}
+.certify-import-dialog::backdrop {background:#0f243e88}
+.certify-import-dialog form {padding:24px;display:grid;gap:14px}
+.certify-import-dialog h2 {margin:0;font-size:22px}
+.certify-import-head {display:flex;align-items:center;justify-content:space-between;gap:10px}
+.certify-import-head button {font-size:24px;border:0;background:transparent;cursor:pointer}
+.certify-import-dialog label {font-weight:650;font-size:13px}
+.certify-import-dialog p {margin:0;color:#607089;font-size:13px;line-height:1.55}
+.certify-import-dialog input[type=file] {padding:12px;border:1px solid #d6dfe9;border-radius:9px;width:100%;box-sizing:border-box}
+.certify-import-dialog .certify-import-hint {font-size:12px}
+.certify-import-actions {display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap}
+@media(max-width:600px){.certify-starter-grid{grid-template-columns:1fr 1fr;padding:0 10px 15px}.certify-starter-gallery>summary{padding:14px 12px}}
+@media(max-width:420px){.certify-starter-grid{grid-template-columns:1fr}}
+
+/* Bundled certificates use the standard saved-template cards, not a second gallery. */
+.template-library .certify-bundled-library-card .library-card-actions > form.certify-bundled-use-form {flex:1;min-width:0;margin:0;display:flex}
+.template-library .certify-bundled-library-card .library-card-actions > form.certify-bundled-use-form > .btn {width:100%;justify-content:center}
+.template-library .certify-bundled-library-card .library-card-actions > .btn {flex:1;min-width:0}

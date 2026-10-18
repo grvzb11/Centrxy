@@ -1,0 +1,51 @@
+/* Certify 2.0.82 — clearer inline paragraph + award assignment inspector.
+   Presentation only: field IDs, tokens, validation, and saved data remain stable. */
+.certify-editor-page #literalWrap {padding:12px!important;margin-top:12px!important;border-radius:10px!important;background:#fff!important;border:1px solid #dce6f3!important;min-width:0;}
+.certify-editor-page #literalWrap > label {margin:0 0 7px!important;font-size:11.5px!important;font-weight:740!important;color:#183b6b!important;}
+.certify-editor-page #literalWrap #literal {box-sizing:border-box;max-width:100%;min-height:116px!important;padding:12px 13px!important;line-height:1.62!important;border:1px solid #cfdbeb!important;border-radius:8px!important;background:#fff!important;outline:none!important;box-shadow:none!important;}
+.certify-editor-page #literalWrap #literal:focus-visible {border-color:#76a4ef!important;box-shadow:inset 0 0 0 1px #76a4ef!important;outline:none!important;}
+.certify-editor-page #literalWrap .editor-inline-tools {display:flex!important;flex-direction:column;gap:8px!important;margin:10px 0 0!important;padding:10px 0 0!important;border:0!important;border-top:1px solid #e6edf5!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;}
+.certify-editor-page #literalWrap .editor-inline-tools[hidden] {display:none!important;}
+.certify-editor-page .editor-inline-heading {display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;}
+.certify-editor-page #literalWrap .editor-inline-tools-label {font-size:11.5px;color:#18385f;}
+.certify-editor-page .editor-inline-instruction {font-size:10px;color:#8191a8;}
+.certify-editor-page #literalWrap .editor-inline-buttons {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;}
+.certify-editor-page #literalWrap .editor-inline-buttons button {padding:8px 3px!important;font-size:10.5px!important;line-height:1.2;min-height:33px;background:white;border:1px solid #dce6f3;color:#24569b;border-radius:7px;white-space:nowrap;}
+.certify-editor-page #literalWrap .editor-inline-tools .editor-inline-explanation {font-size:10px!important;color:#7688a1!important;line-height:1.45;margin:0!important;}
+.certify-editor-page #literalWrap .editor-inline-configure {display:inline-flex;gap:5px;align-self:flex-start;align-items:center;font-size:11px!important;min-height:25px!important;padding:0!important;line-height:1.35;}
+.certify-editor-page .editor-inline-format {display:flex;gap:10px;justify-content:space-between;align-items:center;padding-top:8px;border-top:1px solid #edf1f7;flex-wrap:wrap;}
+.certify-editor-page #literalWrap .editor-inline-style-toggle {display:inline-flex!important;gap:7px;align-items:center;font-size:11px!important;line-height:1.4;margin:0!important;}
+.certify-editor-page #literalWrap .editor-inline-style-toggle input {box-sizing:border-box;flex:none;width:16px!important;min-width:16px!important;max-width:16px!important;height:16px!important;min-height:16px!important;margin:0!important;padding:0!important;}
+.certify-editor-page #literalWrap .editor-inline-color-row {display:inline-flex;gap:7px;justify-content:flex-end;align-items:center;}
+.certify-editor-page #literalWrap .editor-inline-color-row label {font-size:10px!important;margin:0!important;}
+.certify-editor-page #literalWrap .editor-inline-color-row input {width:40px!important;min-width:40px!important;max-width:40px!important;height:30px!important;min-height:30px!important;padding:3px!important;}
+.certify-editor-page #literalWrap .editor-fixed-text-meta {margin-top:8px!important;gap:5px;}
+.certify-editor-page #literalWrap .editor-fixed-text-meta span {font-size:10px!important;color:#7a8aa4;}
+
+#editorAwardSettings {margin-top:14px!important;padding-top:14px!important;}
+#editorAwardSettings .editor-award-settings-head h3 {margin-bottom:3px;font-size:13px;}
+#editorAwardSettings .editor-award-settings-head p {margin:0 0 11px!important;font-size:10.5px;line-height:1.48;}
+#editorAwardSettings .editor-award-switch {margin:0 0 8px!important;border:0!important;border-radius:9px;}
+#editorAwardSettings .editor-award-switch label {height:34px!important;min-height:34px!important;font-size:11px!important;}
+#editorAwardSettings .editor-award-mode-hint {margin:0 0 10px!important;font-size:10px!important;}
+#editorAwardSettings .editor-award-column-labels {margin-bottom:5px!important;}
+#editorAwardSettings .editor-award-group-rows {gap:6px!important;}
+#editorAwardSettings .editor-award-group-row input {height:34px!important;min-height:34px!important;}
+#editorAwardSettings .editor-award-delete {height:34px!important;}
+#editorAwardSettings .editor-add-award {margin:8px 0 0!important;padding:7px 10px!important;}
+#editorAwardSettings .editor-award-manual-top {margin:0 0 6px!important;}
+#editorAwardSettings #editorAwardManual {min-height:124px!important;padding:13px 14px!important;line-height:1.7!important;scroll-padding:14px!important;}
+#editorAwardSettings .editor-inline-award-source {display:flex;gap:9px;margin:12px 0 0!important;padding:10px 0!important;border-top:1px solid #e9eef5;color:#23426a;align-items:center;}
+#editorAwardSettings .editor-inline-award-source input {margin:0!important;flex:none;width:16px;height:16px;}
+#editorAwardSettings .editor-inline-award-source span {display:grid;gap:2px;}
+#editorAwardSettings .editor-inline-award-source strong {font-size:11px;line-height:1.25;}
+#editorAwardSettings .editor-inline-award-source small {font-size:10px;line-height:1.3;}
+#editorAwardSettings .editor-award-summary-line {margin-top:0!important;padding:10px 0!important;gap:9px;border-top:1px solid #e9eef5;}
+#editorAwardSettings .editor-award-count {width:34px!important;height:34px!important;flex-basis:34px!important;border-radius:8px;font-size:14px;}
+#editorAwardSettings .editor-award-summary-copy strong {font-size:11px;}
+#editorAwardSettings .editor-award-preview {padding-top:6px!important;}
+@media(max-width:390px){
+  .certify-editor-page #literalWrap .editor-inline-buttons {grid-template-columns:repeat(2,minmax(0,1fr));}
+  .certify-editor-page .editor-inline-heading {align-items:flex-start;}
+  .certify-editor-page .editor-inline-format {align-items:flex-start;}
+}

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "installed_e844f0b871b26a4f3ba0999689934240",
+    "name": "Great Vibes",
+    "path": "private/fonts/source/installed_e844f0b871b26a4f3ba0999689934240.ttf",
+    "tcpdf_name": "installed_e844f0b871b26a4f3ba0999689934240",
+    "catalog_id": "great-vibes",
+    "license": "SIL Open Font License 1.1",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/greatvibes/GreatVibes-Regular.ttf",
+    "bundled": true,
+    "sha256": "8d509802186f1b51572531ecf313e8098f9a5bfdfaca93f0c9b34467f9982d15"
+  },
+  {
+    "id": "installed_4eb86e122529357db423edae16e3fb26",
+    "name": "Allura",
+    "path": "private/fonts/source/installed_4eb86e122529357db423edae16e3fb26.ttf",
+    "tcpdf_name": "installed_4eb86e122529357db423edae16e3fb26",
+    "catalog_id": "allura",
+    "license": "SIL Open Font License 1.1",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/allura/Allura-Regular.ttf",
+    "bundled": true,
+    "sha256": "9c142b2e515832c0dfc4ff8b8ea18f40314943bf937b72e2b23c4661bac14cc6"
+  },
+  {
+    "id": "installed_9d7f81a07fb90a9682d091fe631c58ce",
+    "name": "Sacramento",
+    "path": "private/fonts/source/installed_9d7f81a07fb90a9682d091fe631c58ce.ttf",
+    "tcpdf_name": "installed_9d7f81a07fb90a9682d091fe631c58ce",
+    "catalog_id": "sacramento",
+    "license": "SIL Open Font License 1.1",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/sacramento/Sacramento-Regular.ttf",
+    "bundled": true,
+    "sha256": "9341fda10adbfeb7efc94302b34507a3e227d7e7f5c432df3f5ac8753ff73d24"
+  },
+  {
+    "id": "installed_aaa5e779fe5a2197a3e240c89e94f9f9",
+    "name": "Italianno",
+    "path": "private/fonts/source/installed_aaa5e779fe5a2197a3e240c89e94f9f9.ttf",
+    "tcpdf_name": "installed_aaa5e779fe5a2197a3e240c89e94f9f9",
+    "catalog_id": "italianno",
+    "license": "SIL Open Font License 1.1",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/italianno/Italianno-Regular.ttf",
+    "bundled": true,
+    "sha256": "f6ae96dea0da46c73370eb0575848ab0eda190315bdfda3f5b252bba3dc9173c"
+  },
+  {
+    "id": "installed_fee83b200b771ed13b1800053f0c62d1",
+    "name": "Marcellus",
+    "path": "private/fonts/source/installed_fee83b200b771ed13b1800053f0c62d1.ttf",
+    "tcpdf_name": "installed_fee83b200b771ed13b1800053f0c62d1",
+    "catalog_id": "marcellus",
+    "license": "SIL Open Font License 1.1",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/marcellus/Marcellus-Regular.ttf",
+    "bundled": true,
+    "sha256": "1cf0cd10b17d35e852729962cc1ffaffed94514895972458345e2df34abb2f81"
+  },
+  {
+    "id": "installed_ac2d4626ff0efb9f8d531ccf1cfc44e3",
+    "name": "Old Standard TT",
+    "path": "private/fonts/source/installed_ac2d4626ff0efb9f8d531ccf1cfc44e3.ttf",
+    "tcpdf_name": "installed_ac2d4626ff0efb9f8d531ccf1cfc44e3",
+    "catalog_id": "old-standard-tt",
+    "license": "SIL Open Font License 1.1",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/oldstandardtt/OldStandard-Regular.ttf",
+    "bundled": true,
+    "sha256": "42717a1280b523a506ca2b0285cca380e77fe214b1f6e3d75a8b925005f19eac"
+  },
+  {
+    "id": "installed_0995e10afb863550ad80969612fab9d9",
+    "name": "Prata",
+    "path": "private/fonts/source/installed_0995e10afb863550ad80969612fab9d9.ttf",
+    "tcpdf_name": "installed_0995e10afb863550ad80969612fab9d9",
+    "catalog_id": "prata",
+    "license": "SIL Open Font License 1.1",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/prata/Prata-Regular.ttf",
+    "bundled": true,
+    "sha256": "3b2b880737be3bda5f03554297b758516876157c88f9e3b3bae8fa1fc96a2c2c"
+  },
+  {
+    "id": "installed_778590b572acb9e6f425f598d12c7c1b",
+    "name": "Abril Fatface",
+    "path": "private/fonts/source/installed_778590b572acb9e6f425f598d12c7c1b.ttf",
+    "tcpdf_name": "installed_778590b572acb9e6f425f598d12c7c1b",
+    "catalog_id": "abril-fatface",
+    "license": "SIL Open Font License 1.1",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/abrilfatface/AbrilFatface-Regular.ttf",
+    "bundled": true,
+    "sha256": "5971d4a3758a922a9fedc7f6fb825a96341a2e718c45a4b2c9a6b417c8c4dbe9"
+  },
+  {
+    "id": "installed_70ad7e9f99cdd58bb120937056a4f121",
+    "name": "Play",
+    "path": "private/fonts/source/installed_70ad7e9f99cdd58bb120937056a4f121.ttf",
+    "tcpdf_name": "installed_70ad7e9f99cdd58bb120937056a4f121",
+    "catalog_id": "play",
+    "license": "SIL Open Font License 1.1",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/play/Play-Regular.ttf",
+    "bundled": true,
+    "sha256": "eed0da79005cab35d6ed0eacab594ed67cc643be0b2632fa9e440b3bc5078dc4"
+  },
+  {
+    "id": "installed_05ba588cd656587a7b8b15f35998a774",
+    "name": "Basic",
+    "path": "private/fonts/source/installed_05ba588cd656587a7b8b15f35998a774.ttf",
+    "tcpdf_name": "installed_05ba588cd656587a7b8b15f35998a774",
+    "catalog_id": "basic",
+    "license": "SIL Open Font License 1.1",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/basic/Basic-Regular.ttf",
+    "bundled": true,
+    "sha256": "077f7245f6459045495b1ca0493f2b426c421d2112d10b48a38ff8858a07397a"
+  }
+]

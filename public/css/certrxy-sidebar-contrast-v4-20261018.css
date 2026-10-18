@@ -1,0 +1,49 @@
+/* Certrxy sidebar logo contrast — V4 (2026-10-18)
+   The original SVG is unchanged. Its navy glyphs need a light canvas to remain readable.
+   This is a full-width, flat branding header; the navigation remains dark navy. */
+.side > .brand {
+    box-sizing: border-box !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: calc(100% + 26px) !important; /* offsets the sidebar's 12px side padding */
+    min-height: 148px !important;
+    margin: -25px -13px 0 !important;    /* flush with sidebar's top and edges */
+    padding: 19px 12px 20px !important;
+    flex: 0 0 auto !important;
+    gap: 0 !important;
+    background: #edf5fc !important;
+    background-image: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    text-decoration: none !important;
+}
+.side > .brand:hover,
+.side > .brand:focus-visible {
+    background: #e6f1fb !important;
+    box-shadow: none !important;
+}
+.side > .brand .brand-logo {
+    box-sizing: border-box !important;
+    display: block !important;
+    flex: 0 1 auto !important;
+    width: min(190px, 100%) !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: 116px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    object-fit: contain !important;
+    filter: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+}
+.side > .brand .brand-copy { display: none !important; }
+.side > .nav-heading { margin-top: 20px; }
+/* Keep the sidebar menu, active navigation, and footer colors untouched. */

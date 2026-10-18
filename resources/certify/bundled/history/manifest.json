@@ -1,0 +1,312 @@
+{
+    "format": "certify-bundled-demo-history-v1",
+    "batches": [
+        {
+            "key": "demo-2cffe23767642376adb56ec970e0a28037321703",
+            "title": "Demo Landscape Certificate",
+            "template_name": "Demo Portrait Certificate",
+            "mime_type": "application/pdf",
+            "artwork": "a9b73da33f4d5b42d50de61a60f41664fb556c0acc4585ead67ebbaa3b94ce98.pdf",
+            "artwork_sha256": "a9b73da33f4d5b42d50de61a60f41664fb556c0acc4585ead67ebbaa3b94ce98",
+            "snapshot": {
+                "file_path": null,
+                "mime_type": "application/pdf",
+                "width_mm": "210.00",
+                "height_mm": "297.00",
+                "elements": [
+                    {
+                        "field_key": "recipient_name",
+                        "kind": "text",
+                        "x_mm": "1.06",
+                        "y_mm": "139.65",
+                        "width_mm": "207.89",
+                        "height_mm": "17.71",
+                        "settings": {
+                            "font_size": "32",
+                            "align": "C",
+                            "color": "#192a4b",
+                            "font_family": "installed_596cd43b19684116e5641c60323dae29",
+                            "bold": "0",
+                            "italic": "0",
+                            "auto_fit": "1"
+                        }
+                    }
+                ],
+                "print_layout": "single",
+                "cutting_guide": false,
+                "print_margin_mm": 0
+            },
+            "certificates": [
+                {
+                    "recipient_name": "Juan Dela Cruz",
+                    "certificate_number": "CERT-LWVY-JHHJ-VLL7",
+                    "pdf_asset": "ff69a9c918ba49167ade3211d7cd16baea320a7b3fdb398b60b318b6c024735d.pdf",
+                    "sha256": "ff69a9c918ba49167ade3211d7cd16baea320a7b3fdb398b60b318b6c024735d"
+                },
+                {
+                    "recipient_name": "Princess Alexandra Nicole B. Santiago",
+                    "certificate_number": "CERT-DDG2-5DAN-WJMN",
+                    "pdf_asset": "7cc536254d88745845204cab300940170b027d4327e5334de4c37396d88fa1f2.pdf",
+                    "sha256": "7cc536254d88745845204cab300940170b027d4327e5334de4c37396d88fa1f2"
+                },
+                {
+                    "recipient_name": "Christian Emmanuel Rafael M. Dela Cruz",
+                    "certificate_number": "CERT-MMJT-92K8-8BMM",
+                    "pdf_asset": "92a9f1c09adb5acbbe64885b8c534414f60a9a39fa4980c2d261a63a3eee4b4e.pdf",
+                    "sha256": "92a9f1c09adb5acbbe64885b8c534414f60a9a39fa4980c2d261a63a3eee4b4e"
+                }
+            ]
+        },
+        {
+            "key": "demo-d376940d5ab926e53f767aef7e8aec9174126edc",
+            "title": "Demo Landscape Certificate",
+            "template_name": "Demo Landscape Certificate",
+            "mime_type": "application/pdf",
+            "artwork": "32780868b594d45a0af4505314b68b8566e47804d16dcb6848400d3fa0d3d1c8.pdf",
+            "artwork_sha256": "32780868b594d45a0af4505314b68b8566e47804d16dcb6848400d3fa0d3d1c8",
+            "snapshot": {
+                "file_path": null,
+                "mime_type": "application/pdf",
+                "width_mm": "297.00",
+                "height_mm": "210.00",
+                "elements": [
+                    {
+                        "field_key": "recipient_name",
+                        "kind": "text",
+                        "x_mm": "0.00",
+                        "y_mm": "101.20",
+                        "width_mm": "296.59",
+                        "height_mm": "17.16",
+                        "settings": {
+                            "font_size": "32",
+                            "align": "C",
+                            "color": "#192a4b",
+                            "font_family": "installed_596cd43b19684116e5641c60323dae29",
+                            "bold": "0",
+                            "italic": "0",
+                            "auto_fit": "1"
+                        }
+                    }
+                ],
+                "print_layout": "two_up",
+                "cutting_guide": true,
+                "print_margin_mm": 3
+            },
+            "certificates": [
+                {
+                    "recipient_name": "Juan Dela Cruz",
+                    "certificate_number": "CERT-GZ4W-43R7-UT5E",
+                    "pdf_asset": "50f9d6ac739ffef66a39b7828484a0cde07b67a941e9092263a7b4db0e37594f.pdf",
+                    "sha256": "50f9d6ac739ffef66a39b7828484a0cde07b67a941e9092263a7b4db0e37594f"
+                },
+                {
+                    "recipient_name": "Princess Alexandra Nicole B. Santiago",
+                    "certificate_number": "CERT-KQHW-SC76-DMBE",
+                    "pdf_asset": "902feba2c58b0d484aed68c8e42bf8a53fb30079f5e36c70d2153c3e269708b1.pdf",
+                    "sha256": "902feba2c58b0d484aed68c8e42bf8a53fb30079f5e36c70d2153c3e269708b1"
+                },
+                {
+                    "recipient_name": "Christian Emmanuel Rafael M. Dela Cruz",
+                    "certificate_number": "CERT-SA8F-LD5X-3C96",
+                    "pdf_asset": "9f36c8854748fb2f0173ca4660ac7ebe37e3ba1dfed1885ecb12f45361740954.pdf",
+                    "sha256": "9f36c8854748fb2f0173ca4660ac7ebe37e3ba1dfed1885ecb12f45361740954"
+                }
+            ]
+        },
+        {
+            "key": "demo-d4a670e4e6af549a0c6ff56386bcceb7182ca9e7",
+            "title": "Two Cert in One A4",
+            "template_name": "Sample Blank Template",
+            "mime_type": "application/pdf",
+            "artwork": "8ad0f28dc5886e1bd6a362d2ea2bc91fb6741d4f065f39204c9d73a5d48fe698.pdf",
+            "artwork_sha256": "8ad0f28dc5886e1bd6a362d2ea2bc91fb6741d4f065f39204c9d73a5d48fe698",
+            "snapshot": {
+                "file_path": null,
+                "mime_type": "application/pdf",
+                "width_mm": "297.00",
+                "height_mm": "210.00",
+                "elements": [
+                    {
+                        "field_key": "recipient_name",
+                        "kind": "text",
+                        "x_mm": "25.00",
+                        "y_mm": "80.99",
+                        "width_mm": "247.00",
+                        "height_mm": "17.99",
+                        "settings": {
+                            "font_size": "32",
+                            "align": "C",
+                            "color": "#192a4b",
+                            "font_family": "times",
+                            "bold": "0",
+                            "italic": "1",
+                            "auto_fit": "1"
+                        }
+                    },
+                    {
+                        "field_key": "static_text",
+                        "kind": "text",
+                        "x_mm": "43.38",
+                        "y_mm": "64.13",
+                        "width_mm": "210.24",
+                        "height_mm": "12.62",
+                        "settings": {
+                            "font_size": "18",
+                            "align": "C",
+                            "color": "#192a4b",
+                            "font_family": "times",
+                            "bold": "0",
+                            "italic": "1",
+                            "auto_fit": "1",
+                            "literal": "This certificate is proudly presented to"
+                        }
+                    },
+                    {
+                        "field_key": "static_text",
+                        "kind": "text",
+                        "x_mm": "35.03",
+                        "y_mm": "88.03",
+                        "width_mm": "226.93",
+                        "height_mm": "10.95",
+                        "settings": {
+                            "font_size": "18",
+                            "align": "C",
+                            "color": "#192A4B",
+                            "font_family": "dejavusans",
+                            "bold": "0",
+                            "italic": "0",
+                            "auto_fit": "1",
+                            "literal": "___________________________________________________"
+                        }
+                    },
+                    {
+                        "field_key": "static_text",
+                        "kind": "text",
+                        "x_mm": "45.20",
+                        "y_mm": "103.15",
+                        "width_mm": "206.61",
+                        "height_mm": "17.83",
+                        "settings": {
+                            "font_size": "12",
+                            "align": "C",
+                            "color": "#192a4b",
+                            "font_family": "times",
+                            "bold": "0",
+                            "italic": "0",
+                            "auto_fit": "0",
+                            "literal": "In recognition of their outstanding achievement as {{AWARD}} in [COMPETITION / CATEGORY] during [EVENT NAME], held on {{DATE}} at [VENUE]. This award recognizes their exceptional performance, dedication, and exemplary display of talent, skill, and sportsmanship.",
+                            "inline_emphasis": "1"
+                        }
+                    },
+                    {
+                        "field_key": "award_placement",
+                        "kind": "text",
+                        "x_mm": "160.25",
+                        "y_mm": "156.16",
+                        "width_mm": "33.80",
+                        "height_mm": "7.15",
+                        "settings": {
+                            "font_size": "12",
+                            "align": "C",
+                            "color": "#192a4b",
+                            "font_family": "times",
+                            "bold": "1",
+                            "italic": "1",
+                            "auto_fit": "0",
+                            "inline_only": "1",
+                            "award_mode": "grouped",
+                            "award_groups": "[{\"label\":\"Champion\",\"count\":1},{\"label\":\"1st Runner-Up\",\"count\":1},{\"label\":\"2nd Runner-Up\",\"count\":1}]",
+                            "award_manual": "null"
+                        }
+                    },
+                    {
+                        "field_key": "static_text",
+                        "kind": "text",
+                        "x_mm": "73.10",
+                        "y_mm": "124.48",
+                        "width_mm": "150.81",
+                        "height_mm": "18.30",
+                        "settings": {
+                            "font_size": "14",
+                            "align": "C",
+                            "color": "#192a4b",
+                            "font_family": "times",
+                            "bold": "0",
+                            "italic": "0",
+                            "auto_fit": "1",
+                            "literal": "Given this [DAY] day of [MONTH, YEAR] at [VENUE / INSTITUTION], in acknowledgment of their remarkable achievement and valuable contribution to the success of the event."
+                        }
+                    },
+                    {
+                        "field_key": "signatory_details",
+                        "kind": "text",
+                        "x_mm": "21.92",
+                        "y_mm": "176.78",
+                        "width_mm": "72.34",
+                        "height_mm": "13.13",
+                        "settings": {
+                            "font_size": "12",
+                            "align": "C",
+                            "color": "#213854",
+                            "font_family": "times",
+                            "bold": "1",
+                            "italic": "0",
+                            "auto_fit": "1",
+                            "signatory_name": "JUAN DELA CRUZ",
+                            "signatory_title": "Director",
+                            "signature_line": "1",
+                            "title_font_family": "times",
+                            "title_font_size": "11",
+                            "title_color": "#213854",
+                            "title_bold": "1",
+                            "title_italic": "1"
+                        }
+                    }
+                ],
+                "award_mode": "grouped",
+                "award_groups": [
+                    {
+                        "label": "Champion",
+                        "count": 1
+                    },
+                    {
+                        "label": "1st Runner-Up",
+                        "count": 1
+                    },
+                    {
+                        "label": "2nd Runner-Up",
+                        "count": 1
+                    }
+                ],
+                "print_layout": "two_up",
+                "cutting_guide": true,
+                "print_margin_mm": 3,
+                "awards_by_number": {
+                    "CERT-YABU-AJHU-N7R4": "Champion",
+                    "CERT-287W-KWEQ-F3KG": "1st Runner-Up",
+                    "CERT-F8WT-E8Y2-HZKA": "2nd Runner-Up"
+                }
+            },
+            "certificates": [
+                {
+                    "recipient_name": "Juan Dela Cruz",
+                    "certificate_number": "CERT-YABU-AJHU-N7R4",
+                    "pdf_asset": "a7566d8569b190ef38d0c3b06a4f6ae6fc9d52fc47aee192971f121d2dbc30c0.pdf",
+                    "sha256": "a7566d8569b190ef38d0c3b06a4f6ae6fc9d52fc47aee192971f121d2dbc30c0"
+                },
+                {
+                    "recipient_name": "Princess Alexandra Nicole B. Santiago",
+                    "certificate_number": "CERT-287W-KWEQ-F3KG",
+                    "pdf_asset": "088030d8e4351c18f5f36be57ab497fb181494e92930ba67f22c4cccbe35f615.pdf",
+                    "sha256": "088030d8e4351c18f5f36be57ab497fb181494e92930ba67f22c4cccbe35f615"
+                },
+                {
+                    "recipient_name": "Christian Emmanuel Rafael M. Dela Cruz",
+                    "certificate_number": "CERT-F8WT-E8Y2-HZKA",
+                    "pdf_asset": "f3f10baa8848c957d2687915eaa4c582c5ae4e72a0c36f3bd12acae4f20ec5f1.pdf",
+                    "sha256": "f3f10baa8848c957d2687915eaa4c582c5ae4e72a0c36f3bd12acae4f20ec5f1"
+                }
+            ]
+        }
+    ]
+}

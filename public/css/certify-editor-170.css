@@ -1,0 +1,171 @@
+/* Certify 1.6.10 — comfortable inspector spacing and true format toggle buttons.
+   Loaded AFTER the existing editor styles. No global page changes. */
+
+/* More breathing room from panel borders; the settings card should not feel cramped. */
+.certify-editor-page .editor-properties-card {
+    border-color: #dce6f4;
+    background: #fff;
+}
+.certify-editor-page .inspector-scroll-body {
+    box-sizing: border-box;
+    padding: 20px 20px 22px;
+}
+.certify-editor-page .inspector-scroll-body > .editor-tab-panel {
+    min-width: 0;
+    max-width: 100%;
+    padding: 0;
+}
+.certify-editor-page .editor-typography-panel .editor-tab-heading {
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+}
+.certify-editor-page .editor-typography-panel .editor-tab-heading h2 {
+    font-size: 15px;
+    line-height: 1.4;
+}
+.certify-editor-page .editor-typography-panel .editor-tab-heading p {
+    margin-top: 4px;
+    line-height: 1.5;
+}
+.certify-editor-page .editor-selected-name {
+    flex-shrink: 0;
+}
+.certify-editor-page .editor-tab-panel label:not(.switch-label) {
+    margin: 12px 0 7px;
+    line-height: 1.35;
+    color: #354f73;
+}
+.certify-editor-page .editor-tab-panel select,
+.certify-editor-page .editor-tab-panel input:not([type="checkbox"]):not([type="color"]) {
+    min-height: 40px;
+    height: 40px;
+}
+.certify-editor-page .editor-style-data {
+    margin-top: 8px;
+    gap: 12px;
+}
+.certify-editor-page .editor-style-options {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 12px;
+    margin-top: 14px;
+}
+.certify-editor-page .editor-style-options > div { min-width: 0; }
+
+/* Clear, high-contrast alignment icons and readable text labels. */
+.certify-editor-page .editor-text-align-buttons {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+    gap: 6px;
+    margin-top: 3px;
+}
+.certify-editor-page .editor-text-align-buttons button,
+.certify-editor-page .editor-text-align-buttons button[data-align="L"],
+.certify-editor-page .editor-text-align-buttons button[data-align="R"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    width: 100%;
+    min-width: 0;
+    height: 49px;
+    min-height: 49px;
+    padding: 5px 2px;
+    background: #fff;
+    color: #345779;
+    border: 1px solid #cfdced;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: none;
+    transition: border-color .15s ease, background .15s ease, color .15s ease;
+}
+.certify-editor-page .editor-text-align-buttons button svg {
+    width: 17px;
+    height: 17px;
+    flex: 0 0 17px;
+}
+.certify-editor-page .editor-text-align-buttons button span {
+    font-size: 10px;
+    line-height: 1.1;
+    font-weight: 720;
+}
+.certify-editor-page .editor-text-align-buttons button:hover:not([aria-pressed="true"]) {
+    color: #1554bb;
+    border-color: #86b4fb;
+    background: #f5f9ff;
+}
+.certify-editor-page .editor-text-align-buttons button[aria-pressed="true"] {
+    color: #1753bd;
+    border-color: #7ba8f4;
+    background: #e7f0ff;
+    box-shadow: inset 0 0 0 1px #bcd4fd;
+}
+
+/* Bold and Italic are directly clickable toggle buttons with no checkbox or letter prefix. */
+.certify-editor-page .editor-font-appearance {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 7px;
+    margin: 3px 0 0;
+    align-items: stretch;
+}
+.certify-editor-page .editor-font-appearance .editor-format-button {
+    appearance: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    min-height: 49px;
+    height: 49px;
+    padding: 6px 7px;
+    border: 1px solid #cfdced;
+    border-radius: 10px;
+    background: #fff;
+    color: #345779;
+    font: inherit;
+    font-size: 11px;
+    font-weight: 720;
+    cursor: pointer;
+    transition: border-color .15s ease, background .15s ease, color .15s ease;
+}
+.certify-editor-page .editor-font-appearance .editor-format-button:hover:not(:disabled):not([aria-pressed="true"]) {
+    color: #1554bb;
+    border-color: #86b4fb;
+    background: #f5f9ff;
+}
+.certify-editor-page .editor-font-appearance .editor-format-button[aria-pressed="true"] {
+    color: #1753bd;
+    border-color: #7ba8f4;
+    background: #e7f0ff;
+    box-shadow: inset 0 0 0 1px #bcd4fd;
+}
+.certify-editor-page .editor-font-appearance .editor-format-button:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+    background: #f6f8fc;
+}
+.certify-editor-page .editor-text-align-buttons button:focus-visible,
+.certify-editor-page .editor-font-appearance .editor-format-button:focus-visible {
+    outline: 3px solid #83aff8;
+    outline-offset: 2px;
+}
+.certify-editor-page .editor-auto-fit {
+    margin-top: 18px !important;
+    padding: 12px 13px;
+    border-radius: 11px;
+}
+.certify-editor-page .inspector-footer {
+    padding: 10px 18px 14px;
+}
+
+@media (min-width:1021px) and (min-height:670px) {
+    .certify-editor-page .inspector-scroll-body { padding: 18px 19px 20px; }
+}
+@media (max-width:480px) {
+    .certify-editor-page .inspector-scroll-body { padding: 16px; }
+    .certify-editor-page .editor-style-options { grid-template-columns: 1fr; }
+    .certify-editor-page .editor-text-align-buttons button,
+    .certify-editor-page .editor-font-appearance .editor-format-button { min-height: 44px; height: 44px; }
+}

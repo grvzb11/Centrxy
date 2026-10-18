@@ -1,0 +1,26 @@
+/* Certify v1.6.9: fixed-text list privacy and overflow containment. */
+.certify-editor-page .editor-field-list,
+.certify-editor-page .editor-field-row,
+.certify-editor-page .editor-field-card,
+.certify-editor-page .editor-field-card-copy {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+.certify-editor-page .editor-field-list { overflow-x: hidden; }
+.certify-editor-page .editor-field-row { overflow: hidden; }
+.certify-editor-page .editor-field-card-copy { overflow: hidden; flex: 1 1 0; }
+.certify-editor-page .editor-field-card-copy strong,
+.certify-editor-page .editor-field-card-copy small {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/* Long pasted words wrap in the editor, not in the field selector. */
+.certify-editor-page .editor-fixed-text-editor textarea {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  white-space: pre-wrap;
+}

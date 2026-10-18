@@ -1,0 +1,26 @@
+/* Certify Legal & Privacy: installer license agreement */
+.clp-eula-summary {
+    font-size: .94rem;
+    line-height: 1.55;
+    color: #425677;
+    margin: 0 0 14px;
+}
+.clp-eula-document {
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    max-height: 360px;
+    overflow: auto;
+    margin: 0;
+    border: 1px solid #dbe5f0;
+    border-radius: 12px;
+    padding: 18px;
+    background: #f8fafc;
+    color: #253750;
+    font: 12.5px/1.7 ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', monospace;
+}
+.clp-eula-qualification { margin-top: 12px; color: #526681; line-height: 1.5; }
+.clp-eula-download { display: inline-flex; margin-top: 12px; font-weight: 600; color: #2458a5; }
+@media (max-width: 620px) {
+    .clp-eula-document { max-height: 280px; padding: 12px; font-size: 11.5px; }
+}

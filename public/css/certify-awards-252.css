@@ -1,0 +1,9 @@
+/* v2.0.52 — unobtrusive template-configured award summary. */
+.generate-award-inline{display:flex;align-items:center;gap:9px;min-width:0;background:#f6f9fe;border:1px solid #e2eaf4;padding:10px 12px;border-radius:10px;margin:15px 0 4px;font-size:11px;color:#465e7d;}
+.generate-award-inline[hidden]{display:none!important;}
+.generate-award-inline-icon{flex:none;color:#2d64ba;}
+.generate-award-inline-text{flex:1;min-width:0;line-height:1.5;overflow-wrap:anywhere;}
+.generate-award-inline-text.is-warning{color:#b04a37;}
+.generate-award-inline a{flex:none;color:#225aa8;font-weight:700;text-decoration:none;white-space:nowrap;}
+.generate-award-inline a:hover{text-decoration:underline;}
+@media(max-width:600px){.generate-award-inline{flex-wrap:wrap}.generate-award-inline a{margin-left:20px}}

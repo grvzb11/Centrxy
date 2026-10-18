@@ -1,0 +1,38 @@
+/* Certify v2.0.48 — pagination for the existing Font Library only. */
+.font-v209 .font-v248-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    flex-wrap: wrap;
+    border-top: 1px solid #e9eef6;
+    margin-top: 17px;
+    padding-top: 17px;
+}
+.font-v209 .font-v248-pagination[hidden] { display: none !important; }
+.font-v248-range { font-size: 11px; color: #7589a3; font-variant-numeric: tabular-nums; }
+.font-v248-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; }
+.font-v248-pages { display: flex; align-items: center; gap: 5px; }
+.font-v248-page-nav, .font-v248-page-number {
+    appearance: none;
+    background: #fff;
+    border: 1px solid #dce7f6;
+    color: #28578e;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+    min-height: 34px;
+    padding: 7px 11px;
+    cursor: pointer;
+}
+.font-v248-page-number { min-width: 34px; padding-left: 7px; padding-right: 7px; }
+.font-v248-page-nav:hover:not(:disabled), .font-v248-page-number:hover:not(:disabled) { background: #f1f6fe; border-color: #aec9f1; }
+.font-v248-page-number.is-current { background: #255fc3; color: #fff; border-color: #255fc3; }
+.font-v248-page-nav:disabled { opacity: .45; cursor: not-allowed; }
+.font-v248-page-nav:focus-visible, .font-v248-page-number:focus-visible { outline: 2px solid #528ee9; outline-offset: 3px; }
+.font-v248-ellipsis { font-size: 13px; color: #90a1b9; padding: 0 3px; }
+@media (max-width: 620px) {
+    .font-v209 .font-v248-pagination { align-items: stretch; }
+    .font-v248-range { width: 100%; }
+    .font-v248-controls { justify-content: space-between; width: 100%; }
+}

@@ -1,0 +1,67 @@
+/* Certrxy dashboard hero SVG — direct, large, borderless, 2026-10-18.
+   Overrides only the dashboard hero (not sidebar, About dialog or favicon). */
+.dash-home .dash-hero {
+    position: relative;
+    min-height: 230px;
+    padding-right: clamp(315px, 35vw, 470px);
+}
+.dash-home .dash-hero .dash-hero-art,
+.dash-home .dash-hero-art {
+    position: absolute !important;
+    top: 50% !important;
+    right: clamp(18px, 2.9vw, 43px) !important;
+    transform: translateY(-50%) !important;
+    width: clamp(290px, 29vw, 375px) !important;
+    height: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    outline: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+    pointer-events: none;
+}
+.dash-home .dash-hero .dash-hero-art::before,
+.dash-home .dash-hero .dash-hero-art::after,
+.dash-home .dash-hero-art::before,
+.dash-home .dash-hero-art::after {
+    content: none !important;
+    display: none !important;
+}
+.dash-home .dash-hero .dash-hero-logo,
+.dash-home .dash-hero-art .dash-hero-logo {
+    display: block !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    max-height: 215px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    outline: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    object-fit: contain !important;
+    filter: none !important;
+    opacity: 1 !important;
+}
+@media (min-width: 701px) and (max-width: 950px) {
+    .dash-home .dash-hero { min-height: 205px; padding-right: 275px; }
+    .dash-home .dash-hero-art { width: 250px !important; right: 12px !important; }
+    .dash-home .dash-hero-art .dash-hero-logo { max-height: 175px !important; }
+}
+@media (max-width: 700px) {
+    .dash-home .dash-hero { min-height: 0; padding-right: inherit; }
+    .dash-home .dash-hero-art { display: none !important; }
+}

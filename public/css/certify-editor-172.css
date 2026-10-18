@@ -1,0 +1,91 @@
+/* Certify 1.6.12: Only the color swatch should activate the native picker.
+   Scoped to Text Style so the rest of the certificate editor is unchanged. */
+.certify-editor-page #editorPanelStyle .editor-color-setting {
+    min-width: 0;
+}
+.certify-editor-page #editorPanelStyle .editor-color-setting .editor-color-label {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    margin: 0 0 8px;
+    color: #354f73;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.4;
+    cursor: default;
+}
+.certify-editor-page #editorPanelStyle .editor-color-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 42px;
+    min-height: 42px;
+    padding: 4px 9px;
+    border: 1px solid #cddbeb;
+    border-radius: 11px;
+    background: #fff;
+    cursor: default;
+    overflow: hidden;
+}
+/* The type=color input itself is the sole hit target. Keep it small; it must
+   not stretch over the hex value or the containing rectangle. */
+.certify-editor-page #editorPanelStyle .editor-color-field #color {
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
+    flex: 0 0 34px;
+    box-sizing: border-box;
+    width: 34px;
+    min-width: 34px;
+    max-width: 34px;
+    height: 32px;
+    min-height: 32px;
+    max-height: 32px;
+    padding: 3px;
+    margin: 0;
+    border: 1px solid #bdcde2;
+    border-radius: 7px;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: none;
+}
+.certify-editor-page #editorPanelStyle .editor-color-field #color::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+.certify-editor-page #editorPanelStyle .editor-color-field #color::-webkit-color-swatch {
+    border: 0;
+    border-radius: 4px;
+}
+.certify-editor-page #editorPanelStyle .editor-color-field #color::-moz-color-swatch {
+    border: 0;
+    border-radius: 4px;
+}
+.certify-editor-page #editorPanelStyle .editor-color-field #color:hover {
+    border-color: #6b9dea;
+    box-shadow: 0 0 0 1px #c3dafc;
+}
+.certify-editor-page #editorPanelStyle .editor-color-field #color:focus-visible {
+    outline: 2px solid #2a68dc;
+    outline-offset: 1px;
+}
+/* Focusing the swatch shouldn't make the entire hex display look clickable. */
+.certify-editor-page #editorPanelStyle .editor-color-field:focus-within {
+    border-color: #cddbeb;
+    box-shadow: none;
+}
+.certify-editor-page #editorPanelStyle .editor-color-field #colorHex {
+    display: block;
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", monospace;
+    font-size: 11px;
+    font-weight: 650;
+    color: #455e80;
+    cursor: text;
+    user-select: text;
+}

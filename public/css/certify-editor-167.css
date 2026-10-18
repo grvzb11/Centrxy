@@ -1,0 +1,135 @@
+/* Certify 1.6.7 — preview toolbar alignment. Editor-scoped only. */
+.certify-editor-page .editor-preview-controls {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:14px;
+  align-items:end;
+  padding:12px 15px;
+  background:#fbfdff;
+}
+.certify-editor-page .editor-preview-controls .name-test {
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+  gap:5px;
+  grid-column:auto;
+}
+.certify-editor-page .editor-preview-controls .editor-control-unit > label:not(.editor-visually-hidden),
+.certify-editor-page .editor-preview-controls .editor-toolbar-caption {
+  display:block;
+  margin:0;
+  line-height:1.2;
+  font-size:10.5px;
+  font-weight:730;
+  color:#355379;
+}
+.certify-editor-page .editor-preview-controls .editor-control-inline {
+  display:flex;
+  flex-wrap:nowrap;
+  align-items:stretch;
+  gap:7px;
+  min-width:0;
+}
+.certify-editor-page .editor-preview-controls #sampleName {
+  flex:1 1 150px;
+  width:0;
+  min-width:90px;
+  margin:0;
+  height:36px;
+  min-height:36px;
+}
+.certify-editor-page .editor-preview-controls #longName {
+  flex:0 0 auto;
+  margin:0;
+  min-height:36px;
+  height:36px;
+  font-size:10.5px;
+  padding:7px 9px;
+}
+.certify-editor-page .editor-preview-view {
+  display:flex;
+  gap:6px;
+  align-items:stretch;
+  min-width:0;
+  flex:0 0 auto;
+  grid-column:auto;
+}
+.certify-editor-page .editor-preview-view #canvasZoom {
+  width:101px;
+  min-width:93px;
+  height:36px;
+  min-height:36px;
+  margin:0;
+  padding:5px 8px;
+  border-radius:9px;
+  font-size:10.5px;
+}
+.certify-editor-page .editor-preview-view #toggleCanvasFullscreen {
+  width:36px;
+  min-width:36px;
+  height:36px;
+  min-height:36px;
+  padding:0;
+}
+.certify-editor-page .editor-preview-controls .editor-alignment {
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  min-width:0;
+  grid-column:auto;
+  justify-self:end;
+}
+.certify-editor-page .editor-preview-controls .editor-alignment .editor-tool-buttons {
+  display:flex;
+  gap:6px;
+  flex-wrap:nowrap;
+}
+.certify-editor-page .editor-preview-controls .editor-alignment .editor-tool-button {
+  height:36px;
+  min-height:36px;
+  padding:6px 9px;
+  margin:0;
+}
+.certify-editor-page .editor-preview-controls .editor-alignment .editor-tool-button span {
+  display:inline;
+  font-size:10px;
+}
+/* Keep the desktop editor single-row even in medium viewport widths. */
+@media (min-width:1021px) and (max-width:1450px) {
+  .certify-editor-page .editor-preview-controls {gap:8px;padding:9px 12px;}
+  .certify-editor-page .editor-preview-controls .editor-control-inline {gap:5px;}
+  .certify-editor-page .editor-preview-controls #longName {padding:6px 7px;font-size:10px;}
+  .certify-editor-page .editor-preview-view {gap:4px;}
+  .certify-editor-page .editor-preview-view #canvasZoom {width:89px;min-width:85px;padding:5px;font-size:10px;}
+  .certify-editor-page .editor-preview-view #toggleCanvasFullscreen {width:32px;min-width:32px;}
+  .certify-editor-page .editor-preview-controls .editor-alignment .editor-tool-buttons {gap:4px;}
+  .certify-editor-page .editor-preview-controls .editor-alignment .editor-tool-button {padding:5px 6px;}
+  .certify-editor-page .editor-preview-controls .editor-alignment .editor-tool-button span {font-size:9.5px;}
+}
+/* Tablet: keep preview options together and move only the positioning group below. */
+@media (min-width:601px) and (max-width:1020px) {
+  .certify-editor-page .editor-preview-controls {grid-template-columns:minmax(0,1fr);gap:12px;}
+  .certify-editor-page .editor-preview-controls .editor-alignment {justify-self:start;}
+}
+/* Small phones: recipients on top; tools wrap under the input without clipping. */
+@media (max-width:600px) {
+  .certify-editor-page .editor-preview-controls {grid-template-columns:minmax(0,1fr);gap:12px;padding:12px;}
+  .certify-editor-page .editor-preview-controls .name-test,
+  .certify-editor-page .editor-preview-controls .editor-alignment {grid-column:auto;justify-self:stretch;}
+  .certify-editor-page .editor-preview-controls .editor-control-inline {flex-wrap:wrap;}
+  .certify-editor-page .editor-preview-controls #sampleName {flex:1 1 100%;width:100%;}
+  .certify-editor-page .editor-preview-controls #longName {flex:0 0 auto;}
+  .certify-editor-page .editor-preview-view {margin-left:auto;}
+  .certify-editor-page .editor-preview-controls .editor-alignment .editor-tool-buttons {flex-wrap:nowrap;}
+  .certify-editor-page .editor-preview-controls .editor-alignment .editor-tool-button span {display:inline;}
+}
+/* Neutralize an inherited margin that offset the preview controls vertically. */
+.certify-editor-page .editor-preview-controls .name-test {margin:0!important;}
+@media (min-width:1021px) and (max-width:1180px) {
+  .certify-editor-page .editor-preview-controls {grid-template-columns:minmax(0,1fr);gap:9px;}
+  .certify-editor-page .editor-preview-controls .editor-alignment {justify-self:start;}
+}
+@media (min-width:1021px) and (max-width:1180px) {
+  .certify-editor-page .editor-preview-controls .name-test {grid-row:1;}
+  .certify-editor-page .editor-preview-controls .editor-alignment {grid-row:2;}
+}

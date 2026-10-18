@@ -1,0 +1,33 @@
+/* v2.0.73: Consistent temporary flash messages across the Certify workspace. */
+.certify-flash {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 14px;
+    opacity: 1;
+    transition: opacity 180ms ease, transform 180ms ease;
+}
+.certify-flash-message { flex: 1 1 auto; min-width: 0; line-height: 1.5; overflow-wrap: anywhere; }
+.certify-flash-close {
+    flex: 0 0 auto;
+    display: grid;
+    place-items: center;
+    width: 25px;
+    height: 25px;
+    margin: -4px -6px -4px 0;
+    border: 0;
+    border-radius: 6px;
+    color: inherit;
+    background: transparent;
+    font-size: 19px;
+    line-height: 1;
+    cursor: pointer;
+}
+.certify-flash-close:hover { background: rgba(0,0,0,.06); }
+.certify-flash-close:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+.certify-flash.is-dismissing { opacity: 0; transform: translateY(-5px); pointer-events: none; }
+.notice-info { border-color: #c5dcff; background: #f0f6ff; color: #234d80; }
+@media (prefers-reduced-motion: reduce) {
+    .certify-flash { transition: none; }
+    .certify-flash.is-dismissing { transform: none; }
+}

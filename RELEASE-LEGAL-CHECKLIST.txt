@@ -1,0 +1,18 @@
+CERTIFY — PRE-RELEASE LEGAL & PRIVACY REVIEW (NOT A CERTIFICATION)
+Date prepared: 2026-10-17
+
+This checklist describes release blockers and documentation work. Writing an EULA does not make a product compliant or prevent a lawsuit. Have a qualified Philippine lawyer review the final terms before wide or commercial release.
+
+[ ] 1. VERIFY OWNERSHIP AND CREDITS: Check that the name grvzb / George Rexy Vincent Z. Bacani is authorized as publisher; resolve any school, team, employment, contractor, and collaborator rights before saying "sole owner" or "all rights reserved".
+[ ] 2. LICENSES OF DEPENDENCIES: Inventory all shipped PHP, Composer, Electron, Node and PDF packages. Include required third-party license files, notices, attributions and any applicable redistribution/source obligations.
+[ ] 3. FONT RIGHTS: Check source and notices for each bundled font. Review resources/certify/bundled/fonts/FONT-NOTICES.txt and OFL-1.1.txt and verify actual font binaries against recorded sources. Do not distribute fonts with unresolved permission.
+[ ] 4. TEMPLATE/LOGO PERMISSIONS: Review every built-in template and graphic for ownership and rights to reproduce, embed, modify and redistribute. Remove or replace unlicensed artwork.
+[ ] 5. DEMO RECIPIENT DATA: Open all bundled History PDFs; verify every name, signature, seal and personal detail may legally be shipped to other users. Prefer clearly fictional recipients and avoid personal signatures.
+[ ] 6. PRIVACY: Confirm actual data paths, retention/deletion, backups, who controls and processes data, secure storage and the applicable lawful basis. The Philippine Data Privacy Act requires transparency, legitimate purpose and proportionality. Verify whether breach handling or registration obligations apply.
+[ ] 7. WINDOWS INSTALLER EULA: Verify that the NSIS installer actually displays the entire current EULA, with affirmative acceptance before installation. Test on a clean Windows machine. One-click installers may not expose a license step.
+[ ] 8. CONSUMER TERMS: If charging users, add separate accurate price, support, refund, cancellation and warranty information compliant with applicable consumer law. Do not assert "no refunds" without legal review.
+[ ] 9. PRODUCT SECURITY: Run dependency audits, test offline setup, backups, file permissions, Windows update/uninstall behavior, PDF imports and security controls before release.
+[ ] 10. CONSISTENCY: Check that About Certify, Legal & Privacy, the installation EULA, README, advertising and actual program behavior make consistent statements. Set true contact details and a real version number.
+[ ] 11. INDEPENDENT COUNSEL REVIEW: Have a Philippine lawyer check the actual release materials. Record changes and approval date.
+
+DO NOT ASSUME: a disclaimer eliminates legal exposure, the existence of a license notice proves permission, or the lack of remote synchronization proves full privacy compliance.

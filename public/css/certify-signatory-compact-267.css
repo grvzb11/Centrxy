@@ -1,0 +1,45 @@
+/* Certify 2.0.67 — compact signatory identity, stable styling interactions. */
+.certify-editor-page .editor-signatory-details-settings {
+    gap:9px;
+}
+.certify-editor-page .editor-signatory-heading p {
+    line-height:1.35;
+}
+/* Treat name and designation as one concise pair, not two tall form blocks. */
+.certify-editor-page .editor-signatory-identity-row {
+    display:grid;
+    grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);
+    gap:9px;
+    align-items:start;
+    min-width:0;
+}
+.certify-editor-page .editor-signatory-identity-row .editor-signatory-unified-field {
+    gap:5px;
+    min-width:0;
+}
+.certify-editor-page .editor-signatory-details-settings .editor-signatory-identity-row input[type=text] {
+    height:33px!important;
+    min-height:33px!important;
+    border-radius:7px;
+    padding:6px 9px;
+    margin:0;
+    line-height:1.25;
+    font-size:11px;
+    max-width:100%;
+    outline-offset:1px;
+}
+.certify-editor-page .editor-signatory-shared-heading {
+    margin-top:0;
+    padding-top:8px;
+}
+.certify-editor-page .editor-signatory-unified-grid :is(input,select),
+.certify-editor-page .editor-signatory-unified-style-row input[type=number] {
+    height:34px;
+    min-height:34px;
+}
+.certify-editor-page .editor-signatory-style-toggles button {
+    min-height:34px;
+}
+@media (max-width:350px) {
+    .certify-editor-page .editor-signatory-identity-row {grid-template-columns:1fr;gap:8px;}
+}

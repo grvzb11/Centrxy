@@ -1,0 +1,29 @@
+/* Certify branding refresh: user-provided original SVG is the authoritative logo.
+   Loaded after all page styles to keep branding consistent across views. */
+.side .brand-logo {
+    width:42px; height:42px; flex:0 0 42px;
+    padding:3px; border-radius:50%; object-fit:contain;
+    background:#fff; box-shadow:0 2px 8px rgba(4,19,52,.18);
+}
+.mobile-bar .mobile-brand-logo {
+    width:31px; height:31px; object-fit:contain;
+    border-radius:50%; padding:2px; background:#fff;
+}
+/* The hero artwork now uses the same vector logo, not a raster certificate graphic.
+   Light backing preserves contrast between the blue mark and blue gradient. */
+.dash-home .dash-hero-art {
+    width:188px; right:clamp(23px,2.4vw,40px);
+}
+.dash-home .dash-hero-logo {
+    display:block; width:174px; height:174px; max-width:100%;
+    border-radius:50%; padding:12px; background:#fff; object-fit:contain;
+    transform:none; filter:none;
+    box-shadow:0 10px 25px rgba(3,24,67,.22);
+}
+@media (max-width:950px) {
+    .dash-home .dash-hero-art { width:150px; right:11px; }
+    .dash-home .dash-hero-logo { width:142px; height:142px; padding:10px; }
+}
+@media (max-width:700px) {
+    .dash-home .dash-hero-art { display:none; }
+}
