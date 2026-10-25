@@ -24,3 +24,7 @@
 /.env.*
 !/.env.example
 !/.env.desktop.example
+
+# Local backup files
+*.bak
+*.v2-backup
