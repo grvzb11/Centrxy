@@ -161,10 +161,15 @@ class CertificatePdfService
             $pdf->AddFont($boldFamily, '', $definition);
         }
         $runs = InlineCertificateFields::runs(str_replace(["\r\n", "\r"], "\n", $literal), $values);
+        $runs = \App\Support\CertrxyTextCase::runs($runs, (string) ($settings['text_case'] ?? 'none'));
+        $underline = filter_var($settings['underline'] ?? false, FILTER_VALIDATE_BOOLEAN);
+        $spacing = min(3.0, max(0.0, (float) ($settings['letter_spacing'] ?? 0)));
+        $ratio = min(2.0, max(1.0, (float) ($settings['line_spacing'] ?? 1.25)));
+        $pdf->setFontSpacing($spacing);
         $maxWidth = max(1, (float) $element['width_mm'] - 2);
         $maxHeight = (float) $element['height_mm'] - 1;
-        $getFace = static function (bool $dynamic) use ($emphasize, $family, $style, $boldFamily, $boldFaceStyle): array {
-            return $dynamic && $emphasize ? [$boldFamily, $boldFaceStyle] : [$family, $style];
+        $getFace = static function (bool $dynamic) use ($emphasize, $family, $style, $boldFamily, $boldFaceStyle, $underline): array {
+            return $dynamic && $emphasize ? [$boldFamily, $boldFaceStyle.($underline ? 'U' : '')] : [$family, $style.($underline ? 'U' : '')];
         };
         $layout = function (float $size) use ($pdf, $runs, $maxWidth, $getFace): array {
             $lines = []; $line = []; $used = 0.0;
@@ -210,16 +215,16 @@ class CertificatePdfService
         };
         $size = $fontSize;
         $lines = $layout($size);
-        $height = count($lines) * $size / 72 * 25.4 * 1.25;
+        $height = count($lines) * $size / 72 * 25.4 * $ratio;
         while ($autoFit && $size > 6 && $height > $maxHeight) {
             $size = max(6, $size - 0.5);
             $lines = $layout($size);
-            $height = count($lines) * $size / 72 * 25.4 * 1.25;
+            $height = count($lines) * $size / 72 * 25.4 * $ratio;
         }
         if ($height > $maxHeight) {
             throw new RuntimeException('Inline paragraph does not fit. Increase its textbox height or reduce its font size.');
         }
-        $lineHeight = $size / 72 * 25.4 * 1.25;
+        $lineHeight = $size / 72 * 25.4 * $ratio;
         $left = (float) $element['x_mm'] + 1;
         $top = (float) $element['y_mm'] + max(0, ((float) $element['height_mm'] - $height) / 2);
         // Remove TCPDF's default cell padding between consecutive text runs.
@@ -243,6 +248,7 @@ class CertificatePdfService
                 }
             }
         } finally {
+            $pdf->setFontSpacing(0);
             if (is_array($padding) && method_exists($pdf, 'setCellPaddings')) {
                 $pdf->setCellPaddings(
                     $padding['L'] ?? $padding['left'] ?? 0,
@@ -345,6 +351,13 @@ class CertificatePdfService
                 default => (string) ($settings['literal'] ?? ''),
             };
 
+            // Certrxy case formatting is applied to displayed text only, not source records.
+            // Inline paragraphs are transformed after tokens have been expanded.
+            $inlineCase = ($element['field_key'] ?? '') === 'static_text'
+                && InlineCertificateFields::contains((string) $value);
+            if (! $inlineCase) {
+                $value = \App\Support\CertrxyTextCase::apply((string) $value, (string) ($settings['text_case'] ?? 'none'));
+            }
             $fontChoice = (string) ($settings['font_family'] ?? 'dejavusans');
             $font = FontLibrary::lookup($fontChoice);
             $requestedStyle = (! empty($settings['bold']) ? 'B' : '').(! empty($settings['italic']) ? 'I' : '');
@@ -364,6 +377,10 @@ class CertificatePdfService
                 }
                 $pdf->AddFont($family, '', $definition);
             }
+            // Underline is a TCPDF decoration, not a separate TTF font variant.
+            if (filter_var($settings['underline'] ?? false, FILTER_VALIDATE_BOOLEAN)) $style .= 'U';
+            $pdf->setFontSpacing(min(3.0,max(0.0,(float)($settings['letter_spacing'] ?? 0))));
+            $certrxyLineRatio = min(2.0,max(1.0,(float)($settings['line_spacing'] ?? 1.25)));
             // Keep author-entered paragraph breaks; TCPDF will also wrap lines to width.
             if (($element['field_key'] ?? '') === 'static_text') {
                 $value = str_replace(["\r\n", "\r"], "\n", (string) $value);
@@ -394,13 +411,13 @@ class CertificatePdfService
                 // TCPDF's own wrapping calculations before calling MultiCell so
                 // the canvas preview and final PDF both support new lines.
                 $innerWidth = max(1, $boxWidth - 2);
-                $pdf->setCellHeightRatio(1.25);
-                $lineHeight = $fontSize / 72 * 25.4 * 1.25;
+                $pdf->setCellHeightRatio($certrxyLineRatio);
+                $lineHeight = $fontSize / 72 * 25.4 * $certrxyLineRatio;
                 $lines = max(1, (int) $pdf->getNumLines($value, $innerWidth, false, false));
                 while ($autoFit && $fontSize > 6 && $lines * $lineHeight > $boxHeight - 1) {
                     $fontSize = max(6, $fontSize - 0.5);
                     $pdf->SetFont($family, $style, $fontSize);
-                    $lineHeight = $fontSize / 72 * 25.4 * 1.25;
+                    $lineHeight = $fontSize / 72 * 25.4 * $certrxyLineRatio;
                     $lines = max(1, (int) $pdf->getNumLines($value, $innerWidth, false, false));
                 }
                 if ($lines * $lineHeight > $boxHeight - 1) {
@@ -421,6 +438,8 @@ class CertificatePdfService
                 $pdf->SetXY($x, $y + max(0, ($boxHeight - $lineHeight) / 2));
                 $pdf->Cell($boxWidth, $lineHeight, $value, 0, 0, $alignment, false, '', 0, false, 'T', 'M');
             }
+            $pdf->setFontSpacing(0);
+            $pdf->setCellHeightRatio(1.25);
         }
 
         $document = $pdf->Output('', 'S');

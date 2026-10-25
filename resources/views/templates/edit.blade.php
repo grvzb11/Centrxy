@@ -32,6 +32,10 @@
 <link rel="stylesheet" href="{{ asset('css/certify-editor-save-discard.css') }}?v=20261017-1">
 <link rel="stylesheet" href="{{ asset('css/certify-fontpicker-word-v3.css') }}?v=20261017-5">
 <link rel="stylesheet" href="{{ asset('css/certify-editor-draft.css') }}?v=20261017-1">
+<link rel="stylesheet" href="{{ asset('css/certrxy-change-case.css') }}?v=1.0">
+<link rel="stylesheet" href="{{ asset('css/certrxy-editor-ui-polish.css') }}?v=1.0">
+<link rel="stylesheet" href="{{ asset('css/certrxy-typography.css') }}?v=20261025-2">
+<link rel="stylesheet" href="{{ asset('css/certrxy-text-style-v3.css') }}?v=20261025-3">
 @endpush
 @section('content')
 <div class="certify-editor-page">
@@ -311,6 +315,18 @@
                                     @endforeach
                                 </select>
                                 <a href="{{ route('fonts.index') }}" class="font-inline-link">＋ Install a font ↗</a>
+                                <div class="certrxy-case-control">
+                                    <label for="certrxyTextCase">Change case (Aa)</label>
+                                    <select id="certrxyTextCase" aria-label="Change case of the selected certificate text field">
+                                        <option value="none">Original / No change</option>
+                                        <option value="sentence">Sentence case.</option>
+                                        <option value="lower">lowercase</option>
+                                        <option value="upper">UPPERCASE</option>
+                                        <option value="title">Capitalize Each Word</option>
+                                        <option value="toggle">tOGGLE cASE</option>
+                                    </select>
+                                    <small>Shows on this certificate and its PDFs. Original text and recipient records remain unchanged.</small>
+                                </div>
                                 <div class="two-cols editor-style-data">
                                     <div><label for="fontSize">Font size (pt)</label><input type="number" id="fontSize" min="6" max="110" step="1"></div>
                                     <div class="editor-color-setting"><span class="editor-color-label" id="colorLabel">Text color</span><label class="editor-color-field" for="color" title="Choose text color"><input type="color" id="color" aria-labelledby="colorLabel" title="Choose text color"><span id="colorHex" aria-hidden="true">#192A4B</span></label></div>
@@ -332,11 +348,29 @@
                                             <input type="checkbox" id="italic" hidden tabindex="-1" aria-hidden="true">
                                             <button type="button" id="boldToggle" class="editor-format-button" aria-pressed="false">Bold</button>
                                             <button type="button" id="italicToggle" class="editor-format-button" aria-pressed="false">Italic</button>
+                                            <input type="checkbox" id="underline" hidden tabindex="-1" aria-hidden="true">
+                                            <button type="button" id="underlineToggle" class="editor-format-button" aria-pressed="false" title="Underline selected text">Underline</button>
                                         </div>
                                     </div>
                                 </div>
                                 <p id="customFontStyleTip" class="editor-font-style-note" hidden>Install the corresponding TTF font variants from Fonts → Manage font to enable these styles.</p>
-                                <label class="switch-label editor-auto-fit"><span><strong>Auto-fit text</strong><small>Reduce the font size when a name is too long.</small></span><input type="checkbox" id="autoFit" checked aria-label="Automatically fit long names"></label>
+                                <label class="switch-label editor-auto-fit"><span><strong>Auto-fit text</strong><small>Adjust text to fit its field when needed.</small></span><input type="checkbox" id="autoFit" checked aria-label="Automatically fit long names"></label>
+                                <details id="certrxyAdvancedTypography" class="certrxy-type-advanced">
+                                    <summary><span>Advanced typography</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+                                    <div class="certrxy-type-advanced-body">
+                                        <div class="certrxy-type-number-grid">
+                                            <label for="certrxyLetterSpacing">Letter spacing (pt)
+                                                <input type="number" id="certrxyLetterSpacing" min="0" max="3" step="0.1" value="0" inputmode="decimal">
+                                            </label>
+                                            <label for="certrxyLineSpacing">Line spacing
+                                                <input type="number" id="certrxyLineSpacing" min="1" max="2" step="0.05" value="1.25" inputmode="decimal">
+                                            </label>
+                                        </div>
+                                        <p class="certrxy-type-help">Applies to this field only · Defaults: 0 pt / 1.25×</p>
+                                        <button id="certrxyResetTextStyle" class="certrxy-type-reset" type="button">↶ Reset text formatting</button>
+                                    </div>
+                                </details>
+                                <p id="certrxyOverflowWarning" class="certrxy-type-overflow" role="status" aria-live="polite" hidden></p>
                         </div>
                     </section>
                     <section class="editor-tab-panel editor-position-panel" id="editorPanelPosition" data-editor-panel="position" role="tabpanel" aria-labelledby="editorTabPosition" hidden>
@@ -397,7 +431,8 @@
     ];
 @endphp
 <script>window.CertifyDraftConfig = @json($certifyDraftConfig);</script>
-<script src="{{ asset('js/certify-editor.js') }}?v=20261017-1" defer></script>
+<script src="{{ asset('js/certify-editor.js') }}?v=20261025-typography2" defer></script>
+<script src="{{ asset('js/certrxy-editor-ui-polish.js') }}?v=1.0" defer></script>
 <script src="{{ asset('js/certify-editor-draft.js') }}?v=20261017-1" defer></script>
 <script src="{{ asset('js/certify-fontpicker-word-v4.js') }}?v=20261017-6" defer></script>
 @endsection

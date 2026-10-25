@@ -1,0 +1,35 @@
+/* Certrxy — Typographic controls; desktop editor only. */
+#editorStandardTextStyle .editor-font-appearance {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 6px;
+  width: 100%;
+}
+#editorStandardTextStyle .editor-font-appearance .editor-format-button {
+  width: 100%; min-width: 0; padding: 10px 5px; font-size: 12px;
+}
+.certrxy-type-advanced { margin-top: 14px; border: 1px solid #dce6f4; border-radius: 11px; background: #fff; }
+.certrxy-type-advanced summary { cursor: pointer; padding: 13px 14px; display:flex; align-items:center; justify-content:space-between; font-weight: 650; color:#24466f; list-style:none; }
+.certrxy-type-advanced summary::-webkit-details-marker { display:none; }
+.certrxy-type-advanced[open] summary svg { transform:rotate(180deg); }
+.certrxy-type-advanced summary svg { transition:transform .15s; }
+.certrxy-type-advanced-body { border-top:1px solid #e3eaf5; padding:13px 14px 14px; }
+.certrxy-type-number-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+.certrxy-type-number-grid label { display:flex; flex-direction:column; gap:8px; font-size:12px; font-weight:600; color:#26476c; }
+#editorStandardTextStyle .certrxy-type-number-grid input { width:100%; min-width:0; height:40px; padding:0 10px; border:1px solid #d5e1f2; border-radius:9px; font:inherit; }
+.certrxy-type-help { margin:10px 0; font-size:11px; color:#677e9b; }
+.certrxy-type-reset { margin:2px 0 0; padding:8px 10px; border:1px solid #d9e4f3; border-radius:9px; background:#f7faff; color:#244d84; cursor:pointer; font:inherit; font-size:12px; font-weight:600; }
+.certrxy-type-reset:hover {background:#edf4ff;}
+.certrxy-type-overflow:not([hidden]) { margin:12px 0 0; padding:10px 12px; background:#fff7e9; border:1px solid #f5d7a0; color:#895213; border-radius:9px; font-size:12px; line-height:1.45; }
+/* Make the newly added toggle a normal part of the existing button group. */
+#editorStandardTextStyle #underlineToggle[aria-pressed="true"] {
+  border-color: #6ea4ff;
+  background-color: #e8f0ff;
+  color: #155ac5;
+}
+#editorStandardTextStyle #underlineToggle:focus-visible,
+#editorStandardTextStyle #certrxyResetTextStyle:focus-visible,
+#editorStandardTextStyle #certrxyAdvancedTypography summary:focus-visible {
+  outline: 2px solid #4b8bf5;
+  outline-offset: 2px;
+}

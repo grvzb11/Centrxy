@@ -1,3 +1,4 @@
+{{-- CERTRXY_DESKTOP_TRANSFER_V2: NativePHP desktop, loopback only; do not deploy publicly. --}}
 @extends('layouts.app')
 @section('hide_top', '1')
 @section('title', 'Templates')
@@ -16,7 +17,7 @@
             <p>{{ $activeCount }} active {{ $activeCount === 1 ? 'design' : 'designs' }}<span aria-hidden="true"> · </span>{{ $archivedCount }} archived</p>
         </div>
         <div class="template-library-main-actions">
-            @if(app()->environment('local') && in_array(request()->ip(), ['127.0.0.1','::1'], true))
+            @if(in_array(request()->ip(), ['127.0.0.1','::1'], true))
                 <button class="btn light" type="button" id="openTemplateImport">↥ Import</button>
             @endif
             <button class="btn library-new-btn" type="button" data-open-template-upload><span aria-hidden="true">＋</span> New template</button>
@@ -93,7 +94,7 @@
                                         </form>
                                         @endunless
                                         <a href="{{ $fileUrl }}" target="_blank" rel="noopener noreferrer">View original</a>
-                                        @if(app()->environment('local') && in_array(request()->ip(), ['127.0.0.1','::1'], true) && !$isSvg)
+                                        @if(in_array(request()->ip(), ['127.0.0.1','::1'], true) && !$isSvg)
                                             <a href="{{ route('templates.export', $template) }}">Export package ↧</a>
                                         @endif
                                         @if($template->isArchived())
@@ -194,7 +195,7 @@
     @endif
 </div>
 
-@if(app()->environment('local') && in_array(request()->ip(), ['127.0.0.1','::1'], true))
+@if(in_array(request()->ip(), ['127.0.0.1','::1'], true))
 <dialog class="certify-import-dialog" id="templateImportDialog" aria-labelledby="templateImportTitle">
     <form method="post" action="{{ route('templates.import') }}" enctype="multipart/form-data">
         @csrf

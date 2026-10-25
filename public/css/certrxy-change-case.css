@@ -1,0 +1,35 @@
+/* Certrxy editor: Word-style per-field case selector. Scoped to inspector only. */
+#editorStandardTextStyle .certrxy-case-control {
+    display: grid;
+    gap: 5px;
+    margin: 4px 0 14px;
+}
+#editorStandardTextStyle .certrxy-case-control label {
+    display: block;
+    font-size: 12px;
+    font-weight: 650;
+    color: #183b67;
+}
+#editorStandardTextStyle .certrxy-case-control select {
+    display: block;
+    width: 100%;
+    min-height: 36px;
+    padding: 7px 12px;
+    border: 1px solid #cbd8eb;
+    border-radius: 8px;
+    color: #173963;
+    background: #fff;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+#editorStandardTextStyle .certrxy-case-control select:focus-visible {
+    outline: 2px solid #4f8dff;
+    outline-offset: 2px;
+}
+#editorStandardTextStyle .certrxy-case-control small {
+    font-size: 11px;
+    line-height: 1.4;
+    color: #697f9d;
+}

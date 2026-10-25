@@ -108,7 +108,7 @@ class TemplateController
 
     private function assertLocalTemplateTransfer(Request $request): void
     {
-        abort_unless(app()->environment('local') && in_array($request->ip(), ['127.0.0.1', '::1'], true), 403);
+        abort_unless(in_array($request->ip(), ['127.0.0.1', '::1'], true), 403);
     }
 
     public function store(Request $request)
@@ -332,6 +332,10 @@ class TemplateController
             'elements.*.settings.bold' => 'sometimes|boolean',
             'elements.*.settings.italic' => 'sometimes|boolean',
             'elements.*.settings.auto_fit' => 'sometimes|boolean',
+            'elements.*.settings.text_case' => 'sometimes|in:none,sentence,lower,upper,title,toggle',
+            'elements.*.settings.underline' => 'sometimes|boolean',
+            'elements.*.settings.letter_spacing' => 'sometimes|numeric|min:0|max:3',
+            'elements.*.settings.line_spacing' => 'sometimes|numeric|min:1|max:2',
             'elements.*.settings.literal' => 'nullable|string|max:2000',
             'elements.*.settings.inline_only' => 'sometimes|boolean',
             'elements.*.settings.inline_emphasis' => 'sometimes|boolean',

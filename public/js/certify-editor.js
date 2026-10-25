@@ -354,8 +354,42 @@
             node.append(span);cursor=match.index+match[0].length;
         }
         if(cursor<literal.length)node.append(document.createTextNode(literal.slice(cursor)));
+        certrxyCaseMarkup(node,e.settings?.text_case);
     };
-    const testText=e=>{
+    // CERTRXY_CHANGE_CASE_V1: per-field, non-destructive text formatting.
+    const certrxyCaseModes = new Set(['none','sentence','lower','upper','title','toggle']);
+    const certrxyCaseState = () => ({sentence:true,word:true});
+    const certrxyCaseChunk = (text, mode, state) => {
+        const input = String(text ?? '');
+        if(!certrxyCaseModes.has(mode)||mode==='none')return input;
+        if(mode==='upper')return input.toLocaleUpperCase('en');
+        if(mode==='lower')return input.toLocaleLowerCase('en');
+        let output='';
+        for(const ch of input){
+            const upper=ch.toLocaleUpperCase('en'), lower=ch.toLocaleLowerCase('en');
+            const letter=/^\p{L}$/u.test(ch);
+            if(mode==='toggle'){
+                output += ch===upper && ch!==lower ? lower : ch===lower && ch!==upper ? upper : ch;
+            }else if(mode==='title'){
+                output += letter ? (state.word ? upper : lower) : ch;
+                if(letter) state.word=false;
+                else if(!/^\p{M}$/u.test(ch)) state.word=true;
+            }else{
+                output += letter ? (state.sentence ? upper : lower) : ch;
+                if(letter) state.sentence=false;
+                else if(/^[.!?\r\n]$/.test(ch))state.sentence=true;
+            }
+        }
+        return output;
+    };
+    const certrxyCaseText=(value,mode)=>certrxyCaseChunk(value,mode,certrxyCaseState());
+    const certrxyCaseMarkup=(node,mode)=>{
+        if(!certrxyCaseModes.has(mode)||mode==='none')return;
+        const walker=document.createTreeWalker(node,NodeFilter.SHOW_TEXT);
+        const state=certrxyCaseState();let textNode;
+        while((textNode=walker.nextNode()))textNode.textContent=certrxyCaseChunk(textNode.textContent,mode,state);
+    };
+    const rawTestText=e=>{
         if(e.field_key==='recipient_name') return $('sampleName').value.trim()||'Recipient name';
         if(e.field_key==='award_placement') return firstAward(e);
         if(e.field_key==='certificate_number') return 'CERT-7K4M-2Q9P-B6TX';
@@ -363,6 +397,7 @@
         if(e.field_key==='static_text')return inlineValueText(e.settings.literal??'Additional text');
         return e.settings.literal ?? 'Additional text';
     };
+    const testText=e=>certrxyCaseText(rawTestText(e),e.settings?.text_case);
     const signatureUrl = id => /^[a-f0-9]{32}$/.test(String(id||''))
         ? (window.CertifySignatureConfig?.assetUrlPrefix||'/signatures/')+id : '';
     const signatureMarkup = (container,e) => {
@@ -428,6 +463,9 @@
         const maxW=Math.max(4,e.width_mm/pageW*canvas.clientWidth-8);
         const maxH=Math.max(4,e.height_mm/pageH*canvas.clientHeight-4);
         const context=document.createElement('canvas').getContext('2d');
+        const certrxyLineRatio=clamp(Number(st.line_spacing)||1.25,1,2);
+        const certrxyLetterPixels=clamp(Number(st.letter_spacing)||0,0,3)*25.4/72*canvas.clientWidth/pageW;
+        const measureWidth=content=>context.measureText(content).width+Math.max(0,[...String(content)].length-1)*certrxyLetterPixels;
         const isParagraph=e.field_key==='static_text';
         const sourceText=String(text.textContent||'').replace(/\r\n?/g,'\n');
         const lineCountAtSize=size=>{
@@ -438,14 +476,14 @@
                 let line='';
                 for(const word of paragraph.split(/(\s+)/).filter(Boolean)){
                     const attempt=line+word;
-                    if(context.measureText(attempt).width<=maxW){line=attempt;continue;}
+                    if(measureWidth(attempt)<=maxW){line=attempt;continue;}
                     if(line.trim()){count++;line=word.trimStart();}
                     else line=word;
                     // Very long uninterrupted words can occupy more than one line.
-                    if(context.measureText(line).width>maxW){
+                    if(measureWidth(line)>maxW){
                         let chunk='';
                         for(const char of line){
-                            if(chunk && context.measureText(chunk+char).width>maxW){count++;chunk='';}
+                            if(chunk && measureWidth(chunk+char)>maxW){count++;chunk='';}
                             chunk+=char;
                         }
                         line=chunk;
@@ -457,16 +495,23 @@
         };
         if(st.auto_fit===undefined||enabled(st.auto_fit)){
             if(isParagraph){
-                while(pixels>6.25 && lineCountAtSize(pixels)*pixels*1.25>maxH) pixels-=.5;
+                while(pixels>6.25 && lineCountAtSize(pixels)*pixels*certrxyLineRatio>maxH) pixels-=.5;
             } else {
                 pixels=Math.min(pixels,maxH/1.3);
                 context.font=`${slant} ${weight} ${pixels}px ${family}`;
-                while(pixels>6&&context.measureText(sourceText).width>maxW){pixels-=.5;context.font=`${slant} ${weight} ${pixels}px ${family}`;}
+                while(pixels>6&&measureWidth(sourceText)>maxW){pixels-=.5;context.font=`${slant} ${weight} ${pixels}px ${family}`;}
             }
         }
         text.style.whiteSpace=isParagraph?'pre-wrap':'nowrap';
         text.style.overflowWrap=isParagraph?'anywhere':'normal';
-        text.style.lineHeight=isParagraph?'1.25':'normal';
+        text.style.lineHeight=isParagraph?String(certrxyLineRatio):'normal';
+        text.style.letterSpacing=certrxyLetterPixels+'px';
+        text.style.textDecoration=enabled(st.underline)?'underline':'none';
+        context.font=`${slant} ${weight} ${pixels}px ${family}`;
+        const hasOverflow=isParagraph
+            ?lineCountAtSize(pixels)*pixels*certrxyLineRatio>maxH+1
+            :measureWidth(sourceText)>maxW+1 || pixels*1.3>maxH+1;
+        text.dataset.certrxyOverflow=hasOverflow?'1':'0';
         text.style.fontFamily=family;
         text.style.fontSynthesis=String(st.font_family||'').startsWith('installed_')?'none':'weight style';
         text.style.fontWeight=weight;
@@ -879,6 +924,8 @@
         $('literal').value=e.settings.literal||'';
         $('literalCount').textContent=`${$('literal').value.length} / 2000`;
         for(const [field,key] of Object.entries({x:'x_mm',y:'y_mm',w:'width_mm',h:'height_mm'})) $(field).value=round(Number(e[key]));
+        $('certrxyTextCase').value=certrxyCaseModes.has(e.settings.text_case)?e.settings.text_case:'none';
+        $('certrxyTextCase').disabled=e.kind!=='text'||e.field_key==='signatory_details';
         $('fontFamily').value=e.settings.font_family||'dejavuserif';
         $('fontSize').value=e.settings.font_size||32;
         $('color').value=e.settings.color||'#192A4B';
@@ -887,6 +934,10 @@
         document.querySelectorAll('.editor-text-align-buttons button').forEach(button=>{button.setAttribute('aria-pressed',String(button.dataset.align===$('align').value));});
         $('bold').checked=enabled(e.settings.bold);
         $('italic').checked=enabled(e.settings.italic);
+        $('underline').checked=enabled(e.settings.underline);
+        $('underlineToggle').setAttribute('aria-pressed',String($('underline').checked));
+        $('certrxyLetterSpacing').value=clamp(Number(e.settings.letter_spacing)||0,0,3);
+        $('certrxyLineSpacing').value=clamp(Number(e.settings.line_spacing)||1.25,1,2);
         const custom = String(e.settings.font_family||'').startsWith('installed_');
         const available = (window.CertifyFontVariants||{})[e.settings.font_family] || {B: false, I: false, BI: false};
         for (const id of ['bold', 'italic']) {
@@ -905,6 +956,11 @@
         tip.hidden = !custom || (available.B && available.I && available.BI);
         if (!tip.hidden) tip.textContent = 'Available styles: Regular' + (available.B?', Bold':'') + (available.I?', Italic':'') + (available.BI?', Bold Italic':'') + '. Add missing TTF faces from Fonts → Manage font.';
         $('autoFit').checked=e.settings.auto_fit===undefined||enabled(e.settings.auto_fit);
+        const overflowNode=$('canvas').querySelectorAll('.field')[selected]?.querySelector('.field-value');
+        const warning=$('certrxyOverflowWarning');
+        const hasOverflow=e.kind==='text'&&e.field_key!=='signatory_details'&&overflowNode?.dataset.certrxyOverflow==='1';
+        warning.hidden=!hasOverflow;
+        if(hasOverflow)warning.textContent='Text exceeds this field. Increase its width or height, reduce font size or spacing, or enable Auto-fit. Test long names before bulk export.';
     };
     // Fit by BOTH available width and height. On the desktop editor the stage
     // occupies the remaining viewport, so the certificate is never clipped.
@@ -1154,7 +1210,7 @@
         const custom = family.startsWith('installed_');
         const available = (window.CertifyFontVariants || {})[family] || {};
         const supported = !custom || !newStyle || !!available[newStyle];
-        e.settings={...e.settings,font_family:family,font_size:clamp(Number($('fontSize').value)||32,6,110),align:$('align').value,color:$('color').value,bold:supported&&$('bold').checked,italic:supported&&$('italic').checked,auto_fit:$('autoFit').checked,literal:$('literal').value};
+        e.settings={...e.settings,font_family:family,font_size:clamp(Number($('fontSize').value)||32,6,110),align:$('align').value,color:$('color').value,bold:supported&&$('bold').checked,italic:supported&&$('italic').checked,underline:$('underline').checked,letter_spacing:clamp(Number($('certrxyLetterSpacing').value)||0,0,3),line_spacing:clamp(Number($('certrxyLineSpacing').value)||1.25,1,2),auto_fit:$('autoFit').checked,literal:$('literal').value};
         markDirty();render();
     };
     const center=axis=>{
@@ -1170,9 +1226,9 @@
         }
         markDirty();render();
     };
-    for(const id of ['x','y','w','h','fontFamily','fontSize','align','color','bold','italic','autoFit'])$(id).addEventListener('change',update);
+    for(const id of ['x','y','w','h','fontFamily','fontSize','align','color','bold','italic','underline','certrxyLetterSpacing','certrxyLineSpacing','autoFit'])$(id).addEventListener('change',update);
     // Visible push-button toggles keep the existing checkbox settings and PDF data format.
-    for (const id of ['bold', 'italic']) {
+    for (const id of ['bold', 'italic', 'underline']) {
         const button = $(id + 'Toggle');
         button.addEventListener('click', () => {
             const setting = $(id);
@@ -1181,6 +1237,17 @@
             setting.dispatchEvent(new Event('change', { bubbles: true }));
         });
     }
+    $('certrxyResetTextStyle').addEventListener('click',()=>{
+        const e=elements[selected];
+        if(!e||e.kind!=='text'||e.field_key==='signatory_details')return;
+        Object.assign(e.settings,{
+            font_family:e.field_key==='recipient_name'?'dejavuserif':'dejavusans',
+            font_size:e.field_key==='recipient_name'?32:18,
+            color:'#192A4B',align:'C',bold:false,italic:false,underline:false,
+            auto_fit:true,text_case:'none',letter_spacing:0,line_spacing:1.25
+        });
+        markDirty();render();
+    });
     $('literal').addEventListener('input',()=>{
         const e=elements[selected];
         if(!e||!['static_text','signatory_name','signatory_title'].includes(e.field_key))return;
@@ -1330,6 +1397,14 @@
     });
     document.addEventListener('fullscreenchange',render);
 
+    $('certrxyTextCase').addEventListener('change',()=>{
+        const e=elements[selected];
+        if(!e||e.kind!=='text'||e.field_key==='signatory_details')return;
+        const mode=$('certrxyTextCase').value;
+        if(!certrxyCaseModes.has(mode))return;
+        e.settings.text_case=mode;
+        markDirty();render();
+    });
     $('sampleName').addEventListener('input',render);
     $('longName').addEventListener('click',()=>{$('sampleName').value='Maria Alexandra Dela Cruz-Santiago';render();});
     // Keyboard deletion applies atomically to the full selection. Keep one
